@@ -1,0 +1,780 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@300&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: 'Lexend Deca', sans-serif;
+  background: #eeeeee;
+  overflow-x: hidden;
+  position: relative;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'play';
+  src: url("../fonts/ PublicaPlay.otf");
+  font-style: normal;
+  font-weight: 100;
+}
+
+nav {
+  width: 100vw;
+  height: 10vh;
+  margin: auto;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+}
+
+nav .logo-name {
+  height: auto;
+  width: 300px;
+}
+
+nav .logo {
+  height: auto;
+  width: 60px;
+}
+
+nav .menu-bar {
+  width: 100px;
+  height: 95%;
+  background-color: blue;
+}
+
+.main-cont {
+  width: 100vw;
+  height: 110vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-cont .carousal {
+  width: 100%;
+  height: 100%;
+  border-bottom: 10px solid #101111;
+}
+
+.main-cont .carousal .slider {
+  width: 150%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+}
+
+.main-cont .carousal .slider li {
+  width: 50%;
+  height: 300px;
+  /*<<--adjust*/
+  padding: 0 9rem;
+  font-family: play;
+  font-size: 16rem;
+}
+
+.main-cont .carousal .menu-content {
+  -webkit-perspective: 400px;
+          perspective: 400px;
+}
+
+.main-cont .carousal .menu-content .child {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateZ(-100px);
+          transform: translateZ(-100px);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  /*<<--adjust*/
+  /*<<--adjust*/
+}
+
+.main-cont .carousal .menu-content .child .cube__face {
+  position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 200px;
+  height: 100%;
+  border-radius: 500px;
+  font-weight: bold;
+  color: #eeeeee;
+  background-color: #101111;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 10px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.main-cont .carousal .menu-content .child .cube__face p {
+  font-family: play;
+  font-size: 12rem;
+  position: relative;
+  top: -20px;
+}
+
+.main-cont .carousal .menu-content .child .cube__face--front {
+  -webkit-transform: rotateY(0deg) translateZ(150px);
+          transform: rotateY(0deg) translateZ(150px);
+}
+
+.main-cont .carousal .menu-content .child .cube__face--top {
+  -webkit-transform: rotateX(90deg) translateZ(150px);
+          transform: rotateX(90deg) translateZ(150px);
+}
+
+.main-cont .carousal .menu-content:hover .child {
+  -webkit-transform: translateZ(-80px) rotateX(-90deg);
+          transform: translateZ(-80px) rotateX(-90deg);
+}
+
+.project-hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.project-hero .hero-title {
+  position: absolute;
+}
+
+.project-hero .hero-title h2 {
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-size: 20rem;
+  color: #101111;
+}
+
+.project-hero .hero-title:nth-child(1) {
+  top: 22%;
+  left: 10%;
+}
+
+.project-hero .hero-title:nth-child(2) {
+  bottom: 20%;
+  right: 10%;
+  z-index: 1;
+}
+
+.project-hero .hero-image {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  overflow: hidden;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
+  box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
+}
+
+.project-hero .hero-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+}
+
+.project-info {
+  max-width: 1200px;
+  margin: 20vh auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.project-info .project-title {
+  width: 40%;
+  height: auto;
+}
+
+.project-info .project-title h2 {
+  font-size: 2.5rem;
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+}
+
+.project-info .project-title .tools {
+  width: 40%;
+  height: auto;
+}
+
+.project-info .project-title .tools h3 {
+  font-size: 1.5rem;
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+  margin: 20px 0 10px;
+}
+
+.project-info .project-title .tools ul li {
+  font-family: Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.project-info .project-disc {
+  width: 60%;
+  height: auto;
+}
+
+.project-info .project-disc p {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+
+.project-info .project-year {
+  margin-left: 20px;
+  width: 200px;
+  height: auto;
+  font-size: 2.5rem;
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+  text-align: center;
+}
+
+.project-info .project-year p {
+  font-size: 1rem;
+  margin: 10px;
+  padding: 20px 1px;
+  background-color: greenyellow;
+  border-radius: 50px;
+}
+
+.next-project {
+  width: 100%;
+  height: 500px;
+  margin: 50px 0;
+  position: relative;
+}
+
+.next-project .strap {
+  height: 130px;
+  width: 250%;
+  background: #101111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translate(-30%);
+          transform: translate(-30%);
+  position: relative;
+  top: 35%;
+}
+
+.next-project .strap p {
+  color: #eeeeee;
+  font-family: Helvetica, sans-serif;
+  font-size: 4.5rem;
+  line-height: 1.5;
+}
+
+.next-project .arrow:nth-child(2) {
+  height: auto;
+  position: absolute;
+  width: 200px;
+  right: 10%;
+  top: -1%;
+}
+
+.next-project .arrow:nth-child(3) {
+  height: auto;
+  position: absolute;
+  width: 300px;
+  left: 10%;
+  top: 55%;
+}
+
+.about-hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-hero .about_content-hero {
+  width: 60%;
+}
+
+.about-hero .about_content-hero div {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+}
+
+.about-hero .about_content-hero div p {
+  color: #101111;
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-size: 4rem;
+  line-height: 1.5;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  z-index: 2;
+}
+
+.about-hero .about_content-hero div h2 {
+  color: #101111;
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-size: 7.5rem;
+  z-index: 9;
+  line-height: 1.5;
+}
+
+.about-hero .about_content-hero div h2:hover + div {
+  width: 800px;
+  position: absolute;
+  top: -100px;
+  right: 150px;
+  z-index: -9;
+}
+
+.about-hero .about_content-hero div h2 .blinds {
+  display: block;
+  height: 50%;
+}
+
+.about-hero .about_content-hero div .blinds::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #eeeeee;
+  position: absolute;
+  left: 0;
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  z-index: 1;
+}
+
+.about-hero .about_content-hero div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-hero .about_content-hero div:nth-child(2) div {
+  width: 110px;
+  border-radius: 800px;
+  overflow: hidden;
+  position: absolute;
+  top: 241px;
+  left: 450px;
+  will-change: auto;
+}
+
+.about-hero .about_content-hero div:nth-child(2) div img {
+  width: 100%;
+}
+
+.about-content {
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-content .about-me {
+  width: 90vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+}
+
+.about-content .about-me h3 {
+  color: #101111;
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-size: 2.5rem;
+  z-index: 9;
+  line-height: 1.5;
+}
+
+.about-content .about-me p {
+  color: #101111;
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.contacts {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts .contacts-cont {
+  width: 60vw;
+}
+
+.contacts .contacts-cont p {
+  color: #101111;
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.contacts .contacts-cont a {
+  color: #101111;
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-size: 9.5rem;
+  line-height: 1.5;
+  color: #101111;
+  text-decoration: none;
+}
+
+.contacts .contacts-cont .follow-me {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contacts .contacts-cont li {
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+  margin: 10px 0;
+}
+
+.work-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.work-content h3 {
+  color: #101111;
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-size: 2.5rem;
+  z-index: 9;
+  line-height: 1.5;
+}
+
+.work-content .work {
+  width: 90vh;
+}
+
+.work-content .work .project_btn {
+  margin: 50px 0;
+  background-color: #eeeeee;
+}
+
+.work-content .work a {
+  text-decoration: none;
+  will-change: auto;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  background: #101111;
+  position: absolute;
+}
+
+.scroll-wheel {
+  height: 30px;
+  width: 100vw;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.scroll-wheel img {
+  position: absolute;
+  width: 200px;
+  top: -90px;
+}
+
+.close-button {
+  height: 10px;
+  width: 100vw;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 99;
+}
+
+.close-button img {
+  position: absolute;
+  width: 100px;
+  top: 50px;
+}
+
+.side-arrow {
+  width: 300px;
+  position: fixed;
+  top: 70vh;
+  right: 20px;
+}
+
+.side-arrow img {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.project_btn {
+  height: 240px;
+  width: 750px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: none;
+  border: none;
+  text-decoration: none;
+  -webkit-transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
+  transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
+}
+
+.project_btn :focus {
+  border: none;
+}
+
+.project_btn .button-wrapper {
+  height: 50px;
+  width: 50px;
+  background-color: #101111;
+  border-radius: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+  transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+}
+
+.project_btn .button-wrapper span {
+  color: #eeeeee;
+  position: absolute;
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
+  top: 50%;
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2;
+  z-index: 2;
+  -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+  transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+}
+
+.project_btn .button-wrapper span::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  background-color: #101111;
+  border-radius: 100px;
+  position: relative;
+  top: -48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: -1;
+  -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+  transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+}
+
+.project_btn .button-wrapper p {
+  margin: 0 60px;
+  color: #eeeeee;
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-size: 7.5rem;
+  line-height: 1.5;
+  position: relative;
+  top: 10px;
+  z-index: 2;
+  mix-blend-mode: difference;
+  -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+  transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+  will-change: auto;
+}
+
+.project_btn:hover .button-wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 0 40px;
+  -webkit-box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
+  box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
+}
+
+.project_btn:hover .button-wrapper span {
+  color: #101111;
+}
+
+.project_btn:hover .button-wrapper span::after {
+  content: "";
+  background-color: #eeeeee;
+}
+
+.project_btn:hover .button-wrapper p {
+  margin: 0 80px;
+  position: absolute;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+  top: 25%;
+}
+
+.project-image {
+  width: 100vw;
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project-image .image {
+  width: 1200px;
+  height: 80%;
+  margin: 0 30px;
+  background: #2fd420;
+  overflow: hidden;
+}
+
+.project-image .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .project-image .img {
+    margin: 0 30px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

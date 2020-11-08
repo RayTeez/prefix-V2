@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510.77 510.77">
+  <defs>
+    <style>
+      .a {
+        fill: #101111;
+      }
+
+      .b {
+        font-size: 48px;
+        font-family: PublicaPlay-Regular, Publica Play;
+      }
+
+      .b, .c {
+        fill: #e6e6e6;
+      }
+    </style>
+  </defs>
+  <title>scroll-down_wheel</title>
+  <path class="a" d="M84.38,343.38a10,10,0,1,0,10,10A10,10,0,0,0,84.38,343.38Zm78-273a10,10,0,1,0,10,10A10,10,0,0,0,162.38,70.38Zm196,347a10,10,0,1,0,10,10A10,10,0,0,0,358.38,417.38Zm76-270a10,10,0,1,0,10,10A10,10,0,0,0,434.38,147.38Z"/>
+  <path class="a" d="M433.92,76.84A252.49,252.49,0,1,0,76.84,433.92,252.49,252.49,0,1,0,433.92,76.84ZM255.38,418.38c-89.88,0-163-73.12-163-163s73.12-163,163-163,163,73.12,163,163S345.26,418.38,255.38,418.38Zm-93-348a10,10,0,1,1-10,10A10,10,0,0,1,162.38,70.38Zm-78,293a10,10,0,1,1,10-10A10,10,0,0,1,84.38,363.38Zm274,74a10,10,0,1,1,10-10A10,10,0,0,1,358.38,437.38Zm76-270a10,10,0,1,1,10-10A10,10,0,0,1,434.38,167.38Z"/>
+  <g>
+    <text class="b" transform="translate(187.38 81.29) rotate(-18.3)">S</text>
+    <text class="b" transform="translate(214.01 72.44) rotate(-9.75)">c</text>
+    <text class="b" transform="matrix(1, -0.06, 0.06, 1, 240.87, 68.17)">r</text>
+    <text class="b" transform="matrix(1, 0.04, -0.04, 1, 253.46, 66.94)">o</text>
+    <text class="b" transform="matrix(0.99, 0.15, -0.15, 0.99, 281.06, 68.56)">l</text>
+    <text class="b" transform="translate(291.43 70.07) rotate(11.6)">l</text>
+    <text class="b" transform="translate(301.67 72.12) rotate(15.21)"> </text>
+    <text class="b" transform="matrix(0.93, 0.38, -0.38, 0.93, 313.68, 74.69)">D</text>
+    <text class="b" transform="translate(343.28 86.84) rotate(31.33)">o</text>
+    <text class="b" transform="translate(366.8 100.43) rotate(41.44)">w</text>
+    <text class="b" transform="translate(394.98 125.81) rotate(51.12)">n</text>
+    <text class="b" transform="matrix(0.54, 0.84, -0.84, 0.54, 411.2, 146.43)"> </text>
+    <text class="b" transform="translate(418.08 157.02) rotate(60.99)"> </text>
+    <text class="b" transform="matrix(0.42, 0.91, -0.91, 0.42, 424.23, 168.07)"> </text>
+    <text class="b" transform="translate(429.91 179.04) rotate(71.25)">S</text>
+    <text class="b" transform="translate(438.97 205.6) rotate(79.8)">c</text>
+    <text class="b" transform="translate(443.45 232.44) rotate(86.02)">r</text>
+    <text class="b" transform="translate(444.78 245.02) rotate(92.09)">o</text>
+    <text class="b" transform="matrix(-0.14, 0.99, -0.99, -0.14, 443.37, 272.62)">l</text>
+    <text class="b" transform="translate(441.95 282.99) rotate(101.15)">l</text>
+    <text class="b" transform="matrix(-0.25, 0.97, -0.97, -0.25, 439.98, 293.24)"> </text>
+    <text class="b" transform="translate(437.49 305.29) rotate(111.7)">D</text>
+    <text class="b" transform="translate(425.57 334.99) rotate(120.88)">o</text>
+    <text class="b" transform="translate(412.16 358.63) rotate(131.01)">w</text>
+    <text class="b" transform="translate(387 387) rotate(140.68)">n</text>
+    <text class="b" transform="matrix(-0.84, 0.55, -0.55, -0.84, 366.51, 403.38)"> </text>
+    <text class="b" transform="translate(355.97 410.34) rotate(150.54)"> </text>
+    <text class="b" transform="translate(344.97 416.57) rotate(154.47)"> </text>
+    <text class="b" transform="translate(334.05 422.33) rotate(160.8)">S</text>
+    <text class="b" transform="translate(307.56 431.6) rotate(169.36)">c</text>
+    <text class="b" transform="translate(280.79 436.29) rotate(175.57)">r</text>
+    <text class="b" transform="translate(268.2 437.71) rotate(-178.36)">o</text>
+    <text class="b" transform="matrix(-0.99, -0.13, 0.13, -0.99, 240.58, 436.52)">l</text>
+    <text class="b" transform="translate(230.18 435.17) rotate(-169.29)">l</text>
+    <text class="b" transform="matrix(-0.97, -0.25, 0.25, -0.97, 219.92, 433.29)"> </text>
+    <text class="b" transform="translate(207.87 430.9) rotate(-158.75)">D</text>
+    <text class="b" transform="matrix(-0.86, -0.51, 0.51, -0.86, 178.06, 419.21)">o</text>
+    <text class="b" transform="translate(154.35 405.99) rotate(-139.44)">w</text>
+    <text class="b" transform="translate(125.77 381.05) rotate(-129.77)">n</text>
+    <text class="b" transform="translate(109.24 360.7) rotate(-123.82)"> </text>
+    <text class="b" transform="translate(102.18 350.19) rotate(-119.9)"> </text>
+    <text class="b" transform="translate(95.87 339.25) rotate(-115.98)"> </text>
+    <text class="b" transform="translate(90.02 328.36) rotate(-109.65)">S</text>
+    <text class="b" transform="translate(80.55 301.96) rotate(-101.09)">c</text>
+    <text class="b" transform="matrix(-0.08, -1, 1, -0.08, 75.65, 275.21)">r</text>
+    <text class="b" transform="matrix(0.02, -1, 1, 0.02, 74.13, 262.66)">o</text>
+    <text class="b" transform="translate(75.11 235.01) rotate(-82.99)">l</text>
+    <text class="b" transform="translate(76.37 224.61) rotate(-79.74)">l</text>
+    <text class="b" transform="matrix(0.24, -0.97, 0.97, 0.24, 78.18, 214.33)"> </text>
+    <text class="b" transform="matrix(0.36, -0.93, 0.93, 0.36, 80.47, 202.27)">D</text>
+    <text class="b" transform="translate(91.92 172.38) rotate(-60.01)">o</text>
+    <text class="b" transform="translate(104.95 148.56) rotate(-49.89)">w</text>
+    <text class="b" transform="matrix(0.76, -0.65, 0.65, 0.76, 129.67, 119.79)">n</text>
+    <text class="b" transform="translate(149.92 103.08) rotate(-34.26)"> </text>
+    <circle class="c" cx="434.38" cy="157.38" r="10"/>
+    <circle class="c" cx="358.38" cy="427.38" r="10"/>
+    <circle class="c" cx="162.38" cy="80.38" r="10"/>
+    <circle class="c" cx="84.38" cy="353.38" r="10"/>
+  </g>
+</svg>
