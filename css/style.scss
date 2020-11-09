@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@300&display=swap');
+@import "mediaQuaries";
 @import "reset";
 
 
@@ -61,7 +62,7 @@ nav{
 
     .logo-name{
         height: auto;
-        width: 300px;
+        // width: 300px;
         
     }
 
@@ -382,7 +383,7 @@ nav{
             h2{
                 color: $notBlack;
                 font-family: $theFont;
-                font-size:7.5rem; 
+                font-size:6.5rem; 
                 z-index: 9;
                 line-height: 1.5;  
                 // mix-blend-mode: difference; 
@@ -412,8 +413,10 @@ nav{
                 transform-origin: 0 100%;
                 z-index: 1;
 
-            }
+            }    
         }
+
+
         div:nth-child(2){
             
             // height: 60vh;
@@ -426,8 +429,8 @@ nav{
                 border-radius: 800px;
                 overflow: hidden;
                 position: absolute;
-                top: 241px;
-                left: 450px;
+                top: 198px;
+                left: 380px;
                 will-change: auto;
                 // transition: all 1s cubic-bezier(.64,0,.23,.99);
                 
@@ -445,6 +448,119 @@ nav{
         // }
 
     }
+    @include media("<=1388px"){
+        .about_content-hero{
+            width:70%;
+        
+            div{
+
+                    p{
+
+                        font-size:3rem; 
+        
+                    }
+                    h2{
+
+                        font-size:5rem; 
+
+                        &:hover + div{
+                            width: 600px;
+                            top:-240px;
+                            right: 150px;
+                        }
+                }
+                
+            }
+            div:nth-child(2){
+            
+                // height: 60vh;
+                display: flex;
+    
+    
+                div{
+                    top: 160px;
+                    left: 350px;
+                }
+                
+            }
+        }
+    }
+    @include media("<=900px"){
+        .about_content-hero{
+            width:80%;
+        
+            div{
+
+                    p{
+
+                        font-size:2rem; 
+        
+                    }
+                    h2{
+
+                        font-size:4.5rem; 
+
+                        &:hover + div{
+                            width: 110px;
+                            width: 600px;
+                            top: 120px;
+                            left: 300px;
+                        }
+                }
+                
+            }
+            div:nth-child(2){
+            
+                // height: 60vh;
+                display: flex;
+    
+    
+                div{
+                    top: 120px;
+                    left: 300px;
+                }
+                
+            }
+        }
+    }
+    @include media("<=500px"){
+        .about_content-hero{
+            width:80%;
+        
+            div{
+
+                    p{
+
+                        font-size:2rem; 
+        
+                    }
+                    h2{
+
+                        font-size:4.5rem; 
+
+                        &:hover + div{
+                            width: 110px;
+                            width: 600px;
+                            top: 0;
+                            left: 0;
+                        }
+                }
+                
+            }
+            div:nth-child(2){
+            
+                // height: 60vh;
+                display: flex;
+    
+    
+                div{
+                    top: 120px;
+                    left: 250px;
+                }
+                
+            }
+        }
+    }
 }
 
 .about-content{
@@ -456,7 +572,7 @@ nav{
     align-items: center;
 
     .about-me{
-        width: 90vh;
+        width: 60%;
         display: grid;
         grid-template-columns: 1fr 2fr;
 
@@ -476,6 +592,49 @@ nav{
             line-height: 1.5;  
         }
     }
+
+    @include media("<=1388px"){
+        .about-me{
+            width: 70%;
+        }
+    } 
+    @include media("<=900px"){
+        .about-me{
+            width: 80%;
+    
+            h3{
+                color: $notBlack;
+                font-family: $theFont;
+                font-size:2rem; 
+                z-index: 9;
+                line-height: 1.5; 
+    
+            }
+    
+            p{
+                color: $notBlack;
+                font-family: $smallFont; 
+                font-size:1.2rem; 
+                line-height: 1.5;  
+            }
+        }    
+    }
+    @include media("<=500px"){
+        .about-me{
+            width: 60%;
+            display: grid;
+            grid-template-columns: 1fr;
+    
+            h3{
+                font-size:2rem; 
+            }
+    
+            p{
+                font-size:1.1rem; 
+            }
+        } 
+    }
+
 }
 
 //--------Contacts-----------
@@ -485,10 +644,10 @@ nav{
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
 
     .contacts-cont{
-        width: 60vw;
+
         
         p{
             color: $notBlack;
@@ -500,7 +659,7 @@ nav{
         a{
             color: $notBlack;
             font-family: $theFont; 
-            font-size:9.5rem; 
+            font-size:6.5rem; 
             line-height: 1.5; 
             color: $notBlack;
             text-decoration: none; 
@@ -514,9 +673,56 @@ nav{
         }
         li{
             font-family: $theFont; 
-            margin: 10px 0;
+            
+            a{
+                font-size: 1.2rem;
+                margin: 10px 0;
+            }
         }
+
+        // @include media("<=desktop"){
+        //     a{
+        //         font-size:3.5rem; 
+        //     }
+        // }
     }
+    @include media("<=1388px"){
+        .contacts-cont{
+
+            a{
+                font-size:5.5rem; 
+
+            }
+    
+        }    
+    }
+    @include media("<=900px"){
+        .contacts-cont{
+
+            a{
+                font-size:3.8rem; 
+
+            }
+            .follow-me{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+    
+            }
+    
+        }    
+    }
+    @include media("<=600px"){
+        .contacts-cont{
+
+            a{
+                font-size:2.2rem; 
+
+            }
+    
+        }    
+    }
+
 }
 
 //-------------------------------

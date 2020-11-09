@@ -84,7 +84,6 @@ nav {
 
 nav .logo-name {
   height: auto;
-  width: 300px;
 }
 
 nav .logo {
@@ -411,7 +410,7 @@ nav .menu-bar {
 .about-hero .about_content-hero div h2 {
   color: #101111;
   font-family: "MuseoModerno", Montserrat, sans-serif;
-  font-size: 7.5rem;
+  font-size: 6.5rem;
   z-index: 9;
   line-height: 1.5;
 }
@@ -452,13 +451,93 @@ nav .menu-bar {
   border-radius: 800px;
   overflow: hidden;
   position: absolute;
-  top: 241px;
-  left: 450px;
+  top: 198px;
+  left: 380px;
   will-change: auto;
 }
 
 .about-hero .about_content-hero div:nth-child(2) div img {
   width: 100%;
+}
+
+@media (max-width: 1388px) {
+  .about-hero .about_content-hero {
+    width: 70%;
+  }
+  .about-hero .about_content-hero div p {
+    font-size: 3rem;
+  }
+  .about-hero .about_content-hero div h2 {
+    font-size: 5rem;
+  }
+  .about-hero .about_content-hero div h2:hover + div {
+    width: 600px;
+    top: -240px;
+    right: 150px;
+  }
+  .about-hero .about_content-hero div:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about-hero .about_content-hero div:nth-child(2) div {
+    top: 160px;
+    left: 350px;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-hero .about_content-hero {
+    width: 80%;
+  }
+  .about-hero .about_content-hero div p {
+    font-size: 2rem;
+  }
+  .about-hero .about_content-hero div h2 {
+    font-size: 4.5rem;
+  }
+  .about-hero .about_content-hero div h2:hover + div {
+    width: 110px;
+    width: 600px;
+    top: 120px;
+    left: 300px;
+  }
+  .about-hero .about_content-hero div:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about-hero .about_content-hero div:nth-child(2) div {
+    top: 120px;
+    left: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-hero .about_content-hero {
+    width: 80%;
+  }
+  .about-hero .about_content-hero div p {
+    font-size: 2rem;
+  }
+  .about-hero .about_content-hero div h2 {
+    font-size: 4.5rem;
+  }
+  .about-hero .about_content-hero div h2:hover + div {
+    width: 110px;
+    width: 600px;
+    top: 0;
+    left: 0;
+  }
+  .about-hero .about_content-hero div:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about-hero .about_content-hero div:nth-child(2) div {
+    top: 120px;
+    left: 250px;
+  }
 }
 
 .about-content {
@@ -477,7 +556,7 @@ nav .menu-bar {
 }
 
 .about-content .about-me {
-  width: 90vh;
+  width: 60%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 2fr;
@@ -499,6 +578,47 @@ nav .menu-bar {
   line-height: 1.5;
 }
 
+@media (max-width: 1388px) {
+  .about-content .about-me {
+    width: 70%;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-content .about-me {
+    width: 80%;
+  }
+  .about-content .about-me h3 {
+    color: #101111;
+    font-family: "MuseoModerno", Montserrat, sans-serif;
+    font-size: 2rem;
+    z-index: 9;
+    line-height: 1.5;
+  }
+  .about-content .about-me p {
+    color: #101111;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-content .about-me {
+    width: 60%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about-content .about-me h3 {
+    font-size: 2rem;
+  }
+  .about-content .about-me p {
+    font-size: 1.1rem;
+  }
+}
+
 .contacts {
   width: 100vw;
   height: 100vh;
@@ -513,10 +633,6 @@ nav .menu-bar {
           align-items: center;
 }
 
-.contacts .contacts-cont {
-  width: 60vw;
-}
-
 .contacts .contacts-cont p {
   color: #101111;
   font-family: "Mukta Vaani", sans-serif;
@@ -527,7 +643,7 @@ nav .menu-bar {
 .contacts .contacts-cont a {
   color: #101111;
   font-family: "MuseoModerno", Montserrat, sans-serif;
-  font-size: 9.5rem;
+  font-size: 6.5rem;
   line-height: 1.5;
   color: #101111;
   text-decoration: none;
@@ -545,7 +661,38 @@ nav .menu-bar {
 
 .contacts .contacts-cont li {
   font-family: "MuseoModerno", Montserrat, sans-serif;
+}
+
+.contacts .contacts-cont li a {
+  font-size: 1.2rem;
   margin: 10px 0;
+}
+
+@media (max-width: 1388px) {
+  .contacts .contacts-cont a {
+    font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .contacts .contacts-cont a {
+    font-size: 3.8rem;
+  }
+  .contacts .contacts-cont .follow-me {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  .contacts .contacts-cont a {
+    font-size: 2.2rem;
+  }
 }
 
 .work-content {
@@ -755,7 +902,7 @@ nav .menu-bar {
           justify-content: center;
 }
 
-.project-image .image {
+.project-image .image video {
   width: 1200px;
   height: 80%;
   margin: 0 30px;
@@ -763,7 +910,7 @@ nav .menu-bar {
   overflow: hidden;
 }
 
-.project-image .image img {
+.project-image .image video img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

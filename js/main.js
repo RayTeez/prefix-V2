@@ -258,6 +258,7 @@ function heroImage(){
 window.onload = () => {
   // heroImage();
   // initLoad();
+  // quaries();
 };
 
 //---- Hover Img -----
@@ -266,9 +267,12 @@ const hoverImg =document.querySelector(".movewithmouse");
 const hoverCont =document.querySelector(".anim1 h2");
 
 hoverCont.addEventListener("mousemove", function(e){
-  test(e);
+  if (window.innerWidth > 960) {
+    console.log('More than 960');
+    floatingImg(e);
+    
+  }
   e.stopPropagation();
-
 });
 
 hoverCont.addEventListener("mouseleave",function(e){
@@ -285,7 +289,7 @@ function showCoords(event) {
   console.log("innnn");
 }
 
-function test(e){
+function floatingImg(e){
 
   var xCoor = e.clientX;
   var yCoor = e.clientY;
@@ -310,7 +314,16 @@ gsap.to(cursor, {x: window.clientX, y: window.clientY});
 
 
 
+// screens
 
+function quaries(){
+  if (screen.width < 960) {
+    console.log('Less than 960');
+  }
+  else {
+    console.log('More than 960');
+  }
+}
 
 
 
