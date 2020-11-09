@@ -258,16 +258,98 @@ nav .menu-bar {
      object-position: 50% 100%;
 }
 
+@media (max-width: 1388px) {
+  .project-hero .hero-title h2 {
+    font-size: 15rem;
+  }
+  .project-hero .hero-title:nth-child(1) {
+    top: 22%;
+    left: 10%;
+  }
+  .project-hero .hero-title:nth-child(2) {
+    bottom: 40%;
+    right: 10%;
+    z-index: 1;
+  }
+  .project-hero .hero-image {
+    width: 60%;
+    height: 90%;
+    top: 35%;
+  }
+}
+
+@media (max-width: 900px) {
+  .project-hero .hero-title h2 {
+    font-size: 15rem;
+  }
+  .project-hero .hero-title:nth-child(1) {
+    top: 22%;
+    left: 10%;
+  }
+  .project-hero .hero-title:nth-child(2) {
+    bottom: 40%;
+    right: 10%;
+    z-index: 1;
+  }
+  .project-hero .hero-image {
+    width: 70%;
+    height: 90%;
+    top: 35%;
+  }
+}
+
+@media (max-width: 700px) {
+  .project-hero .hero-title h2 {
+    font-size: 10rem;
+  }
+  .project-hero .hero-title:nth-child(1) {
+    top: 22%;
+    left: 10%;
+  }
+  .project-hero .hero-title:nth-child(2) {
+    bottom: 50%;
+    right: 10%;
+    z-index: 1;
+  }
+  .project-hero .hero-image {
+    width: 80%;
+    height: 60%;
+    top: 35%;
+  }
+}
+
+@media (max-width: 450px) {
+  .project-hero .hero-title h2 {
+    font-size: 6rem;
+  }
+  .project-hero .hero-title:nth-child(1) {
+    top: 22%;
+    left: 0%;
+  }
+  .project-hero .hero-title:nth-child(2) {
+    top: 30%;
+    right: 0%;
+    z-index: 1;
+  }
+  .project-hero .hero-image {
+    width: 80%;
+    height: 70%;
+    top: 25%;
+  }
+}
+
 .project-info {
   max-width: 1200px;
   margin: 20vh auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 5fr 1fr;
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
 }
 
 .project-info .project-title {
-  width: 40%;
   height: auto;
 }
 
@@ -294,19 +376,16 @@ nav .menu-bar {
 }
 
 .project-info .project-disc {
-  width: 60%;
   height: auto;
 }
 
 .project-info .project-disc p {
-  font-family: Helvetica, sans-serif;
-  font-size: 1.7rem;
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 1.5rem;
   line-height: 1.5;
 }
 
 .project-info .project-year {
-  margin-left: 20px;
-  width: 200px;
   height: auto;
   font-size: 2.5rem;
   font-family: "MuseoModerno", Montserrat, sans-serif;
@@ -314,11 +393,114 @@ nav .menu-bar {
 }
 
 .project-info .project-year p {
+  width: 90px;
   font-size: 1rem;
   margin: 10px;
   padding: 20px 1px;
   background-color: greenyellow;
   border-radius: 50px;
+}
+
+@media (max-width: 1388px) {
+  .project-info {
+    max-width: 1200px;
+    margin: 15vh 60px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 5fr 1fr;
+        grid-template-columns: 1fr 5fr 1fr;
+    -webkit-column-gap: 4rem;
+            column-gap: 4rem;
+  }
+  .project-info .project-title h2 {
+    font-size: 2rem;
+    font-family: "MuseoModerno", Montserrat, sans-serif;
+  }
+  .project-info .project-title .tools {
+    width: 40%;
+    height: auto;
+  }
+  .project-info .project-title .tools h3 {
+    font-size: 1.5rem;
+  }
+  .project-info .project-title .tools ul li {
+    font-family: "Mukta Vaani", sans-serif;
+    font-size: 1rem;
+  }
+  .project-info .project-disc p {
+    font-size: 1.2rem;
+  }
+  .project-info .project-year {
+    font-size: 2rem;
+  }
+  .project-info .project-year p {
+    font-size: 1rem;
+    margin: 10px;
+    padding: 20px 1px;
+    background-color: greenyellow;
+    border-radius: 50px;
+  }
+}
+
+@media (max-width: 899px) {
+  .project-info {
+    max-width: 1200px;
+    margin: 0 60px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr  1fr;
+        grid-template-columns: 1fr  1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -webkit-column-gap: 4rem;
+            column-gap: 4rem;
+  }
+  .project-info .project-title {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  .project-info .project-title h2 {
+    font-size: 2rem;
+    font-family: "MuseoModerno", Montserrat, sans-serif;
+  }
+  .project-info .project-title .tools {
+    width: 40%;
+    height: auto;
+  }
+  .project-info .project-title .tools h3 {
+    font-size: 1.5rem;
+  }
+  .project-info .project-title .tools ul li {
+    font-family: "Mukta Vaani", sans-serif;
+    font-size: 1rem;
+  }
+  .project-info .project-disc {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  .project-info .project-disc p {
+    font-size: 1.2rem;
+  }
+  .project-info .project-year {
+    font-size: 2rem;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  .project-info .project-year p {
+    font-size: 1rem;
+    margin: 10px;
+    padding: 20px 1px;
+    background-color: greenyellow;
+    border-radius: 50px;
+  }
 }
 
 .next-project {
@@ -699,6 +881,10 @@ nav .menu-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -713,7 +899,8 @@ nav .menu-bar {
 }
 
 .work-content .work {
-  width: 90vh;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .work-content .work .project_btn {
@@ -782,9 +969,29 @@ nav .menu-bar {
           transform: rotate(90deg);
 }
 
+@media (max-width: 1388px) {
+  .side-arrow {
+    width: 200px;
+    top: 80vh;
+  }
+}
+
+@media (max-width: 900px) {
+  .side-arrow {
+    width: 120px;
+  }
+}
+
+@media (max-width: 500px) {
+  .side-arrow {
+    width: 100px;
+    top: 90vh;
+  }
+}
+
 .project_btn {
   height: 240px;
-  width: 750px;
+  width: calc(100% - 100px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -888,6 +1095,36 @@ nav .menu-bar {
   top: 25%;
 }
 
+@media (max-width: 1388px) {
+  .project_btn {
+    height: 140px;
+    width: 500px;
+  }
+  .project_btn .button-wrapper p {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .project_btn {
+    height: 100px;
+    width: 450px;
+  }
+  .project_btn .button-wrapper p {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .project_btn {
+    height: 70px;
+    width: 350px;
+  }
+  .project_btn .button-wrapper p {
+    font-size: 2.5rem;
+  }
+}
+
 .project-image {
   width: 100vw;
   margin: 2rem 0;
@@ -902,7 +1139,7 @@ nav .menu-bar {
           justify-content: center;
 }
 
-.project-image .image video {
+.project-image .image {
   width: 1200px;
   height: 80%;
   margin: 0 30px;
@@ -910,7 +1147,7 @@ nav .menu-bar {
   overflow: hidden;
 }
 
-.project-image .image video img {
+.project-image .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

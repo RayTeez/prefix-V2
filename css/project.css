@@ -12,7 +12,7 @@
           justify-content: center;
 }
 
-.project-image .image video {
+.project-image .image {
   width: 1200px;
   height: 80%;
   margin: 0 30px;
@@ -20,7 +20,7 @@
   overflow: hidden;
 }
 
-.project-image .image video img {
+.project-image .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
