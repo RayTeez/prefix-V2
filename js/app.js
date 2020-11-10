@@ -11,16 +11,16 @@ var app =new Vue({
             },
             { //project02
                 title: 'Xperience Xperia',
-                year: '2019',
+                year: '2020',
                 tools: ["photoshop","illustrator","xd"],
-                projectImages: ['img/bolo/bli-logo-28.png','img/bolo/print.png','img/bolo/web.png','img/bolo/menu.png'],
+                projectImages: ['img/sony/sony-look_and_feeling.png','img/sony/sony-wireframe.png','img/sony/sony-web.png'],
                 
             },
             {
                 title: 'Cure',
                 year: '2019',
                 tools: ["photoshop","illustrator","xd"],
-                projectImages: ['img/bolo/bli-logo-28.png','img/bolo/print.png','img/bolo/web.png','img/bolo/menu.png'],
+                projectImages: ['img/cure/cure-web.png'],
                 
             },
             {
