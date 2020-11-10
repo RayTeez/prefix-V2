@@ -483,7 +483,6 @@ nav{
     }
 
 }
-
 @include media("<900px"){
 
     .project-info{
@@ -561,11 +560,17 @@ nav{
     position: absolute;
 }
 
+.next-project-tilt{
+    
+    //  
+}    
+
 .next-project{
     width: 100%;
-    height: 500px;
-    margin: 50px 0;
+    height: 60vh;
+    margin-top: 15%;
     position: relative;
+    transform: rotate(-3deg);
 
     .strap{
         height: 130px;
@@ -587,22 +592,142 @@ nav{
             
         }
     }
+    
     .arrow:nth-child(2){
         @include arrow();
         width: 200px;
         right: 10%;
-        top: -1%;
+        top: 5%;
+        transform: rotate(3deg);
+
     }
     .arrow:nth-child(3){
         @include arrow();
         width: 300px;
         left: 10%;
-        top: 55%;
-
-
+        top: 50%;
+        transform: rotate(3deg);
     }
-
-
+}
+@include media("<=1388px"){
+    .next-project{
+        width: 100%;
+        height: 60vh;
+        margin-top: 15%;
+        position: relative;
+        transform: rotate(-3deg);
+    
+        .strap{
+            height: 130px;
+            width: 250%;
+            background: $notBlack;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            transform: translate(-30%);
+            // transform: rotate(-3deg);
+            position: relative;
+            top:35%;
+    
+            p{
+                font-size:3.5rem; 
+            }
+        }
+        
+        .arrow:nth-child(2){
+            @include arrow();
+            width: 200px;
+            right: 10%;
+            top: 5%;
+    
+        }
+        .arrow:nth-child(3){
+            @include arrow();
+            width: 250px;
+            left: 10%;
+            top: 50%;
+        }
+    }  
+}
+@include media("<=900px"){
+    .next-project{
+        width: 100%;
+        height: 60vh;
+        margin-top: 15%;
+        position: relative;
+        transform: rotate(-3deg);
+    
+        .strap{
+            height: 100px;
+            width: 250%;
+            background: $notBlack;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            transform: translate(-30%);
+            // transform: rotate(-3deg);
+            position: relative;
+            top:35%;
+    
+            p{
+                font-size:2.1rem; 
+            }
+        }
+        
+        .arrow:nth-child(2){
+            @include arrow();
+            width: 120px;
+            right: 10%;
+            top: 13%;
+    
+        }
+        .arrow:nth-child(3){
+            @include arrow();
+            width: 200px;
+            left: 10%;
+            top: 50%;
+        }
+    }  
+}
+@include media("<=500px"){
+    .next-project{
+        width: 100%;
+        height: 60vh;
+        margin-top: 15%;
+        position: relative;
+        transform: rotate(-3deg);
+    
+        .strap{
+            height: 80px;
+            width: 250%;
+            background: $notBlack;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            transform: translate(-30%);
+            // transform: rotate(-3deg);
+            position: relative;
+            top:35%;
+    
+            p{
+                font-size:1.3rem; 
+            }
+        }
+        
+        .arrow:nth-child(2){
+            @include arrow();
+            width: 80px;
+            right: 10%;
+            top: 13%;
+    
+        }
+        .arrow:nth-child(3){
+            @include arrow();
+            width: 140px;
+            left: 10%;
+            top: 50%;
+        }
+    }  
 }
 
 
@@ -1052,6 +1177,7 @@ nav{
     position: fixed;
     display: flex; 
     justify-content: center;
+    mix-blend-mode: difference;
     z-index: 99;
 
     img{

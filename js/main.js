@@ -142,8 +142,8 @@ let x =gsap.to(strap,{
   scrollTrigger:{
     trigger: strap,
     toggleActions:'restart restart play',
-    markers:false,
-    end:"bottom 80%",
+    markers:true,
+    end:"bottom 87%",
     scrub:2.5,
     onEnter:() => {
       console.log('true')
@@ -164,7 +164,7 @@ let x =gsap.to(strap,{
     onEnterBack:() =>{
       document.querySelectorAll(".strap p")
       .forEach(para => {
-        para.textContent='Hol Up'
+        para.textContent='Or Not...'
       });
       
 
