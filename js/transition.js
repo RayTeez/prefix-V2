@@ -48,6 +48,7 @@ barba.init({
             const done = this.async();
 
             pageTransition();
+            
             console.log("waaiiit!!!");
             await delay(1500);
             toTop();

@@ -878,7 +878,9 @@ nav .menu-bar {
           align-items: center;
 }
 
-.about-content .about-me {
+.about-content .about-me, .about-content .myExp, .about-content .mySkills {
+  -webkit-column-gap: 13rem;
+          column-gap: 13rem;
   width: 60%;
   display: -ms-grid;
   display: grid;
@@ -886,7 +888,7 @@ nav .menu-bar {
       grid-template-columns: 1fr 2fr;
 }
 
-.about-content .about-me h3 {
+.about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
   color: #101111;
   font-family: "MuseoModerno", Montserrat, sans-serif;
   font-size: 2.5rem;
@@ -894,7 +896,7 @@ nav .menu-bar {
   line-height: 1.5;
 }
 
-.about-content .about-me p {
+.about-content .about-me p, .about-content .myExp p, .about-content .mySkills p {
   color: #101111;
   font-family: "Mukta Vaani", sans-serif;
   font-size: 1.5rem;
@@ -940,6 +942,27 @@ nav .menu-bar {
   .about-content .about-me p {
     font-size: 1.1rem;
   }
+}
+
+.myExp .timeline, .myExp .skill, .mySkills .timeline, .mySkills .skill {
+  color: #101111;
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1;
+  position: relative;
+  top: -20px;
+}
+
+.myExp .timeline li, .myExp .skill li, .mySkills .timeline li, .mySkills .skill li {
+  margin: 20px;
+}
+
+.myExp .timeline .time, .myExp .skill .time, .mySkills .timeline .time, .mySkills .skill .time {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-size: 1rem;
 }
 
 .contacts {

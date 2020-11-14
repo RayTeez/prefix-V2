@@ -560,10 +560,10 @@ nav{
     position: absolute;
 }
 
-.next-project-tilt{
+// .next-project-tilt{
     
-    //  
-}    
+//     //  
+// }    
 
 .next-project{
     width: 100%;
@@ -953,7 +953,9 @@ nav{
     justify-content: center;
     align-items: center;
 
-    .about-me{
+
+    .about-me, .myExp, .mySkills{
+        column-gap: 13rem;
         width: 60%;
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -973,6 +975,7 @@ nav{
             font-size:1.5rem; 
             line-height: 1.5;  
         }
+
     }
 
     @include media("<=1388px"){
@@ -1017,6 +1020,29 @@ nav{
         } 
     }
 
+}
+
+.myExp, .mySkills{
+    
+    .timeline, .skill{
+        color: $notBlack;
+        font-family: $smallFont; 
+        font-size:2.5rem; 
+        line-height: 1; 
+        position: relative;
+        top: -20px;
+        
+        li{
+            margin:20px;
+        }
+        
+        .time{
+            width: max-content;
+            font-family: $theFont;
+            font-size:1rem; 
+
+        }
+    }
 }
 
 //--------Contacts-----------
