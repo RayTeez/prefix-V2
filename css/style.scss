@@ -953,7 +953,6 @@ nav{
     justify-content: center;
     align-items: center;
 
-
     .about-me, .myExp, .mySkills{
         column-gap: 13rem;
         width: 60%;
@@ -1022,12 +1021,16 @@ nav{
 
 }
 
+.about-cont{
+    height: 60vh;
+}
+
 .myExp, .mySkills{
     
     .timeline, .skill{
         color: $notBlack;
         font-family: $smallFont; 
-        font-size:2.5rem; 
+        font-size:2.2rem; 
         line-height: 1; 
         position: relative;
         top: -20px;
@@ -1179,6 +1182,11 @@ nav{
     background: $notBlack;
     position: absolute;
     // mix-blend-mode: difference;
+}
+
+// line 
+hr{
+    width: 80%;
 }
 
 // scroll- wheel

@@ -944,10 +944,14 @@ nav .menu-bar {
   }
 }
 
+.about-cont {
+  height: 60vh;
+}
+
 .myExp .timeline, .myExp .skill, .mySkills .timeline, .mySkills .skill {
   color: #101111;
   font-family: "Mukta Vaani", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   line-height: 1;
   position: relative;
   top: -20px;
@@ -1082,6 +1086,10 @@ nav .menu-bar {
   height: 20px;
   background: #101111;
   position: absolute;
+}
+
+hr {
+  width: 80%;
 }
 
 .scroll-wheel {
