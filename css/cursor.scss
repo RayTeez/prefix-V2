@@ -1,0 +1,30 @@
+.hover-this {
+    transition: all 0.3s ease;
+}
+
+.hoverthis span {
+    display: inline-block;
+    pointer-events: none;
+    // transition: transform 0.1s linear;
+
+}
+
+.hoverthis a span:hover{
+    color:grey ;
+}
+
+
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    padding: 0.3rem;
+    background-color: #fff;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: transform 0.2s ease;
+    z-index: 5555;
+}
+
+.hover-this:hover ~ .cursor {
+    transform: translate(-50%, -50%) scale(8);
+}

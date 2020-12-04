@@ -68,17 +68,18 @@ nav {
   width: 100vw;
   height: 10vh;
   margin: auto;
-  padding: 10px;
+  padding: 5% 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
+  position: fixed;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 999;
   font-family: "MuseoModerno", Montserrat, sans-serif;
 }
 
@@ -88,13 +89,23 @@ nav .logo-name {
 
 nav .logo {
   height: auto;
-  width: 60px;
+  width: 50px;
 }
 
 nav .menu-bar {
   width: 100px;
-  height: 95%;
-  background-color: blue;
+  font-size: 2rem;
+  -webkit-text-decoration-style: none;
+          text-decoration-style: none;
+}
+
+nav .menu-bar a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:visited {
+  text-decoration: none;
 }
 
 .main-cont {
@@ -530,11 +541,16 @@ nav .menu-bar {
   top: 35%;
 }
 
+.next-project .strap a {
+  text-decoration: none;
+}
+
 .next-project .strap p {
   color: #eeeeee;
   font-family: Helvetica, sans-serif;
   font-size: 4.5rem;
   line-height: 1.5;
+  text-decoration: none;
 }
 
 .next-project .arrow:nth-child(2) {
@@ -1069,6 +1085,13 @@ nav .menu-bar {
 .work-content .work {
   width: 60%;
   margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+}
+
+.work-content .work h3 {
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .work-content .work .project_btn {
@@ -1079,6 +1102,14 @@ nav .menu-bar {
 .work-content .work a {
   text-decoration: none;
   will-change: auto;
+}
+
+.skewable, .hoverthis {
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  will-change: transform;
 }
 
 .cursor {

@@ -24,11 +24,12 @@ $smallFont: 'Mukta Vaani', sans-serif;
     width: 100vw;
     height: 10vh;
     margin: auto;
-    padding:10px;
+    padding:5% 5% ;
     display: flex;
-    position: absolute;
+    position: fixed;
     justify-content: space-between;
     align-items: center; 
+    z-index: 999;
 
 }
 
@@ -68,17 +69,26 @@ nav{
 
     .logo{
         height: auto;
-        width: 60px;
+        width: 50px;
           
     }
 
     .menu-bar{
         
         width: 100px;
-        height: 95%;
-        background-color: blue;
+        font-size: 2rem;
         
+        text-decoration-style: none;
+        
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
     }
+    a:visited {
+        text-decoration: none;
+      }
 
 }
 
@@ -584,11 +594,16 @@ nav{
         position: relative;
         top:35%;
 
+        a{
+         text-decoration: none;   
+        }
+
         p{
             color: $notWhite;
             font-family: Helvetica, sans-serif;
             font-size:4.5rem; 
             line-height: 1.5;  
+         text-decoration: none;   
             
         }
     }
@@ -1156,6 +1171,11 @@ nav{
     .work{
         width: 60%;
         margin: 0 auto;
+        display: grid;
+
+        h3{
+            justify-self: center;
+        }
         
         .project_btn{
             margin: 50px 0 ;
@@ -1173,6 +1193,15 @@ nav{
 
 
 // components
+
+//skewable
+
+.skewable , .hoverthis{
+    transition: transform 0.25s;
+	will-change: transform;
+}
+
+
 
 //cursor
 

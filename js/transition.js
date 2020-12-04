@@ -42,6 +42,25 @@ function delay(n){
 barba.init({
     sync:true,
 
+    views: [{
+        namespace: 'project',
+        beforeEnter(data) {
+            app();
+            console.log("it works very very well");
+        }
+          // do something before leaving the current `index` namespace
+    },{   
+        namespace: 'services' ,
+        beforeEnter(data) {
+            Images.rotation();
+            console.log("about page very very well");
+          // do something before leaving the current `index` namespace
+        }
+    }], 
+
+
+
+
     transitions:[{
 
         async leave(data){
