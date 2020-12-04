@@ -10,6 +10,7 @@ ul.transition {
   left: 0;
   margin: 0;
   pointer-events: none;
+  z-index: 9999;
 }
 
 ul.transition li {

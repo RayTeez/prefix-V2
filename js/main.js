@@ -1,5 +1,7 @@
 //--->> to top --
 
+
+
 const toTop= ()=>{
 
   var body = document.body; // For Safari
@@ -18,9 +20,10 @@ const toTop= ()=>{
 
 function pageTransition(){
 
+
   var tl =gsap.timeline();
 
-  tl.to('ul.transition li',{duration:.5, scaleY:1,transformOrigin:'buttom left', stagger: .2})
+  tl.set('ul.transition li',{duration:.5, scaleY:1,transformOrigin:'buttom left', stagger: .2})
   tl.to('ul.transition li',{duration:.5, scaleY:0,transformOrigin:'top left', stagger: .1, delay:.1})
 
 };
@@ -28,15 +31,19 @@ function pageTransition(){
 // ---->> home intro --
 
 function contentAnimation(){
-
-
+ 
   var tl = gsap.timeline();
   var rule = CSSRulePlugin.getRule(".about-hero .about_content-hero div .blinds::after"); //get the rule
 
+  const nav = document.querySelector('nav');
 
-  tl.from('.anim1', {  duration:1, y:50,stagger:0.})
+  tl
+    .from('.anim1', {  duration:1, y:50,stagger:0.})
     .to(rule,{cssRule:{scaleY:0},duration:1})
-    .to(rule, {duration: 2, cssRule: {scaleY:0}},'=-2');
+    .to(rule, {duration: 2, cssRule: {scaleY:0}},'=-2')
+    .to(nav,{duration:0.3, y:0})
+    .set('.scroll-wheel',{autoAlpha:0},0)
+    .from('.scroll-wheel',{autoAlpha:0,duration:1 })
      
 };
 
@@ -53,7 +60,7 @@ let x =gsap.to(strap,{
   scrollTrigger:{
     trigger: strap,
     toggleActions:'restart restart play',
-    markers:true,
+    markers:false,
     end:"bottom 87%",
     scrub:2.5,
     onEnter:() => {
@@ -218,7 +225,7 @@ function heroImage(){
 
 
 window.onload = () => { 
- 
+
 toTop();
  
 if (window.document.title == 'Home'){    // ------<< fix

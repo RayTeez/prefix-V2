@@ -81,6 +81,8 @@ nav {
           align-items: center;
   z-index: 999;
   font-family: "MuseoModerno", Montserrat, sans-serif;
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
 }
 
 nav .logo-name {
@@ -523,6 +525,10 @@ nav a:visited {
           transform: rotate(-3deg);
 }
 
+.next-project a {
+  text-decoration: none;
+}
+
 .next-project .strap {
   height: 130px;
   width: 250%;
@@ -539,10 +545,6 @@ nav a:visited {
           transform: translate(-30%);
   position: relative;
   top: 35%;
-}
-
-.next-project .strap a {
-  text-decoration: none;
 }
 
 .next-project .strap p {

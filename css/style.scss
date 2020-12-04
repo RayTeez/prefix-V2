@@ -59,6 +59,7 @@ $smallFont: 'Mukta Vaani', sans-serif;
 nav{
     @include navi;
     font-family: $theFont;
+    transform: translateY(-200px);
     
 
     .logo-name{
@@ -582,6 +583,10 @@ nav{
     position: relative;
     transform: rotate(-3deg);
 
+    a{
+        text-decoration: none;   
+    }
+
     .strap{
         height: 130px;
         width: 250%;
@@ -594,16 +599,14 @@ nav{
         position: relative;
         top:35%;
 
-        a{
-         text-decoration: none;   
-        }
+
 
         p{
             color: $notWhite;
             font-family: Helvetica, sans-serif;
             font-size:4.5rem; 
             line-height: 1.5;  
-         text-decoration: none;   
+            text-decoration: none;   
             
         }
     }
@@ -1226,6 +1229,7 @@ hr{
     position: relative;
     display: flex; 
     justify-content: center;
+    // opacity: 0;
     
     img{
         position: absolute;
