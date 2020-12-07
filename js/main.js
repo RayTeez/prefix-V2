@@ -175,10 +175,13 @@ if(window.document.title=='Cure'||window.document.title=='Sony'||window.document
   })}
 
   function f() {
-    viewNextTitle= document.querySelector('.strap').parentElement.href.split("/")[3].split(".")[0]
+    const nextData = document.querySelector("body");
 
+    viewNextTitle= document.querySelector('.strap').parentElement.href.split("/")[3].split(".")[0]
+    
     viewNextProject.forEach(para => {
-    para.textContent=viewNextTitle.charAt(0).toUpperCase() + viewNextTitle.slice(1);
+
+    para.textContent= nextData.getAttribute("data-name");
   })}
 }
 
@@ -317,7 +320,7 @@ let currentPixel = window.pageYOffset
 const looper = function () {
   const newPixel = window.pageYOffset;
   const diff = newPixel - currentPixel
-  const speed = diff * 0.35;
+  const speed = diff * 0.15;
   
   section.style.transform = "skewY(" + speed + "deg)"
   
