@@ -175,13 +175,10 @@ if(window.document.title=='Cure'||window.document.title=='Sony'||window.document
   })}
 
   function f() {
-    const nextData = document.querySelector("body");
-
     viewNextTitle= document.querySelector('.strap').parentElement.href.split("/")[3].split(".")[0]
-    
-    viewNextProject.forEach(para => {
 
-    para.textContent= nextData.getAttribute("data-name");
+    viewNextProject.forEach(para => {
+    para.textContent=viewNextTitle.charAt(0).toUpperCase() + viewNextTitle.slice(1);
   })}
 }
 
@@ -320,7 +317,7 @@ let currentPixel = window.pageYOffset
 const looper = function () {
   const newPixel = window.pageYOffset;
   const diff = newPixel - currentPixel
-  const speed = diff * 0.15;
+  const speed = diff * 0.35;
   
   section.style.transform = "skewY(" + speed + "deg)"
   
