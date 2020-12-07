@@ -133,15 +133,17 @@ tll.to(heroImg,{
   height:"50px"
 });
 
-tll.to(heroTitle[0],{
-  duration:5,
-  x:-1000
-},'-=5');
 
-tll.to(heroTitle[1],{
-  duration:5,
-  x:1000
-},'-=5');
+  tll.to(heroTitle[0],{
+    duration:5,
+    x:-1000
+  },'-=5');
+
+
+  tll.to(heroTitle[1],{
+    duration:5,
+    x:1000
+  },'-=5');
 
 
 // scrollTrigger.addEventListener("scrollStart", () => console.log("scrolling started!"));
@@ -187,13 +189,13 @@ if(window.document.title=='Cure'||window.document.title=='Sony'||window.document
 
 // --->> project intro ---
 
-const hideTextTop = () => gsap.set('.hero-title.top',{
-  xPercent: -130,
-});
-const hideTextBottom = () => gsap.set('.hero-title.bottom',{
-  xPercent: 130,
+// const hideTextTop = () => gsap.set('.hero-title.top',{
+//   xPercent: -130,
+// });
+// const hideTextBottom = () => gsap.set('.hero-title.bottom',{
+//   xPercent: 130,
 
-});
+// });
 
 
 function showText(){
@@ -207,7 +209,14 @@ function showText(){
 
 }
 
-showText();
+if (window.innerHeight >= 960) {
+  showText();
+  console.log("it can move on scroll");
+}
+else{
+  
+  console.log("it cannot move on scroll bruh");
+}
 
 // function initLoad(){
 

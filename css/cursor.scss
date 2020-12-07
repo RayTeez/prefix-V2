@@ -28,3 +28,11 @@
 .hover-this:hover ~ .cursor {
     transform: translate(-50%, -50%) scale(8);
 }
+
+@include media("<=900px"){
+
+    .cursor {
+        display: none;
+    }
+
+}

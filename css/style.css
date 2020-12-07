@@ -57,6 +57,11 @@ table {
   border-spacing: 0;
 }
 
+button:focus {
+  border: none;
+  outline: none;
+}
+
 @font-face {
   font-family: 'play';
   src: url("../fonts/ PublicaPlay.otf");
@@ -111,6 +116,12 @@ nav .menu-bar a {
 
 nav a:visited {
   text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  nav {
+    height: auto;
+  }
 }
 
 .main-cont {
@@ -468,8 +479,9 @@ nav a:visited {
         grid-template-columns: 1fr  1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-    -webkit-column-gap: 4rem;
-            column-gap: 4rem;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+    overflow: visible;
   }
   .project-info .project-title {
     -ms-grid-column: 1;
@@ -825,6 +837,7 @@ nav a:visited {
     display: flex;
   }
   .about-hero .about_content-hero div:nth-child(2) div {
+    display: none;
     top: 160px;
     left: 350px;
   }
@@ -872,6 +885,18 @@ nav a:visited {
     width: 600px;
     top: 0;
     left: 0;
+  }
+  .about-hero .about_content-hero div .blinds::after {
+    display: none;
+    content: '';
+    width: 100%;
+    height: 0;
+    background-color: #eeeeee;
+    position: absolute;
+    left: 0;
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    z-index: 1;
   }
   .about-hero .about_content-hero div:nth-child(2) {
     display: -webkit-box;
@@ -1109,9 +1134,18 @@ nav a:visited {
   background-color: #eeeeee;
 }
 
+.work-content .work:focus {
+  outline: none;
+}
+
 .work-content .work a {
   text-decoration: none;
   will-change: auto;
+}
+
+button:focus {
+  border: none;
+  outline: none;
 }
 
 .skewable, .hoverthis {
@@ -1120,6 +1154,10 @@ nav a:visited {
   transition: transform 0.25s;
   transition: transform 0.25s, -webkit-transform 0.25s;
   will-change: transform;
+}
+
+.contain-next {
+  overflow: hidden;
 }
 
 .cursor {
@@ -1171,6 +1209,14 @@ hr {
   top: 50px;
 }
 
+@media (max-width: 700px) {
+  .close-button img {
+    position: absolute;
+    width: 60px;
+    top: 50px;
+  }
+}
+
 .side-arrow {
   width: 300px;
   position: fixed;
@@ -1217,6 +1263,7 @@ hr {
 }
 
 .project_btn :focus {
+  outline: none;
   border: none;
 }
 
