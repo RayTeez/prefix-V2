@@ -58,6 +58,11 @@ $smallFont: 'Mukta Vaani', sans-serif;
 
 nav{
     @include navi;
+    background: rgb(238,238,238);
+background: -moz-linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 60%, rgba(238,238,238,0) 96%);
+background: -webkit-linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 60%, rgba(238,238,238,0) 96%);
+background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 60%, rgba(238,238,238,0) 96%);
+
     font-family: $theFont;
     transform: translateY(-200px);
     
@@ -996,13 +1001,15 @@ nav{
     }
 
     @include media("<=1388px"){
-        .about-me{
+        .about-me, .myExp, .mySkills{
             width: 70%;
+            column-gap: 8rem;
         }
     } 
     @include media("<=900px"){
-        .about-me{
+        .about-me, .myExp, .mySkills{
             width: 80%;
+            column-gap: 1rem;
     
             h3{
                 color: $notBlack;
@@ -1022,13 +1029,14 @@ nav{
         }    
     }
     @include media("<=500px"){
-        .about-me{
+        .about-me, .myExp, .mySkills{
             width: 60%;
             display: grid;
             grid-template-columns: 1fr;
     
             h3{
                 font-size:2rem; 
+                margin-bottom:1.5rem;
             }
     
             p{
