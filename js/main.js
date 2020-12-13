@@ -345,4 +345,55 @@ const looper = function () {
 
 //------->> wheel spin
 
+const wheel =document.querySelector('.scroll-wheel img');
+
+gsap.to(wheel,
+
+
+  {rotation: 360,
+  duration: 10,
+  ease: "none",
+  repeat:-1
+
+});
+
 //------->> arrow flip
+
+const toTopButton =document.querySelector(".side-arrow");
+const viewedContent =document.querySelector('.project-info');
+
+gsap.to(".side-arrow",
+{
+  scrollTrigger:{
+    trigger: ".hero-image",
+    toggleActions:" play none reverse reverse",
+    start: " top center",
+    end: "90% center",
+    onEnter:()=>{
+      if(window.document.title=='Cure'||window.document.title=='Sony'||window.document.title=='Bolobedu'||window.document.title=='Open App'){
+      toTopButton.addEventListener('click', backToTop);
+      }
+    },
+  },
+  rotation: 180,
+  ease: "back.out(1.7)",
+  duration: 1,
+
+});
+
+// press to top 
+
+function backToTop() {
+  if (window.pageYOffset > 0) {
+    window.scrollBy(0, -80);
+    setTimeout(backToTop, 0);
+  }
+}
+
+function ToContent() {
+
+    window.scrollTo(0, viewedContent.offsetTop);
+    setTimeout(ToContent, 0);
+  }
+
+
