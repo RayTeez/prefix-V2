@@ -240,7 +240,7 @@ window.onload = () => {
 
 toTop();
  
-if (window.document.title == 'Home'){    // ------<< fix
+if (window.document.title == '🙃Thomas Mosito'){    // ------<< fix
   pageTransition(); 
   setTimeout(function () {
   contentAnimation()},2000)
@@ -254,7 +254,7 @@ if (window.document.title == 'Home'){    // ------<< fix
 const hoverImg =document.querySelector(".movewithmouse");
 const hoverCont =document.querySelector(".anim1 h2");
 
-if(window.document.title=='Home'){  // ------<< fix
+if(window.document.title=='🙃Thomas Mosito'){  // ------<< fix
 
   hoverCont.addEventListener("mousemove", function(e){
     if (window.innerWidth > 960) {
@@ -339,11 +339,10 @@ const looper = function () {
   requestAnimationFrame(looper)
 }
 
-// for (let index = 0; index < section.length; index++) {
-
   looper();
-// }
-// section.forEach(section => {looper()});
 
 
 
+//------->> wheel spin
+
+//------->> arrow flip

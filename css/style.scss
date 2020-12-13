@@ -315,9 +315,12 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
     .project-hero{
 
         .hero-title{
+             z-index: 999;  
+
     
             h2{
-                font-size: 10rem;       
+                font-size: 10rem; 
+                 
             }
     
             &:nth-child(1){
@@ -345,7 +348,8 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
         .hero-title{
     
             h2{
-                font-size: 6rem;       
+                font-size: 6rem; 
+                   
             }
     
             &:nth-child(1){
@@ -979,6 +983,10 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
             
                 // height: 60vh;
                 display: flex;
+
+                h2 > span:first-child{
+                    line-height: 1;
+                }
     
     
                 div{
@@ -1179,6 +1187,22 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
                 font-size:2.2rem; 
 
             }
+            .follow-me {
+                ul{
+                    width: 100%;
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+            }
+            .follow-me > p{
+                display: none;
+
+            }
+
+
+
     
         }    
     }
@@ -1288,6 +1312,14 @@ hr{
         top:-90px
     }
 }
+@include media("<=600px"){
+    .scroll-wheel{
+        display: none;
+    }
+     
+}
+
+
 
 .close-button{
     height: 10px;

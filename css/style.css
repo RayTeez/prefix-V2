@@ -326,6 +326,9 @@ nav a:visited {
 }
 
 @media (max-width: 700px) {
+  .project-hero .hero-title {
+    z-index: 999;
+  }
   .project-hero .hero-title h2 {
     font-size: 10rem;
   }
@@ -903,6 +906,9 @@ nav a:visited {
     display: -ms-flexbox;
     display: flex;
   }
+  .about-hero .about_content-hero div:nth-child(2) h2 > span:first-child {
+    line-height: 1;
+  }
   .about-hero .about_content-hero div:nth-child(2) div {
     top: 120px;
     left: 250px;
@@ -1094,6 +1100,19 @@ nav a:visited {
   .contacts .contacts-cont a {
     font-size: 2.2rem;
   }
+  .contacts .contacts-cont .follow-me ul {
+    width: 100%;
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contacts .contacts-cont .follow-me > p {
+    display: none;
+  }
 }
 
 .work-content {
@@ -1187,6 +1206,12 @@ hr {
   position: absolute;
   width: 200px;
   top: -90px;
+}
+
+@media (max-width: 600px) {
+  .scroll-wheel {
+    display: none;
+  }
 }
 
 .close-button {
