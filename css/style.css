@@ -1050,7 +1050,7 @@ nav a:visited {
 .contacts .contacts-cont a {
   color: #101111;
   font-family: "MuseoModerno", Montserrat, sans-serif;
-  font-size: 6.5rem;
+  font-size: 4.5rem;
   line-height: 1.5;
   color: #101111;
   text-decoration: none;
@@ -1077,13 +1077,13 @@ nav a:visited {
 
 @media (max-width: 1388px) {
   .contacts .contacts-cont a {
-    font-size: 5.5rem;
+    font-size: 4.0rem;
   }
 }
 
 @media (max-width: 900px) {
   .contacts .contacts-cont a {
-    font-size: 3.8rem;
+    font-size: 2.8rem;
   }
   .contacts .contacts-cont .follow-me {
     width: 100%;

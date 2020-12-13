@@ -383,6 +383,10 @@ gsap.to(".side-arrow",
 
 // press to top 
 
+const logo = document.querySelector('.logo');
+
+logo.addEventListener('click',backToTop);
+
 function backToTop() {
   if (window.pageYOffset > 0) {
     window.scrollBy(0, -80);
