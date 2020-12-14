@@ -385,7 +385,7 @@ gsap.to(".side-arrow",
 
 const logo = document.querySelector('.logo');
 
-logo.addEventListener('click',backToTop);
+// logo.addEventListener('click',backToTop);
 
 function backToTop() {
   if (window.pageYOffset > 0) {
