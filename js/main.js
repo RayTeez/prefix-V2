@@ -115,26 +115,16 @@ const heroTitle = document.querySelectorAll('.hero-title');
 let tll =gsap.timeline({
   scrollTrigger:{
     trigger: heroImg, 
-    toggleActions:'restart restart play',
     markers:false,
     start: "top 40%",
     scrub:0.5,
 
-
-    onEnter:() => {
-      console.log('true')
-
-      document.querySelectorAll(".strap p")
-      .forEach(para => {
-        para.textContent='View Next'
-      });
-    }
   }
 });
 
 tll.to(heroImg,{
   duration:5,
-  height:"50px"
+  height:"60%"
 });
 
 
@@ -150,7 +140,7 @@ tll.to(heroImg,{
   },'-=5');
 
 
-let tl = gsap.timeline({delay: 1.5});
+let tl = gsap.timeline({delay: 0.5});
     
 tl.to(heroImg, {
     // x: 100,
@@ -194,15 +184,17 @@ if(window.document.title=='Cure'||window.document.title=='Sony'||window.document
 function showText(){
   var tl = gsap.timeline();
 
-  tl.from('.hero-image',1,{height:0, duration:0.7, ease:'power1.out', onComplete: () => scrollHero()}),
+
+
+  tl.from('.hero-image',1,{height:0, duration:0.7, ease:'power1.out'}),
   tl.to('.hero-title.top', {xPercent:0,duration:0.7, ease:'power2.out'}),
   tl.to('.hero-title.bottom', {xPercent:0,duration:0.7, ease:'power2.out'},'-=0.5'),
   tl.from('.side-arrow', {autoAlpha:0, yPercent:-10,duration:1.5, ease: Elastic.easeOut.config(1, 0.3)},'-=0.5')
   
-
+  scrollHero();
 }
 
-if (window.innerHeight >= 960) {
+if (window.innerWidth >= 960) {
   showText();
   console.log("it can move on scroll");
 }
