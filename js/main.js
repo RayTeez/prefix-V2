@@ -146,8 +146,6 @@ tll.to(heroImg,{
   },'-=5');
 
 
-// scrollTrigger.addEventListener("scrollStart", () => console.log("scrolling started!"));
-
 let tl = gsap.timeline({delay: 1.5});
     
 tl.to(heroImg, {
@@ -187,15 +185,6 @@ if(window.document.title=='Cure'||window.document.title=='Sony'||window.document
   })}
 }
 
-// --->> project intro ---
-
-// const hideTextTop = () => gsap.set('.hero-title.top',{
-//   xPercent: -130,
-// });
-// const hideTextBottom = () => gsap.set('.hero-title.bottom',{
-//   xPercent: 130,
-
-// });
 
 
 function showText(){
@@ -218,16 +207,6 @@ else{
   console.log("it cannot move on scroll bruh");
 }
 
-// function initLoad(){
-
-//   var tl = gsap.timeline();
-//   var rule = CSSRulePlugin.getRule(".about-hero .about_content-hero div span::after"); //get the rule
-
-
-//   tl.from('.anim1', { opacity:0, duration:1, y:"50px"})
-//     .to(rule,{cssRule:{scaleY:0},duration:1},"-=3")
-//     .to(rule, {duration: 2, cssRule: {scaleY:0}},"-=4");
-// };
 
 function heroImage(){
   var tl = gsap.timeline();
