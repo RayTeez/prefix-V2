@@ -38,15 +38,19 @@ function contentAnimation(){
   const nav = document.querySelector('nav');
 
   tl
+  
     .from('.anim1', {  duration:1, y:50,stagger:0.})
     .to(rule,{cssRule:{scaleY:0},duration:1})
-    .to(rule, {duration: 2, cssRule: {scaleY:0}},'=-2')
-    .to(nav,{duration:0.3, y:0})
-    .set('.scroll-wheel',{autoAlpha:0},0)
-    .from('.scroll-wheel',{autoAlpha:0,duration:1 })
+    .to(rule, {duration: 2, cssRule: {scaleY:0},onComplete: () => showImg()},'=-2')
+    .to(nav,{duration:0.3, y:0},'=-1')
+    .to('.scroll-wheel',{opacity:1,duration:0.5 })
      
 };
 
+
+function showImg(){
+  hoverImg.classList.add('show');
+} 
 
 // --->> project stuff -- 
 

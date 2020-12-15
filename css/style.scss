@@ -437,7 +437,7 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
 
             p{  width:90px;
                 font-size: 1rem;
-                margin: 10px;
+                margin: 0 auto;
                 padding: 20px 1px;
                 background-color: greenyellow;
                 border-radius: 50px;
@@ -1258,6 +1258,14 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
 
 // components
 
+.movewithmouse{
+    visibility: hidden;
+}
+
+.show{
+    visibility:visible;
+}
+
 
 // button 
 
@@ -1305,7 +1313,7 @@ hr{
     position: relative;
     display: flex; 
     justify-content: center;
-    // opacity: 0;
+    opacity: 0;
     
     img{
         position: absolute;

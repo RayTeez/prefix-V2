@@ -425,7 +425,7 @@ nav a:visited {
 .project-info .project-year p {
   width: 90px;
   font-size: 1rem;
-  margin: 10px;
+  margin: 0 auto;
   padding: 20px 1px;
   background-color: greenyellow;
   border-radius: 50px;
@@ -1163,6 +1163,14 @@ nav a:visited {
   will-change: auto;
 }
 
+.movewithmouse {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
 button:focus {
   border: none;
   outline: none;
@@ -1201,6 +1209,7 @@ hr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  opacity: 0;
 }
 
 .scroll-wheel img {
