@@ -38,15 +38,19 @@ function contentAnimation(){
   const nav = document.querySelector('nav');
 
   tl
+  
     .from('.anim1', {  duration:1, y:50,stagger:0.})
     .to(rule,{cssRule:{scaleY:0},duration:1})
-    .to(rule, {duration: 2, cssRule: {scaleY:0}},'=-2')
-    .to(nav,{duration:0.3, y:0})
-    .set('.scroll-wheel',{autoAlpha:0},0)
-    .from('.scroll-wheel',{autoAlpha:0,duration:1 })
+    .to(rule, {duration: 2, cssRule: {scaleY:0},onComplete: () => showImg()},'=-2')
+    .to(nav,{duration:0.3, y:0},'=-1')
+    .to('.scroll-wheel',{opacity:1,duration:0.5 })
      
 };
 
+
+function showImg(){
+  hoverImg.classList.add('show');
+} 
 
 // --->> project stuff -- 
 
@@ -111,26 +115,16 @@ const heroTitle = document.querySelectorAll('.hero-title');
 let tll =gsap.timeline({
   scrollTrigger:{
     trigger: heroImg, 
-    toggleActions:'restart restart play',
     markers:false,
     start: "top 40%",
     scrub:0.5,
 
-
-    onEnter:() => {
-      console.log('true')
-
-      document.querySelectorAll(".strap p")
-      .forEach(para => {
-        para.textContent='View Next'
-      });
-    }
   }
 });
 
 tll.to(heroImg,{
   duration:5,
-  height:"50px"
+  height:"60%"
 });
 
 
@@ -146,9 +140,7 @@ tll.to(heroImg,{
   },'-=5');
 
 
-// scrollTrigger.addEventListener("scrollStart", () => console.log("scrolling started!"));
-
-let tl = gsap.timeline({delay: 1.5});
+let tl = gsap.timeline({delay: 0.5});
     
 tl.to(heroImg, {
     // x: 100,
@@ -187,29 +179,22 @@ if(window.document.title=='Cure'||window.document.title=='Sony'||window.document
   })}
 }
 
-// --->> project intro ---
-
-// const hideTextTop = () => gsap.set('.hero-title.top',{
-//   xPercent: -130,
-// });
-// const hideTextBottom = () => gsap.set('.hero-title.bottom',{
-//   xPercent: 130,
-
-// });
 
 
 function showText(){
   var tl = gsap.timeline();
 
-  tl.from('.hero-image',1,{height:0, duration:0.7, ease:'power1.out', onComplete: () => scrollHero()}),
+
+
+  tl.from('.hero-image',1,{height:0, duration:0.7, ease:'power1.out'}),
   tl.to('.hero-title.top', {xPercent:0,duration:0.7, ease:'power2.out'}),
   tl.to('.hero-title.bottom', {xPercent:0,duration:0.7, ease:'power2.out'},'-=0.5'),
   tl.from('.side-arrow', {autoAlpha:0, yPercent:-10,duration:1.5, ease: Elastic.easeOut.config(1, 0.3)},'-=0.5')
   
-
+  scrollHero();
 }
 
-if (window.innerHeight >= 960) {
+if (window.innerWidth >= 960) {
   showText();
   console.log("it can move on scroll");
 }
@@ -218,16 +203,6 @@ else{
   console.log("it cannot move on scroll bruh");
 }
 
-// function initLoad(){
-
-//   var tl = gsap.timeline();
-//   var rule = CSSRulePlugin.getRule(".about-hero .about_content-hero div span::after"); //get the rule
-
-
-//   tl.from('.anim1', { opacity:0, duration:1, y:"50px"})
-//     .to(rule,{cssRule:{scaleY:0},duration:1},"-=3")
-//     .to(rule, {duration: 2, cssRule: {scaleY:0}},"-=4");
-// };
 
 function heroImage(){
   var tl = gsap.timeline();
@@ -240,7 +215,7 @@ window.onload = () => {
 
 toTop();
  
-if (window.document.title == 'Home'){    // ------<< fix
+if (window.document.title == '🙃Thomas Mosito'){    // ------<< fix
   pageTransition(); 
   setTimeout(function () {
   contentAnimation()},2000)
@@ -254,7 +229,7 @@ if (window.document.title == 'Home'){    // ------<< fix
 const hoverImg =document.querySelector(".movewithmouse");
 const hoverCont =document.querySelector(".anim1 h2");
 
-if(window.document.title=='Home'){  // ------<< fix
+if(window.document.title=='🙃Thomas Mosito'){  // ------<< fix
 
   hoverCont.addEventListener("mousemove", function(e){
     if (window.innerWidth > 960) {
@@ -339,11 +314,65 @@ const looper = function () {
   requestAnimationFrame(looper)
 }
 
-// for (let index = 0; index < section.length; index++) {
-
   looper();
-// }
-// section.forEach(section => {looper()});
 
+
+
+//------->> wheel spin
+
+const wheel =document.querySelector('.scroll-wheel img');
+
+gsap.to(wheel,
+
+
+  {rotation: 360,
+  duration: 10,
+  ease: "none",
+  repeat:-1
+
+});
+
+//------->> arrow flip
+
+const toTopButton =document.querySelector(".side-arrow");
+const viewedContent =document.querySelector('.project-info');
+
+gsap.to(".side-arrow",
+{
+  scrollTrigger:{
+    trigger: ".hero-image",
+    toggleActions:" play none reverse reverse",
+    start: " top center",
+    end: "90% center",
+    onEnter:()=>{
+      if(window.document.title=='Cure'||window.document.title=='Sony'||window.document.title=='Bolobedu'||window.document.title=='Open App'){
+      toTopButton.addEventListener('click', backToTop);
+      }
+    },
+  },
+  rotation: 180,
+  ease: "back.out(1.7)",
+  duration: 1,
+
+});
+
+// press to top 
+
+const logo = document.querySelector('.logo');
+
+// logo.addEventListener('click',backToTop);
+
+function backToTop() {
+  if (window.pageYOffset > 0) {
+    window.scrollBy(0, -80);
+    setTimeout(backToTop, 0);
+  }
+}
+
+function ToContent() {
+
+    window.scrollTo(0, viewedContent.offsetTop);
+    setTimeout(ToContent, 0);
+  }
 
 

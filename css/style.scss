@@ -230,7 +230,7 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
 
     .hero-image{
         width: 50%;
-        height: 100%;
+        height: 0%;
         position: relative;
         top: 40%;
         left: 50%;
@@ -276,8 +276,8 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
         }
     
         .hero-image{
-            width: 60%;
-            height: 90%;
+            width: 0%;
+            height: 50%;
             top: 35%;
 
         }
@@ -315,9 +315,12 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
     .project-hero{
 
         .hero-title{
+             z-index: 999;  
+
     
             h2{
-                font-size: 10rem;       
+                font-size: 10rem; 
+                 
             }
     
             &:nth-child(1){
@@ -345,7 +348,8 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
         .hero-title{
     
             h2{
-                font-size: 6rem;       
+                font-size: 4.8rem; 
+                   
             }
     
             &:nth-child(1){
@@ -433,7 +437,7 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
 
             p{  width:90px;
                 font-size: 1rem;
-                margin: 10px;
+                margin: 0 auto;
                 padding: 20px 1px;
                 background-color: greenyellow;
                 border-radius: 50px;
@@ -756,6 +760,7 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
         }
         .arrow:nth-child(3){
             @include arrow();
+            display: none;
             width: 140px;
             left: 10%;
             top: 50%;
@@ -979,6 +984,10 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
             
                 // height: 60vh;
                 display: flex;
+
+                h2 > span:first-child{
+                    line-height: 1;
+                }
     
     
                 div{
@@ -1119,7 +1128,7 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
         a{
             color: $notBlack;
             font-family: $theFont; 
-            font-size:6.5rem; 
+            font-size:4.5rem; 
             line-height: 1.5; 
             color: $notBlack;
             text-decoration: none; 
@@ -1150,7 +1159,7 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
         .contacts-cont{
 
             a{
-                font-size:5.5rem; 
+                font-size:4.0rem; 
 
             }
     
@@ -1160,7 +1169,7 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
         .contacts-cont{
 
             a{
-                font-size:3.8rem; 
+                font-size:2.8rem; 
 
             }
             .follow-me{
@@ -1179,6 +1188,22 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
                 font-size:2.2rem; 
 
             }
+            .follow-me {
+                ul{
+                    width: 100%;
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+            }
+            .follow-me > p{
+                display: none;
+
+            }
+
+
+
     
         }    
     }
@@ -1233,6 +1258,14 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
 
 // components
 
+.movewithmouse{
+    visibility: hidden;
+}
+
+.show{
+    visibility:visible;
+}
+
 
 // button 
 
@@ -1280,7 +1313,7 @@ hr{
     position: relative;
     display: flex; 
     justify-content: center;
-    // opacity: 0;
+    opacity: 0;
     
     img{
         position: absolute;
@@ -1288,6 +1321,14 @@ hr{
         top:-90px
     }
 }
+@include media("<=600px"){
+    .scroll-wheel{
+        display: none;
+    }
+     
+}
+
+
 
 .close-button{
     height: 10px;
