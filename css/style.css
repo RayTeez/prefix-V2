@@ -1457,4 +1457,382 @@ hr {
     margin: 0 30px;
   }
 }
+
+.catagory-section {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  pointer-events: none;
+}
+
+.catagory-section h1 {
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-size: calc(100vw / 10);
+  color: mediumblue;
+  pointer-events: none;
+}
+
+.cont {
+  width: 100vw;
+}
+
+.t-project_cont {
+  -webkit-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s all;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s all;
+}
+
+.shift {
+  position: relative;
+  left: -500px;
+}
+
+.t-project {
+  width: 100vw;
+  padding-top: 90vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: (1fr)[3] 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr;
+      grid-template-rows: repeat(3, 1fr) 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 20px;
+}
+
+.box1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+.box2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: 2 / 4 / 3 / 6;
+}
+
+.box3 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: 3 / 3 / 4 / 5;
+}
+
+.box4 {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 7 / 1 / 8 / 3;
+}
+
+.box5 {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-area: 5 / 5 / 6 / 7;
+}
+
+.box6 {
+  -ms-grid-row: 9;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: 9 / 3 / 10 / 5;
+}
+
+.box4, .box2, .box6 {
+  z-index: 9;
+  margin-left: 10%;
+}
+
+.t-project li div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.t-project img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+}
+
+@media (max-width: 1000px) {
+  .t-project {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    -ms-grid-rows: (1fr)[3] 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr;
+        grid-template-rows: repeat(3, 1fr) 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr;
+  }
+  .box1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: 1 / 2 / 2 / 4;
+  }
+  .box2 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: 2 / 3 / 3 / 5;
+  }
+  .box3 {
+    -ms-grid-row: 9;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: 9 / 3 / 10 / 5;
+  }
+  .box4 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: 3 / 2 / 4 / 4;
+  }
+  .box5 {
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: 7 / 1 / 8 / 3;
+  }
+  .box6 {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 2;
+    grid-area: 5 / 4 / 6 / 6;
+  }
+  .box4, .box2, .box6 {
+    z-index: 9;
+  }
+  .t-project img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .t-project_cont {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .t-project {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .box4, .box2, .box6 {
+    z-index: 9;
+  }
+  .t-project img {
+    width: 100%;
+  }
+  .project_name {
+    height: 50px;
+    width: calc(100% - 300px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+  }
+  .project_name :focus {
+    outline: none;
+    border: none;
+  }
+  .project_name .button-wrapper {
+    height: 50px;
+    width: 50px;
+    border-radius: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+    transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+  }
+  .project_name .button-wrapper span {
+    color: #101111;
+    position: absolute;
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    top: 50%;
+    left: 4px;
+    font-family: "MuseoModerno", Montserrat, sans-serif;
+    font-size: 1.5rem;
+    line-height: 2;
+    z-index: 2;
+    -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+    transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+  }
+  .project_name .button-wrapper span::after {
+    content: "";
+    height: 40px;
+    width: 40px;
+    background-color: #eeeeee;
+    border-radius: 100px;
+    position: relative;
+    top: -46px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: -1;
+    -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+    transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+  }
+  .project_name .button-wrapper p {
+    margin: 0 80px;
+    color: #eeeeee;
+    font-family: "MuseoModerno", Montserrat, sans-serif;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    font-size: 2.5rem;
+    line-height: 1.5;
+    position: absolute;
+    top: 20%;
+    left: -10px;
+    opacity: 1;
+    z-index: 2;
+    mix-blend-mode: difference;
+    -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+    transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+    will-change: auto;
+  }
+}
+
+@media (min-width: 700px) {
+  .project_name {
+    height: 50px;
+    width: calc(100% - 300px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+  }
+  .project_name :focus {
+    outline: none;
+    border: none;
+  }
+  .project_name .button-wrapper {
+    height: 50px;
+    width: 50px;
+    border-radius: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+    transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+  }
+  .project_name .button-wrapper span {
+    color: #eeeeee;
+    position: absolute;
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    top: 50%;
+    font-family: "MuseoModerno", Montserrat, sans-serif;
+    font-size: 1.5rem;
+    line-height: 2;
+    z-index: 2;
+    -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+    transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+  }
+  .project_name .button-wrapper span::after {
+    content: "";
+    height: 50px;
+    width: 50px;
+    background-color: #101111;
+    border-radius: 100px;
+    position: relative;
+    top: -48px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: -1;
+    -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+    transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+  }
+  .project_name .button-wrapper p {
+    margin: 0 60px;
+    color: #eeeeee;
+    font-family: "MuseoModerno", Montserrat, sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    position: relative;
+    top: 8px;
+    left: -10px;
+    opacity: 0;
+    z-index: 2;
+    mix-blend-mode: difference;
+    -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+    transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+    will-change: auto;
+  }
+  .box1:hover .project_name .button-wrapper span, .box2:hover .project_name .button-wrapper span, .box3:hover .project_name .button-wrapper span, .box4:hover .project_name .button-wrapper span, .box5:hover .project_name .button-wrapper span, .box6:hover .project_name .button-wrapper span {
+    color: #101111;
+    left: 4px;
+  }
+  .box1:hover .project_name .button-wrapper span::after, .box2:hover .project_name .button-wrapper span::after, .box3:hover .project_name .button-wrapper span::after, .box4:hover .project_name .button-wrapper span::after, .box5:hover .project_name .button-wrapper span::after, .box6:hover .project_name .button-wrapper span::after {
+    content: "";
+    height: 40px;
+    width: 40px;
+    background-color: #eeeeee;
+    top: -46px;
+  }
+  .box1:hover .project_name .button-wrapper p, .box2:hover .project_name .button-wrapper p, .box3:hover .project_name .button-wrapper p, .box4:hover .project_name .button-wrapper p, .box5:hover .project_name .button-wrapper p, .box6:hover .project_name .button-wrapper p {
+    margin: 0 80px;
+    position: absolute;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    top: 20%;
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=style.css.map */

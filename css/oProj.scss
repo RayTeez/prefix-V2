@@ -1,0 +1,34 @@
+
+
+//variables
+
+$notBlack:#101111;
+$notWhite:#eeeeee;
+$theFont: 'MuseoModerno', Montserrat, sans-serif;
+$smallFont: 'Mukta Vaani', sans-serif;
+
+.catagory-section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    pointer-events: none;
+    
+
+    h1{
+        font-family: $theFont; 
+        font-size: calc(100vw / 10);
+        color: mediumblue;
+        pointer-events: none;
+    }
+}
+
+.cont{
+    width: 100vw;
+    // padding-top: 90vh;
+    // display:grid;
+    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+}

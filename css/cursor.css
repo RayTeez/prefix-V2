@@ -30,4 +30,10 @@
   -webkit-transform: translate(-50%, -50%) scale(8);
           transform: translate(-50%, -50%) scale(8);
 }
+
+@media (max-width: 900px) {
+  .cursor {
+    display: none;
+  }
+}
 /*# sourceMappingURL=cursor.css.map */

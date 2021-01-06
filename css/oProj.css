@@ -1,0 +1,27 @@
+.catagory-section {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  pointer-events: none;
+}
+
+.catagory-section h1 {
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-size: calc(100vw / 10);
+  color: mediumblue;
+  pointer-events: none;
+}
+
+.cont {
+  width: 100vw;
+}
+/*# sourceMappingURL=oProj.css.map */
