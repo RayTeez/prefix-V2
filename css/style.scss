@@ -1597,7 +1597,7 @@ hr{
     .t-project {
 
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(3, 1fr) 0.2fr 1fr 0.2fr 1fr .2fr 1fr;
+        grid-template-rows: repeat(3, max-content) 0.2fr max-content 0.2fr max-content .2fr max-content;
 
     }
         
@@ -1712,7 +1712,7 @@ hr{
     
         
             p{
-    
+                width:200% ;
                 margin: 0 80px;
                 color: $notWhite;
                 font-family: $theFont; 
@@ -1740,7 +1740,7 @@ hr{
 @include media(">=1000px"){
 .project_name{
     height: 50px;
-    width: calc(100% - 300px); //.....fix
+    width: calc(100% - 250px); //.....fix
 
     display: flex;
 
@@ -1810,7 +1810,7 @@ hr{
 
     
         p{
-
+            
             margin: 0 60px;
             color: $notWhite;
             font-family: $theFont; 
@@ -1855,6 +1855,7 @@ hr{
             
         }
         p{
+            width: 200%;
             margin: 0 80px;
             position: absolute;
             transform: translateY(-20%);
@@ -1914,3 +1915,62 @@ hr{
     margin: 5vw 0 1vw;
     font-family: $theFont; 
 }
+
+
+//collapible
+
+.other-projects{
+    width: 60%; 
+    margin: 0 auto;
+}
+
+.collapsible {
+    width: max-content;
+    padding: 18px;
+    margin: 20px 0;
+    background-color: transparent;
+    color: $notBlack;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    font-family: $theFont;
+  }
+  
+
+  
+  .content {
+
+    max-height: 0px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    button{
+        padding: 10px 20px;
+        outline: none;
+        border: none;
+        background-color: none;
+        font-size: 1.2rem;
+        font-family: $theFont;
+    }
+  }
+
+  @include media("<=700px"){
+
+    .content {
+
+        max-height: 0px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+  }
+      

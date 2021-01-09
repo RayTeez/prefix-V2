@@ -1583,8 +1583,9 @@ hr {
   .t-project {
     -ms-grid-columns: (1fr)[5];
         grid-template-columns: repeat(5, 1fr);
-    -ms-grid-rows: (1fr)[3] 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr;
-        grid-template-rows: repeat(3, 1fr) 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr;
+    -ms-grid-rows: (max-content)[3] 0.2fr max-content 0.2fr max-content 0.2fr max-content;
+        grid-template-rows: repeat(3, -webkit-max-content) 0.2fr -webkit-max-content 0.2fr -webkit-max-content 0.2fr -webkit-max-content;
+        grid-template-rows: repeat(3, max-content) 0.2fr max-content 0.2fr max-content 0.2fr max-content;
   }
   .box1 {
     -ms-grid-row: 1;
@@ -1722,6 +1723,7 @@ hr {
     transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
   }
   .project_name .button-wrapper p {
+    width: 200%;
     margin: 0 80px;
     color: #eeeeee;
     font-family: "MuseoModerno", Montserrat, sans-serif;
@@ -1744,7 +1746,7 @@ hr {
 @media (min-width: 1000px) {
   .project_name {
     height: 50px;
-    width: calc(100% - 300px);
+    width: calc(100% - 250px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1832,6 +1834,7 @@ hr {
     top: -46px;
   }
   .box1:hover .project_name .button-wrapper p, .box2:hover .project_name .button-wrapper p, .box3:hover .project_name .button-wrapper p, .box4:hover .project_name .button-wrapper p, .box5:hover .project_name .button-wrapper p, .box6:hover .project_name .button-wrapper p {
+    width: 200%;
     margin: 0 80px;
     position: absolute;
     -webkit-transform: translateY(-20%);
@@ -1902,5 +1905,71 @@ hr {
   font-size: calc(100vw / 30);
   margin: 5vw 0 1vw;
   font-family: "MuseoModerno", Montserrat, sans-serif;
+}
+
+.other-projects {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.collapsible {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 18px;
+  margin: 20px 0;
+  background-color: transparent;
+  color: #101111;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  outline: none;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 1.8rem;
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+}
+
+.content {
+  max-height: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+.content button {
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  background-color: none;
+  font-size: 1.2rem;
+  font-family: "MuseoModerno", Montserrat, sans-serif;
+}
+
+@media (max-width: 700px) {
+  .content {
+    max-height: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: hidden;
+    -webkit-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
+  }
 }
 /*# sourceMappingURL=style.css.map */
