@@ -16,7 +16,7 @@
 
 $notBlack:#101111;
 $notWhite:#eeeeee;
-$theFont: 'Casta', Montserrat, sans-serif;
+$theFont: 'MuseoModerno', Montserrat, sans-serif;
 $smallFont: 'Mukta Vaani', sans-serif;
 //mixin
 
@@ -1554,6 +1554,13 @@ hr{
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s all;
     
 }
+.show-overlay .t-project_cont{
+    position: fixed;
+    left: 0;
+    right: 0;
+    overflow-y: scroll; /* render disabled scroll bar to keep the same width */
+  }
+
 .shift{
     position: relative;
     left: -500px;
@@ -1874,12 +1881,14 @@ hr{
     width: 100vw;
     height: 100vh;
     padding: calc(7%*3) 5% 5%;
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
 
     overflow: scroll; 
     z-index: 55;
 }
+
 .lb-back-drop{
     width: 100%;
     height: 100%;

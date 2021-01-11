@@ -146,49 +146,117 @@ let test=()=>{
         </div>
         </li>
         
-        `  ;
+        ` ;
         
-
     }
 
 }
 
 test()
 
-
-function showProjectCont(clicked_id){
-    
-   
-
-    // const listProjects = document.querySelectorAll('.proj');
-    const lightbox = document.querySelector('.lightbox');
-    const projectInBox = document.querySelector('.project-image');
-    const lb_projectName = document.querySelector('.lb-p_name h1');
-    const lb_CatergoryName = document.querySelector('.lb-p_catergory-name h2');
-    
-
-    let getProjectNum = clicked_id;
-    console.log(getProjectNum)
+const lightbox = document.querySelector('.lightbox');
+const projectInBox = document.querySelector('.project-image');
+let lbIsOn=false;
+let scrollPosition = 0;
 
 
-        for (let j = 0; j < projects[getproject[1]][getProjectNum].images.length; j++) {
 
-            console.log(projects[getproject[1]][getProjectNum].images[j]);
 
-            let imageData = projects[getproject[1]][getProjectNum].images
+    function showOverlay() {
+        scrollPosition = window.pageYOffset;
+        const mainEl = document.querySelector('.t-project_cont');
+        mainEl.style.top = -scrollPosition + 'px';
+        document.body.classList.add('show-overlay');
+    }
 
-            projectInBox.innerHTML+=
+    function removeOverlay() {
+            document.body.classList.remove('show-overlay');
+        window.scrollTo(0, scrollPosition);
+        const mainEl = document.querySelector('.t-project_cont');
+        mainEl.style.top = 0;
+    }
 
-            `<figure class="image">
-                <img src=${imageData[j]} alt="project-image">
-            </figure>`
+    function removeChildren(){
+        projectInBox.innerHTML='';
+    }
 
-        };
+
+
+    function showProjectCont(clicked_id){
         
-        lb_projectName.textContent= projects[getproject[1]][getProjectNum].projectName;
-        lb_CatergoryName.textContent= projects[getproject[1]][getProjectNum].projectCatergory;
-       
-    lightbox.style.display="block";
+    
+
+        // const listProjects = document.querySelectorAll('.proj');
+        
+        const lb_projectName = document.querySelector('.lb-p_name h1');
+        const lb_CatergoryName = document.querySelector('.lb-p_catergory-name h2');
+        
+
+        let getProjectNum = clicked_id;
+
+        console.log(getProjectNum);
+
+
+            for (let j = 0; j < projects[getproject[1]][getProjectNum].images.length; j++) {
+
+                console.log(projects[getproject[1]][getProjectNum].images[j]);
+
+                let imageData = projects[getproject[1]][getProjectNum].images
+
+                projectInBox.innerHTML+=
+
+                `<figure class="image">
+                    <img src=${imageData[j]} alt="project-image">
+                </figure>`
+
+            };
+            
+            lb_projectName.textContent= projects[getproject[1]][getProjectNum].projectName;
+            lb_CatergoryName.textContent= projects[getproject[1]][getProjectNum].projectCatergory;
+        
+        lightbox.style.display="block";
+        lbIsOn=true;
+        showOverlay();
+
+
+    }
+
+
+    const close=document.querySelector('.close-button > img');
+
+    close.addEventListener('click',e=>{
+
+        var phase = e.eventPhase;
+        showOverlay();
+
+        if(lbIsOn==true){
+            lightbox.style.display="none";
+            lbIsOn=false;
+            removeOverlay();
+            removeChildren();
+
+        }
+        else{
+            document.location.pathname= "/index.html"
+           
+            
+            
+    };
+        console.log('close');
+        console.log(phase);
+
+    });
+
+    window.addEventListener('click',event=>{
+        
+        if (event.target === lightbox.children[0]) {
+        lightbox.style.display = "none";
+        removeOverlay();
+        removeChildren();
+    
+
+        }
+    });
 
 }
-}
+
