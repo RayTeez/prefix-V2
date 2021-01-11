@@ -253,7 +253,8 @@ let scrollPosition = 0;
         lightbox.style.display = "none";
         removeOverlay();
         removeChildren();
-    
+        // document.querySelector('.lb-project-box').scrollTop =0; //not working
+        
 
         }
     });
