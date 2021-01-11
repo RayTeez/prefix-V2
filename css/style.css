@@ -88,7 +88,7 @@ nav {
   background: #eeeeee;
   background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), color-stop(60%, #eeeeee), color-stop(96%, rgba(238, 238, 238, 0)));
   background: linear-gradient(180deg, #eeeeee 0%, #eeeeee 60%, rgba(238, 238, 238, 0) 96%);
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Casta", Montserrat, sans-serif;
   -webkit-transform: translateY(-200px);
           transform: translateY(-200px);
 }
@@ -245,7 +245,7 @@ nav a:visited {
 }
 
 .project-hero .hero-title h2 {
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Casta", Montserrat, sans-serif;
   font-size: 20rem;
   color: #101111;
 }
@@ -385,7 +385,7 @@ nav a:visited {
 
 .project-info .project-title h2 {
   font-size: 2.5rem;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Casta", Montserrat, sans-serif;
 }
 
 .project-info .project-title .tools {
@@ -395,7 +395,7 @@ nav a:visited {
 
 .project-info .project-title .tools h3 {
   font-size: 1.5rem;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Casta", Montserrat, sans-serif;
   margin: 20px 0 10px;
 }
 
@@ -418,7 +418,7 @@ nav a:visited {
 .project-info .project-year {
   height: auto;
   font-size: 2.5rem;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Casta", Montserrat, sans-serif;
   text-align: center;
 }
 
@@ -444,7 +444,7 @@ nav a:visited {
   }
   .project-info .project-title h2 {
     font-size: 2rem;
-    font-family: "MuseoModerno", Montserrat, sans-serif;
+    font-family: "Casta", Montserrat, sans-serif;
   }
   .project-info .project-title .tools {
     width: 40%;
@@ -493,7 +493,7 @@ nav a:visited {
   }
   .project-info .project-title h2 {
     font-size: 2rem;
-    font-family: "MuseoModerno", Montserrat, sans-serif;
+    font-family: "Casta", Montserrat, sans-serif;
   }
   .project-info .project-title .tools {
     width: 40%;
@@ -754,12 +754,12 @@ nav a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Casta", Montserrat, sans-serif;
 }
 
 .about-hero .about_content-hero div p {
   color: #101111;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Casta", Montserrat, sans-serif;
   font-size: 4rem;
   line-height: 1.5;
   -ms-grid-column-align: center;
@@ -769,7 +769,7 @@ nav a:visited {
 
 .about-hero .about_content-hero div h2 {
   color: #101111;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Casta", Montserrat, sans-serif;
   font-size: 6.5rem;
   z-index: 9;
   line-height: 1.5;
@@ -943,7 +943,7 @@ nav a:visited {
 
 .about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
   color: #101111;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Casta", Montserrat, sans-serif;
   font-size: 2.5rem;
   z-index: 9;
   line-height: 1.5;
@@ -972,7 +972,7 @@ nav a:visited {
   }
   .about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
     color: #101111;
-    font-family: "MuseoModerno", Montserrat, sans-serif;
+    font-family: "Casta", Montserrat, sans-serif;
     font-size: 2rem;
     z-index: 9;
     line-height: 1.5;
@@ -1023,7 +1023,7 @@ nav a:visited {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Casta", Montserrat, sans-serif;
   font-size: 1rem;
 }
 
@@ -1050,7 +1050,7 @@ nav a:visited {
 
 .contacts .contacts-cont a {
   color: #101111;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Casta", Montserrat, sans-serif;
   font-size: 4.5rem;
   line-height: 1.5;
   color: #101111;
@@ -1068,7 +1068,7 @@ nav a:visited {
 }
 
 .contacts .contacts-cont li {
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Casta", Montserrat, sans-serif;
 }
 
 .contacts .contacts-cont li a {
@@ -1131,7 +1131,7 @@ nav a:visited {
 
 .work-content h3 {
   color: #101111;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Casta", Montserrat, sans-serif;
   font-size: 2.5rem;
   z-index: 9;
   line-height: 1.5;
@@ -1321,7 +1321,7 @@ hr {
   -webkit-transform: translateY(-25%);
           transform: translateY(-25%);
   top: 50%;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Casta", Montserrat, sans-serif;
   font-size: 1.5rem;
   line-height: 2;
   z-index: 2;
@@ -1354,7 +1354,7 @@ hr {
 .project_btn .button-wrapper p {
   margin: 0 60px;
   color: #eeeeee;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Casta", Montserrat, sans-serif;
   font-size: 7.5rem;
   line-height: 1.5;
   position: relative;

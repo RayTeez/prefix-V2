@@ -5,12 +5,12 @@ const projects=[
         {
             projectName:'Ceres',
             projectCatergory:'Branding',
-            images:['img/otherprojects/img1.jpg','img/otherprojects/img2.jpg','../img/otherprojects/img3.jpg']
+            images:['img/otherprojects/img1-1.jpg','img/otherprojects/img1-2.jpg','img/otherprojects/img1-3.jpg','img/otherprojects/img1-4.jpg','img/otherprojects/img1-5.jpg']
         },
         {
             projectName:'Kiwi',
             projectCatergory:'Branding',
-            images:['img/otherprojects/img2.jpg','img2','img3']
+            images:['img/otherprojects/img2-1.jpg','img/otherprojects/img2-2.jpg','img/otherprojects/img2-3.jpg','img/otherprojects/img2-4.jpg','img/otherprojects/img2-5.jpg']
         },
         {
             projectName:'Bolobedu',
@@ -134,7 +134,7 @@ let test=()=>{
 
         pressedImg.innerHTML+= 
         
-        `<li class="box${i+1}" onclick=showProjectCont()>
+        `<li class="box${i+1} proj" id="${i}"  onclick="showProjectCont(this.id)">
         <div>
         <button class="project_name">
             <div class="button-wrapper">
@@ -149,16 +149,46 @@ let test=()=>{
         `  ;
         
 
-
-
     }
 
 }
 
 test()
+
+
+function showProjectCont(clicked_id){
+    
+   
+
+    // const listProjects = document.querySelectorAll('.proj');
+    const lightbox = document.querySelector('.lightbox');
+    const projectInBox = document.querySelector('.project-image');
+    const lb_projectName = document.querySelector('.lb-p_name h1');
+    const lb_CatergoryName = document.querySelector('.lb-p_catergory-name h2');
+    
+
+    let getProjectNum = clicked_id;
+    console.log(getProjectNum)
+
+
+        for (let j = 0; j < projects[getproject[1]][getProjectNum].images.length; j++) {
+
+            console.log(projects[getproject[1]][getProjectNum].images[j]);
+
+            let imageData = projects[getproject[1]][getProjectNum].images
+
+            projectInBox.innerHTML+=
+
+            `<figure class="image">
+                <img src=${imageData[j]} alt="project-image">
+            </figure>`
+
+        };
+        
+        lb_projectName.textContent= projects[getproject[1]][getProjectNum].projectName;
+        lb_CatergoryName.textContent= projects[getproject[1]][getProjectNum].projectCatergory;
+       
+    lightbox.style.display="block";
+
 }
-
-
-function showProjectCont(){
-    console.log('Lets pretend you can see the images😅')
 }
