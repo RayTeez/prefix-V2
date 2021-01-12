@@ -4,7 +4,7 @@
 
 $notBlack:#101111;
 $notWhite:#eeeeee;
-$theFont: 'MuseoModerno', Montserrat, sans-serif;
+$theFont: 'Lexend Tera', Montserrat, sans-serif;
 $smallFont: 'Mukta Vaani', sans-serif;
 
 .catagory-section{
@@ -18,8 +18,9 @@ $smallFont: 'Mukta Vaani', sans-serif;
     
 
     h1{
-        font-family: $theFont; 
-        font-size: calc(100vw / 10);
+        font-family: $theFont;
+        letter-spacing: -20px; 
+        font-size: calc(100vw / 12);
         color: mediumblue;
         pointer-events: none;
     }

@@ -223,17 +223,19 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
         position: absolute;
 
         h2{
-            font-family: $theFont;
+            
             font-size: 20rem;
             color: $notBlack;
     
         }
 
         &:nth-child(1){
+            @include Casta;
             top: 22%;
             left: 10%;
         }
         &:nth-child(2){
+            @include Lexand;
             bottom: 20%;
             right: 10%;
             z-index: 1;
@@ -631,16 +633,27 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
         // transform: rotate(-3deg);
         position: relative;
         top:35%;
+        overflow: hidden;
 
-
+        .s-1{
+            width: 100%;
+            height: 80%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1)  transform;
+            
+        }
 
         p{
             color: $notWhite;
-            font-family: Helvetica, sans-serif;
+            @include Lexand;
             font-size:4.5rem; 
             line-height: 1.5;  
             text-decoration: none;   
             
+        }
+        p:nth-child(n+5){
+            @include Casta;
         }
     }
     
@@ -659,6 +672,10 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
         top: 50%;
         transform: rotate(3deg);
     }
+}
+
+.move-up{
+    transform: translateY(-100%);
 }
 @include media("<=1388px"){
     .next-project{
@@ -824,6 +841,7 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
                 font-size: 8rem;
                 text-transform: uppercase;
                 @include Casta;
+                font-style: italic;
                 
             }
             h3{
@@ -860,11 +878,12 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
             z-index: -3;
 
             figure{
-
+                // transform: rotate(10deg);
                 width: 100%;
                 height: 100%;
                 
                 img{
+                    
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
@@ -1237,18 +1256,24 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
     align-items: center;
 
     .contacts-cont{
-
+        
+        display: grid;
+        grid-template-columns: 0.4fr 1fr;
         
         p{
+            width: 250px;
+            grid-area: 1 / 1 / 2 / 3;
             color: $notBlack;
-            font-family: $smallFont; 
-            font-size:1.5rem; 
+            font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
+            font-size:1.6rem; 
             line-height: 1.5;   
         }
+        .hoverthis{grid-area: 2 / 2 / 3 / 3;}
 
         a{
+            
             color: $notBlack;
-            font-family: $theFont; 
+            @include Casta; 
             font-size:4.5rem; 
             line-height: 1.5; 
             color: $notBlack;
@@ -1256,17 +1281,29 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
         }
 
         .follow-me{
-            width: 300px;
+            width: 90%;
+            grid-area: 3 / 2 / 4 / 3;
             display: flex;
-            justify-content: space-between;
+            
+            // justify-content: space-between;
 
         }
-        li{
-            font-family: $theFont; 
+
+        // .div4 { grid-area: 2 / 1 / 3 / 2; } -------arrow thing
+
+
+        ul{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
             
-            a{
-                font-size: 1.2rem;
-                margin: 10px 0;
+            li{
+                font-family: $theFont; 
+                
+                a{
+                    font-size: 1.8rem;
+                    margin: 10px 0;
+                }
             }
         }
 
@@ -1582,9 +1619,10 @@ hr{
 
             margin: 0 60px;
             color: $notWhite;
-            @include Lexand;
-            letter-spacing: -20px;
-            font-size:7.5rem; 
+            font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
+            text-transform: uppercase;
+            // letter-spacing: -20px;
+            font-size:5.5rem; 
             line-height: 1.5;
             position: relative; 
             top: 10px; 
@@ -2043,14 +2081,17 @@ hr{
     width: 100%;
     display:flex;
     justify-content: flex-end;
-    font-family: $theFont; 
+    @include Lexand;
+    font-size: 1.2rem;
+    letter-spacing: 0;
 }
 .lb-p_name{
     display: flex;
     justify-content: center;
-    font-size: calc(100vw / 30);
+    font-size: calc(100vw /10);
     margin: 5vw 0 1vw;
-    font-family: $theFont; 
+    @include Casta;
+    letter-spacing: 3px; 
 }
 
 
@@ -2075,7 +2116,8 @@ hr{
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.8rem;
-    font-family: $theFont;
+    @include Lexand;
+    letter-spacing: -2px;
   }
   
 

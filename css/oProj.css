@@ -15,8 +15,9 @@
 }
 
 .catagory-section h1 {
-  font-family: "MuseoModerno", Montserrat, sans-serif;
-  font-size: calc(100vw / 10);
+  font-family: "Lexend Tera", Montserrat, sans-serif;
+  letter-spacing: -20px;
+  font-size: calc(100vw / 12);
   color: mediumblue;
   pointer-events: none;
 }

@@ -48,9 +48,9 @@ function contentAnimation(){
 };
 
 
-function showImg(){
-  hoverImg.classList.add('show');
-} 
+// function showImg(){
+//   hoverImg.classList.add('show');
+// } 
 
 // --->> project stuff -- 
 
@@ -222,67 +222,67 @@ if (window.document.title == '🙃Thomas Mosito'){    // ------<< fix
  };
 }
 
-
+// ====================================
 
 //---- Hover Img -----
 
-const hoverImg =document.querySelector(".movewithmouse");
-const hoverCont =document.querySelector(".anim1 h2");
+// const hoverImg =document.querySelector(".movewithmouse");
+// const hoverCont =document.querySelector(".anim1 h2");
 
-if(window.document.title=='🙃Thomas Mosito'){  // ------<< fix
+// if(window.document.title=='🙃Thomas Mosito'){  // ------<< fix
 
-  hoverCont.addEventListener("mousemove", function(e){
-    if (window.innerWidth > 960) {
-      floatingImg(e);
+//   hoverCont.addEventListener("mousemove", function(e){
+//     if (window.innerWidth > 960) {
+//       floatingImg(e);
       
-    }
-    e.stopPropagation();
-  });
+//     }
+//     e.stopPropagation();
+//   });
 
 
-hoverCont.addEventListener("mouseleave",function(e){
-reposition(e);
-console.log(hoverImg.style.transform);
-})
+// hoverCont.addEventListener("mouseleave",function(e){
+// reposition(e);
+// console.log(hoverImg.style.transform);
+// })
 
-function showCoords(event) {
-  var x = event.clientX;
-  var y = event.clientY;
+// function showCoords(event) {
+//   var x = event.clientX;
+//   var y = event.clientY;
 
-  // hoverImg.style.top=(y-500)+'px';
-  hoverImg.style.transform="translate(" +(x-1200)+"px, "+(y-550)+"px)";
-  console.log("innnn");
-}
+//   // hoverImg.style.top=(y-500)+'px';
+//   hoverImg.style.transform="translate(" +(x-1200)+"px, "+(y-550)+"px)";
+//   console.log("innnn");
+// }
 
-hoverCont.addEventListener('click', function(e){
-  window.location.href="about.html";
-})
-}
+// hoverCont.addEventListener('click', function(e){
+//   window.location.href="about.html";
+// })
+// }
 
-function floatingImg(e){
+// function floatingImg(e){
 
-  var xCoor = e.clientX;
-  var yCoor = e.clientY;
+//   var xCoor = e.clientX;
+//   var yCoor = e.clientY;
 
-  gsap.to(hoverImg, {x: xCoor-hoverCont.clientWidth, y:yCoor-hoverCont.clientHeight});
-  console.log("innnn");
+//   gsap.to(hoverImg, {x: xCoor-hoverCont.clientWidth, y:yCoor-hoverCont.clientHeight});
+//   console.log("innnn");
 
-}
+// }
 
-function reposition() {
-  var reposition = document.getElementById("reposition");
+// function reposition() {
+//   var reposition = document.getElementById("reposition");
 
-  gsap.to(hoverImg, { x: reposition.offsetLeft, y:reposition.offsetTop-hoverCont.clientHeight});
-  // hoverImg.style.transform="translate3D(" +reposition.offsetLeft+"px, "+reposition.offsetTop+"px)"
+//   gsap.to(hoverImg, { x: reposition.offsetLeft, y:reposition.offsetTop-hoverCont.clientHeight});
+//   // hoverImg.style.transform="translate3D(" +reposition.offsetLeft+"px, "+reposition.offsetTop+"px)"
   
-}
+// }
 
-const cursor=document.getElementsByClassName("cursor");
+// const cursor=document.getElementsByClassName("cursor");
 
-gsap.to(cursor, {x: window.clientX, y: window.clientY});
+// gsap.to(cursor, {x: window.clientX, y: window.clientY});
 
 
-
+// =========================================
 
 // screens
 
@@ -295,28 +295,29 @@ function quaries(){
   }
 }
 
+// ===============
 // ----->>skewing
 
-const section = document.querySelector(".skewable");
-let currentPixel = window.pageYOffset
+// const section = document.querySelector(".skewable");
+// let currentPixel = window.pageYOffset
 
-//looper keeps running and keeps track of where the new pixel is
-const looper = function () {
-  const newPixel = window.pageYOffset;
-  const diff = newPixel - currentPixel
-  const speed = diff * 0.15;
+// //looper keeps running and keeps track of where the new pixel is
+// const looper = function () {
+//   const newPixel = window.pageYOffset;
+//   const diff = newPixel - currentPixel
+//   const speed = diff * 0.15;
   
-  section.style.transform = "skewY(" + speed + "deg)"
+//   section.style.transform = "skewY(" + speed + "deg)"
   
   
-  currentPixel = newPixel;
+//   currentPixel = newPixel;
   
-  requestAnimationFrame(looper)
-}
+//   requestAnimationFrame(looper)
+// }
 
-  looper();
+//   looper();
 
-
+// =================
 
 //------->> wheel spin
 

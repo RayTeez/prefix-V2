@@ -249,17 +249,22 @@ nav a:visited {
 }
 
 .project-hero .hero-title h2 {
-  font-family: "MuseoModerno", Montserrat, sans-serif;
   font-size: 20rem;
   color: #101111;
 }
 
 .project-hero .hero-title:nth-child(1) {
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
   top: 22%;
   left: 10%;
 }
 
 .project-hero .hero-title:nth-child(2) {
+  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: -10px;
   bottom: 20%;
   right: 10%;
   z-index: 1;
@@ -567,14 +572,36 @@ nav a:visited {
           transform: translate(-30%);
   position: relative;
   top: 35%;
+  overflow: hidden;
+}
+
+.next-project .strap .s-1 {
+  width: 100%;
+  height: 80%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -webkit-transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+  transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+  transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform;
+  transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform, 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
 }
 
 .next-project .strap p {
   color: #eeeeee;
-  font-family: Helvetica, sans-serif;
+  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: -10px;
   font-size: 4.5rem;
   line-height: 1.5;
   text-decoration: none;
+}
+
+.next-project .strap p:nth-child(n+5) {
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
 }
 
 .next-project .arrow:nth-child(2) {
@@ -595,6 +622,11 @@ nav a:visited {
   top: 50%;
   -webkit-transform: rotate(3deg);
           transform: rotate(3deg);
+}
+
+.move-up {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 @media (max-width: 1388px) {
@@ -791,6 +823,7 @@ nav a:visited {
   font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-stretch: expanded;
   letter-spacing: 3px;
+  font-style: italic;
 }
 
 .Hero .Hero-Contents .hero-intro h3 {
@@ -1172,16 +1205,39 @@ nav a:visited {
           align-items: center;
 }
 
+.contacts .contacts-cont {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.4fr 1fr;
+      grid-template-columns: 0.4fr 1fr;
+}
+
 .contacts .contacts-cont p {
+  width: 250px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 1 / 2 / 3;
   color: #101111;
-  font-family: "Mukta Vaani", sans-serif;
-  font-size: 1.5rem;
+  font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.6rem;
   line-height: 1.5;
+}
+
+.contacts .contacts-cont .hoverthis {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 3 / 3;
 }
 
 .contacts .contacts-cont a {
   color: #101111;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
   font-size: 4.5rem;
   line-height: 1.5;
   color: #101111;
@@ -1189,7 +1245,19 @@ nav a:visited {
 }
 
 .contacts .contacts-cont .follow-me {
-  width: 300px;
+  width: 90%;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 2 / 4 / 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts .contacts-cont ul {
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1198,12 +1266,12 @@ nav a:visited {
           justify-content: space-between;
 }
 
-.contacts .contacts-cont li {
+.contacts .contacts-cont ul li {
   font-family: "MuseoModerno", Montserrat, sans-serif;
 }
 
-.contacts .contacts-cont li a {
-  font-size: 1.2rem;
+.contacts .contacts-cont ul li a {
+  font-size: 1.8rem;
   margin: 10px 0;
 }
 
@@ -1490,11 +1558,9 @@ hr {
 .project_btn .button-wrapper p {
   margin: 0 60px;
   color: #eeeeee;
-  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: 100;
-  letter-spacing: -10px;
-  letter-spacing: -20px;
-  font-size: 7.5rem;
+  font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  font-size: 5.5rem;
   line-height: 1.5;
   position: relative;
   top: 10px;
@@ -1622,8 +1688,9 @@ hr {
 }
 
 .catagory-section h1 {
-  font-family: "MuseoModerno", Montserrat, sans-serif;
-  font-size: calc(100vw / 10);
+  font-family: "Lexend Tera", Montserrat, sans-serif;
+  letter-spacing: -20px;
+  font-size: calc(100vw / 12);
   color: mediumblue;
   pointer-events: none;
 }
@@ -1845,7 +1912,7 @@ hr {
             transform: translateY(-25%);
     top: 50%;
     left: 4px;
-    font-family: "MuseoModerno", Montserrat, sans-serif;
+    font-family: "Lexend Tera", Montserrat, sans-serif;
     font-size: 1.5rem;
     line-height: 2;
     z-index: 2;
@@ -1877,7 +1944,7 @@ hr {
     width: 200%;
     margin: 0 80px;
     color: #eeeeee;
-    font-family: "MuseoModerno", Montserrat, sans-serif;
+    font-family: "Lexend Tera", Montserrat, sans-serif;
     -webkit-transform: translateY(-20%);
             transform: translateY(-20%);
     font-size: 2.5rem;
@@ -1929,7 +1996,7 @@ hr {
     -webkit-transform: translateY(-25%);
             transform: translateY(-25%);
     top: 50%;
-    font-family: "MuseoModerno", Montserrat, sans-serif;
+    font-family: "Lexend Tera", Montserrat, sans-serif;
     font-size: 1.5rem;
     line-height: 2;
     z-index: 2;
@@ -1960,7 +2027,7 @@ hr {
   .project_name .button-wrapper p {
     margin: 0 60px;
     color: #eeeeee;
-    font-family: "MuseoModerno", Montserrat, sans-serif;
+    font-family: "Lexend Tera", Montserrat, sans-serif;
     font-size: 2.5rem;
     line-height: 1.5;
     position: relative;
@@ -2044,7 +2111,11 @@ hr {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: -10px;
+  font-size: 1.2rem;
+  letter-spacing: 0;
 }
 
 .lb-p_name {
@@ -2054,9 +2125,12 @@ hr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: calc(100vw / 30);
+  font-size: calc(100vw /10);
   margin: 5vw 0 1vw;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+  letter-spacing: 3px;
 }
 
 .other-projects {
@@ -2081,7 +2155,10 @@ hr {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   font-size: 1.8rem;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: -10px;
+  letter-spacing: -2px;
 }
 
 .content {
@@ -2103,7 +2180,7 @@ hr {
   border: none;
   background-color: none;
   font-size: 1.2rem;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: "Lexend Tera", Montserrat, sans-serif;
 }
 
 @media (max-width: 700px) {
