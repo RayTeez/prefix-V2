@@ -88,9 +88,13 @@ nav {
   background: #eeeeee;
   background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), color-stop(60%, #eeeeee), color-stop(96%, rgba(238, 238, 238, 0)));
   background: linear-gradient(180deg, #eeeeee 0%, #eeeeee 60%, rgba(238, 238, 238, 0) 96%);
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: -10px;
   -webkit-transform: translateY(-200px);
           transform: translateY(-200px);
+  letter-spacing: -2px;
+  text-transform: uppercase;
 }
 
 nav .logo-name {
@@ -103,8 +107,8 @@ nav .logo {
 }
 
 nav .menu-bar {
-  width: 100px;
-  font-size: 2rem;
+  width: 130px;
+  font-size: 1.2rem;
   -webkit-text-decoration-style: none;
           text-decoration-style: none;
 }
@@ -729,26 +733,143 @@ nav a:visited {
   }
 }
 
-.about-hero {
+.Hero {
   width: 100vw;
   height: 100vh;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.Hero .Hero-Contents {
+  width: 70%;
+  height: 100%;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.2fr 1fr;
+      grid-template-columns: 1.2fr 1fr;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.about-hero .about_content-hero {
+.Hero .Hero-Contents .hero-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Hero .Hero-Contents .hero-intro h2 {
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+  margin-bottom: 6%;
+}
+
+.Hero .Hero-Contents .hero-intro h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: -10px;
+}
+
+.Hero .Hero-Contents .hero-intro .fontchange > h1 {
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+}
+
+.Hero .Hero-Contents .hero-intro h3 {
+  font-size: 1.6rem;
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+}
+
+.Hero .Hero-Contents .hero-intro .ht_5 {
+  margin-top: 10%;
+}
+
+.Hero .Hero-Contents .ht_2, .Hero .Hero-Contents .ht_5, .Hero .Hero-Contents .ht_6 {
+  position: relative;
+  left: 10%;
+}
+
+.Hero .Hero-Contents .ht_3 {
+  position: relative;
+  top: 10px;
+  left: 60%;
+}
+
+.Hero .Hero-Contents .ht_4 {
+  position: relative;
+  left: -20%;
+}
+
+.Hero .Hero-Contents .hero-intro-image {
+  width: 100%;
+  height: 65%;
+  position: relative;
+  top: 7%;
+  z-index: -3;
+}
+
+.Hero .Hero-Contents .hero-intro-image figure {
+  width: 100%;
+  height: 100%;
+}
+
+.Hero .Hero-Contents .hero-intro-image figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+}
+
+.Hero .Hero-Contents .hero-intro-image .hi_2 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #101111;
+  padding: 20px 60px;
+  border-radius: 100px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: relative;
+  top: -25%;
+  left: -10%;
+}
+
+.Hero .Hero-Contents .hero-intro-image .hi_2 p {
+  color: white;
+  font-size: 2rem;
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+  letter-spacing: 0px;
+}
+
+.Hero .about_content-hero {
   width: 60%;
 }
 
-.about-hero .about_content-hero div {
+.Hero .about_content-hero div {
   width: 100%;
   position: relative;
   display: -webkit-box;
@@ -757,7 +878,7 @@ nav a:visited {
   font-family: "MuseoModerno", Montserrat, sans-serif;
 }
 
-.about-hero .about_content-hero div p {
+.Hero .about_content-hero div p {
   color: #101111;
   font-family: "MuseoModerno", Montserrat, sans-serif;
   font-size: 4rem;
@@ -767,7 +888,7 @@ nav a:visited {
   z-index: 2;
 }
 
-.about-hero .about_content-hero div h2 {
+.Hero .about_content-hero div h2 {
   color: #101111;
   font-family: "MuseoModerno", Montserrat, sans-serif;
   font-size: 6.5rem;
@@ -775,7 +896,7 @@ nav a:visited {
   line-height: 1.5;
 }
 
-.about-hero .about_content-hero div h2:hover + div {
+.Hero .about_content-hero div h2:hover + div {
   width: 800px;
   position: absolute;
   top: -100px;
@@ -783,12 +904,12 @@ nav a:visited {
   z-index: -9;
 }
 
-.about-hero .about_content-hero div h2 .blinds {
+.Hero .about_content-hero div h2 .blinds {
   display: block;
   height: 50%;
 }
 
-.about-hero .about_content-hero div .blinds::after {
+.Hero .about_content-hero div .blinds::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -800,13 +921,13 @@ nav a:visited {
   z-index: 1;
 }
 
-.about-hero .about_content-hero div:nth-child(2) {
+.Hero .about_content-hero div:nth-child(2) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.about-hero .about_content-hero div:nth-child(2) div {
+.Hero .about_content-hero div:nth-child(2) div {
   width: 110px;
   border-radius: 800px;
   overflow: hidden;
@@ -816,31 +937,31 @@ nav a:visited {
   will-change: auto;
 }
 
-.about-hero .about_content-hero div:nth-child(2) div img {
+.Hero .about_content-hero div:nth-child(2) div img {
   width: 100%;
 }
 
 @media (max-width: 1388px) {
-  .about-hero .about_content-hero {
+  .Hero .about_content-hero {
     width: 70%;
   }
-  .about-hero .about_content-hero div p {
+  .Hero .about_content-hero div p {
     font-size: 3rem;
   }
-  .about-hero .about_content-hero div h2 {
+  .Hero .about_content-hero div h2 {
     font-size: 5rem;
   }
-  .about-hero .about_content-hero div h2:hover + div {
+  .Hero .about_content-hero div h2:hover + div {
     width: 600px;
     top: -240px;
     right: 150px;
   }
-  .about-hero .about_content-hero div:nth-child(2) {
+  .Hero .about_content-hero div:nth-child(2) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .about-hero .about_content-hero div:nth-child(2) div {
+  .Hero .about_content-hero div:nth-child(2) div {
     display: none;
     top: 160px;
     left: 350px;
@@ -848,49 +969,49 @@ nav a:visited {
 }
 
 @media (max-width: 900px) {
-  .about-hero .about_content-hero {
+  .Hero .about_content-hero {
     width: 80%;
   }
-  .about-hero .about_content-hero div p {
+  .Hero .about_content-hero div p {
     font-size: 2rem;
   }
-  .about-hero .about_content-hero div h2 {
+  .Hero .about_content-hero div h2 {
     font-size: 4.5rem;
   }
-  .about-hero .about_content-hero div h2:hover + div {
+  .Hero .about_content-hero div h2:hover + div {
     width: 110px;
     width: 600px;
     top: 120px;
     left: 300px;
   }
-  .about-hero .about_content-hero div:nth-child(2) {
+  .Hero .about_content-hero div:nth-child(2) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .about-hero .about_content-hero div:nth-child(2) div {
+  .Hero .about_content-hero div:nth-child(2) div {
     top: 120px;
     left: 300px;
   }
 }
 
 @media (max-width: 500px) {
-  .about-hero .about_content-hero {
+  .Hero .about_content-hero {
     width: 80%;
   }
-  .about-hero .about_content-hero div p {
+  .Hero .about_content-hero div p {
     font-size: 2rem;
   }
-  .about-hero .about_content-hero div h2 {
+  .Hero .about_content-hero div h2 {
     font-size: 4.5rem;
   }
-  .about-hero .about_content-hero div h2:hover + div {
+  .Hero .about_content-hero div h2:hover + div {
     width: 110px;
     width: 600px;
     top: 0;
     left: 0;
   }
-  .about-hero .about_content-hero div .blinds::after {
+  .Hero .about_content-hero div .blinds::after {
     display: none;
     content: '';
     width: 100%;
@@ -902,15 +1023,15 @@ nav a:visited {
             transform-origin: 0 100%;
     z-index: 1;
   }
-  .about-hero .about_content-hero div:nth-child(2) {
+  .Hero .about_content-hero div:nth-child(2) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .about-hero .about_content-hero div:nth-child(2) h2 > span:first-child {
+  .Hero .about_content-hero div:nth-child(2) h2 > span:first-child {
     line-height: 1;
   }
-  .about-hero .about_content-hero div:nth-child(2) div {
+  .Hero .about_content-hero div:nth-child(2) div {
     top: 120px;
     left: 250px;
   }
