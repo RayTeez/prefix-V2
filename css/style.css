@@ -1053,9 +1053,9 @@ nav a:visited {
 }
 
 .about-content .about-me, .about-content .myExp, .about-content .mySkills {
-  -webkit-column-gap: 13rem;
-          column-gap: 13rem;
-  width: 60%;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  width: 70%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 2fr;
@@ -1063,18 +1063,28 @@ nav a:visited {
 }
 
 .about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
+  position: relative;
+  top: -45px;
   color: #101111;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
-  font-size: 2.5rem;
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+  font-size: 6.5rem;
+  letter-spacing: 6px;
   z-index: 9;
   line-height: 1.5;
 }
 
 .about-content .about-me p, .about-content .myExp p, .about-content .mySkills p {
   color: #101111;
-  font-family: "Mukta Vaani", sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.5;
+  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: -10px;
+  font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0;
+  font-size: 1.8rem;
+  line-height: 2.2;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1388px) {
@@ -1259,7 +1269,7 @@ nav a:visited {
 }
 
 .work-content .work {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
@@ -1268,6 +1278,11 @@ nav a:visited {
 .work-content .work h3 {
   -ms-grid-column-align: center;
       justify-self: center;
+  font-size: 5rem;
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+  letter-spacing: 6px;
 }
 
 .work-content .work .project_btn {
@@ -1442,7 +1457,7 @@ hr {
   -webkit-transform: translateY(-25%);
           transform: translateY(-25%);
   top: 50%;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.5rem;
   line-height: 2;
   z-index: 2;
@@ -1475,7 +1490,10 @@ hr {
 .project_btn .button-wrapper p {
   margin: 0 60px;
   color: #eeeeee;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: -10px;
+  letter-spacing: -20px;
   font-size: 7.5rem;
   line-height: 1.5;
   position: relative;
@@ -1505,6 +1523,10 @@ hr {
 }
 
 .project_btn:hover .button-wrapper p {
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+  font-size: 8.5rem;
   margin: 0 80px;
   position: absolute;
   -webkit-transform: translateY(-20%);
