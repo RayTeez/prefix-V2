@@ -62,6 +62,11 @@ button:focus {
   outline: none;
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @font-face {
   font-family: 'play';
   src: url("../fonts/ PublicaPlay.otf");
@@ -842,6 +847,11 @@ nav a:visited {
   left: 10%;
 }
 
+.Hero .Hero-Contents .ht_2, .Hero .Hero-Contents .ht_3 {
+  pointer-events: none;
+  z-index: 3;
+}
+
 .Hero .Hero-Contents .ht_3 {
   position: relative;
   top: 10px;
@@ -858,7 +868,6 @@ nav a:visited {
   height: 65%;
   position: relative;
   top: 7%;
-  z-index: -3;
 }
 
 .Hero .Hero-Contents .hero-intro-image figure {
@@ -887,6 +896,7 @@ nav a:visited {
   position: relative;
   top: -25%;
   left: -10%;
+  pointer-events: none;
 }
 
 .Hero .Hero-Contents .hero-intro-image .hi_2 p {
@@ -1396,6 +1406,29 @@ button:focus {
   width: 20px;
   height: 20px;
   background: #101111;
+  position: absolute;
+}
+
+.info {
+  height: 150px;
+  width: 150px;
+}
+
+.c-info {
+  display: none;
+  font-size: 1rem;
+  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: -10px;
+  letter-spacing: 0px;
+  color: #101111;
+  position: absolute;
+}
+
+.c-next {
+  display: none;
+  width: 50%;
+  height: auto;
   position: absolute;
 }
 
@@ -2200,5 +2233,40 @@ hr {
     -webkit-transition: max-height 0.2s ease-out;
     transition: max-height 0.2s ease-out;
   }
+}
+
+.svg-cont {
+  height: 100vh;
+  width: 96vw;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  position: absolute;
+  z-index: -3;
+}
+
+svg {
+  width: 80%;
+  height: auto;
+  position: relative;
+  top: 10%;
+  -webkit-transform: rotate(130deg);
+          transform: rotate(130deg);
+}
+
+text {
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+  word-spacing: 20px;
 }
 /*# sourceMappingURL=style.css.map */

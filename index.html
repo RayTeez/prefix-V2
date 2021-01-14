@@ -32,9 +32,9 @@
         <div class="logo">
             <img src="img/logo.svg" alt="logo-icon">
         </div>
-        <div class="menu-bar hoverthis">
-            <a href="about.html"><span> About Me </span></a> 
-        </div>
+        <div class="menu-bar hoverthis" data-option="selected"><span>
+            <a   href="about.html"> About Me </a> 
+        </span></div>
     </nav>
 
 <div class="skewable">
@@ -79,17 +79,21 @@
             </div> 
         </div>
 
-        <div class="hero-intro-image">
-            <figure class="hi_1">
-                <img src="img/otherprojects/img1-3.jpg" alt="">
-            </figure>
+        <div class="hero-intro-image" data-option="info">
+            
+                <figure class="hi_1 hoverthis"  data-option="info">
+              <span><img src="img/pic-of-me.png" alt=""></span>
+                </figure>
+            
             <div class="hi_2">
+                
                 <div>
-                    <p class="ht_Reveal">And this is my</p>
+                    <p class="ht_Reveal">this is my </p>
                 </div>
                 <div>
                     <p class="ht_Reveal">Portfolio</p>
                 </div>
+            
             </div>
         </div>
     </div>    
@@ -166,42 +170,59 @@
 
     </section>
 
-    <section class="other-projects">
-        <button class="collapsible">Other Projects</button>
+    <section class="other-projects hoverthis" data-option="selected">
+        <button class="collapsible"><span>Other Projects</span></button>
         <div class="content">
-            <button class="project-one" id="0" onclick="showProject(this)">Branding</button>
-            <button class="project-two" id="2" onclick="showProject(this)">3D Design</button>
-            <button class="project-three" id="1" onclick="showProject(this)">Logo Design</button>
+            <button class="project-one hoverthis" data-option="selected" id="0" onclick="showProject(this)"><span>Branding</span></button>
+            <button class="project-two hoverthis" data-option="selected" id="2" onclick="showProject(this)"><span>3D Design</span></button>
+            <button class="project-three hoverthis" data-option="selected" id="1" onclick="showProject(this)"><span>Logo Design</span></button>
         </div>
     </section>
 
 
     <footer class="contacts skewable">
     
-
     <div class="contacts-cont">
         <p>Let's Chat</p>
-        <div class="hoverthis">
+        <div class="hoverthis" data-option="selected">
             <a href="mailto:hello@thomasmosito.xyz"><span> hello@thomasmosito.xyz </span></a>
         </div>
         <div class="follow-me">
             <p>Or... Follow</p>
             <ul>
-                <li><div class="hoverthis"><a href="https://www.instagram.com/thomasmosito/" target="_blank"><span>Instagram</span> </a> </div></li>
-                <li><div class="hoverthis"><a href="https://dribbble.com/Thomas_Mosito" target="_blank"><span>Dribbble</span> </a> </div></li>
-                <li><div class="hoverthis"><a href="https://www.behance.net/reatilemosito?tracking_source=search_projects_recommended%7Creatile" target="_blank"><span>Behance</span> </a> </div></li>
+                <li><div class="hoverthis" data-option="selected"><a href="https://www.instagram.com/thomasmosito/" target="_blank"><span>Instagram</span> </a> </div></li>
+                <li><div class="hoverthis" data-option="selected"><a href="https://dribbble.com/Thomas_Mosito" target="_blank"><span>Dribbble</span> </a> </div></li>
+                <li><div class="hoverthis" data-option="selected"><a href="https://www.behance.net/reatilemosito?tracking_source=search_projects_recommended%7Creatile" target="_blank"><span>Behance</span> </a> </div></li>
 
             </ul>
         </div>
 
     </div> 
+
+
+    <div class="svg-cont">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 315">
+  
+          <path id="curve" fill="transparent" d="M291.79,157.48c0,74.16-60.12,133.9-134.29,133.9S23.21,231.64,23.21,157.48a134.29,134.29,0,0,1,268.58,0Z"/>
+          <text class="lc-circle" width="600">
+            <textpath xlink:href="#curve">
+              Let's Chat Let's Chat Let's Chat Let's Chat Let's Chat Let's Chat Let's Chat
+            </textpath>
+          </text>
+        </svg>
+        </div>
+
+
     </footer>
 
 
 </div>
 
 
-<div class="cursor"></div>
+<div class="cursor">
+    <p class="c-info">This is Me</p>
+    <img class="c-next" src="" alt="arrow">
+</div>
     <!-- <script src="js/app.js"></script> -->
 
 

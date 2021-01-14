@@ -4,6 +4,7 @@
 }
 
 .hoverthis span {
+  height: inherit;
   display: inline-block;
   pointer-events: none;
 }
@@ -13,6 +14,15 @@
 }
 
 .cursor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   pointer-events: none;
   position: fixed;
   padding: 0.3rem;
@@ -24,6 +34,23 @@
   transition: transform 0.2s ease;
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
   z-index: 5555;
+}
+
+.selected {
+  -webkit-transform: scale(8);
+          transform: scale(8);
+}
+
+.info {
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: absolute;
+}
+
+.next {
+  width: 50%;
+  height: auto;
+  position: absolute;
 }
 
 .hover-this:hover ~ .cursor {

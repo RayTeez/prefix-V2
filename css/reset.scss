@@ -50,3 +50,8 @@ button:focus {
     border: none;
     outline: none;
 }
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
