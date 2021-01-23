@@ -1137,19 +1137,20 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
     }
 }
 
+
 .about-content{
     width: 100vw;
-    height: 80vh;
+    // height: 100vh;
     position: relative;
     display: flex;    
     justify-content: center;
     align-items: center;
 
-    .about-me, .myExp, .mySkills{
+    .about-me{
         column-gap: 2rem;
-        width: 70%;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
+        width: 90%;
+
+
 
         h3{
             position: relative;
@@ -1160,21 +1161,85 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
             letter-spacing: 6px;
             z-index: 9;
             line-height: 1.5; 
-
         }
 
         p{
             color: $notBlack;
             @include Lexand;
-            font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
-            letter-spacing: 0;
-            font-size:1.8rem; 
+            padding: 200px 0;
+            letter-spacing: -6px;
+            font-size: 2.4rem; 
             line-height: 2.2;
             text-transform: uppercase; 
 
         }
 
+        .my-name{
+            
+            @include Casta;
+            font-size: 3.4rem;
+            text-transform: capitalize;
+            position: relative;
+            flex-direction: column;
+        }
+
+        .line{
+            display: inline-block;
+            height: 1px;
+            width: 0%;
+            background-color:$notBlack;
+            position: absolute;
+            top:50px;
+            left: 0;
+            transition: cubic-bezier(0.215, 0.610, 0.355, 1) all 1s;
+        }
+
+        .my-name:hover .line{
+            width: 100%; 
+            pointer-events: none; 
+        }
+
     }
+
+    .myExp, .mySkills{
+        column-gap: 2rem;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+
+        h3{
+            position: relative;
+            top: -45px;
+            color: $notBlack;
+            @include Casta;
+            font-size:6.5rem; 
+            letter-spacing: 6px;
+            z-index: 9;
+            line-height: 1.5; 
+        }
+
+        p{
+            color: $notBlack;
+            @include Lexand;
+            padding: 200px 0;
+            letter-spacing: -6px;
+            font-size: 2.4rem; 
+            line-height: 2.2;
+            text-transform: uppercase; 
+
+        }
+
+        .my-name{
+            
+            @include Casta;
+            font-size: 3.4rem;
+            text-transform: capitalize;
+        }
+
+    }
+
+
 
     @include media("<=1388px"){
         .about-me, .myExp, .mySkills{
@@ -1230,8 +1295,11 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
 .myExp, .mySkills{
     
     .timeline, .skill{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         color: $notBlack;
-        font-family: $smallFont; 
+        font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
         font-size:2.2rem; 
         line-height: 1; 
         position: relative;
@@ -1243,8 +1311,9 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
         
         .time{
             width: max-content;
-            font-family: $theFont;
+            @include Lexand;
             font-size:1rem; 
+            letter-spacing: -2px;
 
         }
     }
@@ -1482,9 +1551,10 @@ button:focus {
 
 .c-next{
     display: none;
-    width: 50%;
+    width: 150px;
     height: auto;
-    position: absolute;
+
+    
 }
 
 
@@ -2211,4 +2281,6 @@ text{
     font-stretch: expanded;
     letter-spacing: 3px;
     word-spacing: 20px;
+    
 }
+

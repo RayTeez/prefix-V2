@@ -1082,7 +1082,6 @@ nav a:visited {
 
 .about-content {
   width: 100vw;
-  height: 80vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1095,17 +1094,13 @@ nav a:visited {
           align-items: center;
 }
 
-.about-content .about-me, .about-content .myExp, .about-content .mySkills {
+.about-content .about-me {
   -webkit-column-gap: 2rem;
           column-gap: 2rem;
-  width: 70%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
+  width: 90%;
 }
 
-.about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
+.about-content .about-me h3 {
   position: relative;
   top: -45px;
   color: #101111;
@@ -1118,16 +1113,89 @@ nav a:visited {
   line-height: 1.5;
 }
 
-.about-content .about-me p, .about-content .myExp p, .about-content .mySkills p {
+.about-content .about-me p {
   color: #101111;
   font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
   letter-spacing: -10px;
-  font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 0;
-  font-size: 1.8rem;
+  padding: 200px 0;
+  letter-spacing: -6px;
+  font-size: 2.4rem;
   line-height: 2.2;
   text-transform: uppercase;
+}
+
+.about-content .about-me .my-name {
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+  font-size: 3.4rem;
+  text-transform: capitalize;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about-content .about-me .line {
+  display: inline-block;
+  height: 1px;
+  width: 0%;
+  background-color: #101111;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  -webkit-transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+}
+
+.about-content .about-me .my-name:hover .line {
+  width: 100%;
+  pointer-events: none;
+}
+
+.about-content .myExp, .about-content .mySkills {
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  width: 90%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+}
+
+.about-content .myExp h3, .about-content .mySkills h3 {
+  position: relative;
+  top: -45px;
+  color: #101111;
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+  font-size: 6.5rem;
+  letter-spacing: 6px;
+  z-index: 9;
+  line-height: 1.5;
+}
+
+.about-content .myExp p, .about-content .mySkills p {
+  color: #101111;
+  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: -10px;
+  padding: 200px 0;
+  letter-spacing: -6px;
+  font-size: 2.4rem;
+  line-height: 2.2;
+  text-transform: uppercase;
+}
+
+.about-content .myExp .my-name, .about-content .mySkills .my-name {
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+  font-size: 3.4rem;
+  text-transform: capitalize;
 }
 
 @media (max-width: 1388px) {
@@ -1181,8 +1249,14 @@ nav a:visited {
 }
 
 .myExp .timeline, .myExp .skill, .mySkills .timeline, .mySkills .skill {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
   color: #101111;
-  font-family: "Mukta Vaani", sans-serif;
+  font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
   font-size: 2.2rem;
   line-height: 1;
   position: relative;
@@ -1197,8 +1271,11 @@ nav a:visited {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
+  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: -10px;
   font-size: 1rem;
+  letter-spacing: -2px;
 }
 
 .contacts {
@@ -1427,9 +1504,8 @@ button:focus {
 
 .c-next {
   display: none;
-  width: 50%;
+  width: 150px;
   height: auto;
-  position: absolute;
 }
 
 hr {

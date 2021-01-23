@@ -157,16 +157,17 @@ tl.to(heroImg, {
 
 const viewNextProject = document.querySelectorAll(".strap p");
 const viewNext = document.querySelector(".strap");
+const upTextInStrap = document.querySelector(".s-1");
 
-if(window.document.title=='Cure'||window.document.title=='Sony'||window.document.title=='Bolobedu'||window.document.title=='Open App'){
+if(window.document.title=='Cure'||window.document.title=='Sony'||window.document.title=='Bolobedu'||window.document.title=='Open App' ||window.document.title=='Other Projects'){
   viewNext.addEventListener('mouseover',f );
   viewNext.addEventListener('mouseout',j );
 
   function j() {
     
-    viewNextProject.forEach(para => {
-    para.textContent='View Next'
-  })}
+    upTextInStrap.style.transform='translateY(0%)';
+    console.log("inside");
+  };
 
   function f() {
     const nextData = document.querySelector("body");
@@ -176,7 +177,15 @@ if(window.document.title=='Cure'||window.document.title=='Sony'||window.document
     viewNextProject.forEach(para => {
 
     para.textContent= nextData.getAttribute("data-name");
-  })}
+    
+    if(nextData.getAttribute("data-name")==null){
+      para.textContent="view next"
+    }
+
+    
+  });
+  upTextInStrap.style.transform='translateY(-100%)';
+}
 }
 
 
@@ -423,14 +432,14 @@ for (i = 0; i < coll.length; i++) {
 
 // -------------svgs---------------
 
-const lcCircle = document.querySelector('.lc-circle');
+// const lcCircle = document.querySelector('.lc-circle');
 
-const editCursor = e => {
-    const { clientX: x, clientY: y } = e;
-    lcCircle.setAttribute('x',((x/window.innerWidth)*100)-50);
-    console.log(((x/window.innerWidth)*100)-50);
-}    
+// const editCursor = e => {
+//     const { clientX: x, clientY: y } = e;
+//     lcCircle.setAttribute('x',((x/window.innerWidth)*100)-50);
+//     console.log(((x/window.innerWidth)*100)-50);
+// }    
 
-window.addEventListener('mousemove', editCursor);
+// window.addEventListener('mousemove', editCursor);
 
 gsap.to('svg',{rotation:360, duration:40, ease: "none", repeat:-1})

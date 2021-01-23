@@ -39,6 +39,11 @@ tl.pause();
             info.style.display='block';
 
         }
+        else if(cursorHoveredOn=='next'){
+            
+            next.style.display='block';
+
+        }
         
           
 
@@ -52,6 +57,7 @@ tl.pause();
             span.style.transform = '';
             cursor.classList.remove('selected');
             cursor.classList.remove('info');
+            cursor.classList.remove('next');
             gsap.to(cursor,{height:'20', width:'20',duration:.4 })
             info.style.display='none';
             next.style.display='none';
