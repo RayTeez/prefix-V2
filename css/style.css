@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -40,6 +42,11 @@ body {
 
 ol, ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 blockquote, q {
@@ -93,13 +100,12 @@ nav {
   background: #eeeeee;
   background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), color-stop(60%, #eeeeee), color-stop(96%, rgba(238, 238, 238, 0)));
   background: linear-gradient(180deg, #eeeeee 0%, #eeeeee 60%, rgba(238, 238, 238, 0) 96%);
-  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
-  letter-spacing: -10px;
+  letter-spacing: 3px;
   -webkit-transform: translateY(-200px);
           transform: translateY(-200px);
-  letter-spacing: -2px;
-  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 nav .logo-name {
@@ -267,9 +273,9 @@ nav a:visited {
 }
 
 .project-hero .hero-title:nth-child(2) {
-  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
-  letter-spacing: -10px;
+  letter-spacing: 3px;
   bottom: 20%;
   right: 10%;
   z-index: 1;
@@ -379,6 +385,120 @@ nav a:visited {
     width: 80%;
     height: 70%;
     top: 25%;
+  }
+}
+
+.intro-content {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro-content p {
+  width: 80%;
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: 3px;
+  font-size: 3.3rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.intro-content .highlight {
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 3.8rem;
+  text-transform: capitalize;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.intro-content .line {
+  display: inline-block;
+  height: 1px;
+  width: 0%;
+  background-color: #101111;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  -webkit-transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+}
+
+.intro-content .highlight:hover .line {
+  width: 100%;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .intro-content {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .intro-content p {
+    width: 80%;
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: calc(50vw *0.15);
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  .intro-content .highlight {
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: calc(50vw *0.15);
+    text-transform: capitalize;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .intro-content .line {
+    display: inline-block;
+    height: 1px;
+    width: 0%;
+    background-color: #101111;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    -webkit-transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+    transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+  }
+  .intro-content .highlight:hover .line {
+    width: 100%;
+    pointer-events: none;
   }
 }
 
@@ -595,9 +715,9 @@ nav a:visited {
 
 .next-project .strap p {
   color: #eeeeee;
-  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
-  letter-spacing: -10px;
+  letter-spacing: 3px;
   font-size: 4.5rem;
   line-height: 1.5;
   text-decoration: none;
@@ -817,9 +937,9 @@ nav a:visited {
 .Hero .Hero-Contents .hero-intro h1 {
   font-size: 6rem;
   text-transform: uppercase;
-  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
-  letter-spacing: -10px;
+  letter-spacing: 3px;
 }
 
 .Hero .Hero-Contents .hero-intro .fontchange > h1 {
@@ -908,175 +1028,376 @@ nav a:visited {
   letter-spacing: 0px;
 }
 
-.Hero .about_content-hero {
-  width: 60%;
-}
-
-.Hero .about_content-hero div {
-  width: 100%;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
-}
-
-.Hero .about_content-hero div p {
-  color: #101111;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
-  font-size: 4rem;
-  line-height: 1.5;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  z-index: 2;
-}
-
-.Hero .about_content-hero div h2 {
-  color: #101111;
-  font-family: "MuseoModerno", Montserrat, sans-serif;
-  font-size: 6.5rem;
-  z-index: 9;
-  line-height: 1.5;
-}
-
-.Hero .about_content-hero div h2:hover + div {
-  width: 800px;
-  position: absolute;
-  top: -100px;
-  right: 150px;
-  z-index: -9;
-}
-
-.Hero .about_content-hero div h2 .blinds {
-  display: block;
-  height: 50%;
-}
-
-.Hero .about_content-hero div .blinds::after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: #eeeeee;
-  position: absolute;
-  left: 0;
-  -webkit-transform-origin: 0 100%;
-          transform-origin: 0 100%;
-  z-index: 1;
-}
-
-.Hero .about_content-hero div:nth-child(2) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.Hero .about_content-hero div:nth-child(2) div {
-  width: 110px;
-  border-radius: 800px;
-  overflow: hidden;
-  position: absolute;
-  top: 198px;
-  left: 380px;
-  will-change: auto;
-}
-
-.Hero .about_content-hero div:nth-child(2) div img {
-  width: 100%;
-}
-
 @media (max-width: 1388px) {
-  .Hero .about_content-hero {
-    width: 70%;
+  .Hero .Hero-Contents {
+    width: 80%;
   }
-  .Hero .about_content-hero div p {
-    font-size: 3rem;
-  }
-  .Hero .about_content-hero div h2 {
-    font-size: 5rem;
-  }
-  .Hero .about_content-hero div h2:hover + div {
-    width: 600px;
-    top: -240px;
-    right: 150px;
-  }
-  .Hero .about_content-hero div:nth-child(2) {
+  .Hero .Hero-Contents .hero-intro {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .Hero .about_content-hero div:nth-child(2) div {
-    display: none;
-    top: 160px;
-    left: 350px;
+  .Hero .Hero-Contents .hero-intro h2 {
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    margin-bottom: 6%;
+  }
+  .Hero .Hero-Contents .hero-intro h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+  }
+  .Hero .Hero-Contents .hero-intro .fontchange > h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    font-style: italic;
+  }
+  .Hero .Hero-Contents .hero-intro h3 {
+    font-size: 1.6rem;
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+  }
+  .Hero .Hero-Contents .hero-intro .ht_5 {
+    margin-top: 10%;
+  }
+  .Hero .Hero-Contents .ht_2, .Hero .Hero-Contents .ht_5, .Hero .Hero-Contents .ht_6 {
+    position: relative;
+    left: 10%;
+  }
+  .Hero .Hero-Contents .ht_2, .Hero .Hero-Contents .ht_3 {
+    pointer-events: none;
+    z-index: 3;
+  }
+  .Hero .Hero-Contents .ht_3 {
+    position: relative;
+    top: 10px;
+    left: 50%;
+  }
+  .Hero .Hero-Contents .ht_4 {
+    position: relative;
+    left: -20%;
+  }
+  .Hero .Hero-Contents .hero-intro-image {
+    width: 100%;
+    height: 65%;
+    position: relative;
+    top: 7%;
+  }
+  .Hero .Hero-Contents .hero-intro-image figure {
+    width: 100%;
+    height: 100%;
+  }
+  .Hero .Hero-Contents .hero-intro-image figure img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 100%;
+       object-position: 50% 100%;
+  }
+  .Hero .Hero-Contents .hero-intro-image .hi_2 {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    background-color: #101111;
+    padding: 20px 60px;
+    border-radius: 100px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    position: relative;
+    top: -25%;
+    left: -10%;
+    pointer-events: none;
+  }
+  .Hero .Hero-Contents .hero-intro-image .hi_2 p {
+    color: white;
+    font-size: 1.8rem;
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    letter-spacing: 0px;
+  }
+}
+
+@media (max-width: 1388px) and (max-width: 1100px) {
+  .Hero .Hero-Contents .hero-intro-image {
+    right: -50px;
   }
 }
 
 @media (max-width: 900px) {
-  .Hero .about_content-hero {
+  .Hero .Hero-Contents {
     width: 80%;
-  }
-  .Hero .about_content-hero div p {
-    font-size: 2rem;
-  }
-  .Hero .about_content-hero div h2 {
-    font-size: 4.5rem;
-  }
-  .Hero .about_content-hero div h2:hover + div {
-    width: 110px;
-    width: 600px;
-    top: 120px;
-    left: 300px;
-  }
-  .Hero .about_content-hero div:nth-child(2) {
+    position: relative;
+    margin: 30vh 0 10% 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .Hero .about_content-hero div:nth-child(2) div {
-    top: 120px;
-    left: 300px;
+  .Hero .Hero-Contents .hero-intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Hero .Hero-Contents .hero-intro h2 {
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 6%;
+  }
+  .Hero .Hero-Contents .hero-intro h1 {
+    font-size: calc(100vw *0.15);
+    text-transform: uppercase;
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+  }
+  .Hero .Hero-Contents .hero-intro .fontchange > h1 {
+    font-size: calc(100vw *0.2);
+    text-transform: uppercase;
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    font-style: italic;
+  }
+  .Hero .Hero-Contents .hero-intro h3 {
+    font-size: 1.6rem;
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+  }
+  .Hero .Hero-Contents .hero-intro .ht_5 {
+    margin-top: 10%;
+    text-align: center;
+  }
+  .Hero .Hero-Contents .ht_2, .Hero .Hero-Contents .ht_5, .Hero .Hero-Contents .ht_6 {
+    position: relative;
+    left: 0;
+    text-align: center;
+  }
+  .Hero .Hero-Contents .ht_2, .Hero .Hero-Contents .ht_3 {
+    pointer-events: none;
+    z-index: 3;
+  }
+  .Hero .Hero-Contents .ht_3 {
+    position: relative;
+    top: 10px;
+    left: 0%;
+  }
+  .Hero .Hero-Contents .ht_4 {
+    position: relative;
+    left: 0%;
+  }
+  .Hero .Hero-Contents .hero-intro-image {
+    width: 90%;
+    height: 100%;
+    margin-top: 10%;
+    position: relative;
+    top: 7%;
+  }
+  .Hero .Hero-Contents .hero-intro-image figure {
+    width: 100%;
+    height: 750px;
+  }
+  .Hero .Hero-Contents .hero-intro-image figure img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 100%;
+       object-position: 50% 100%;
+  }
+  .Hero .Hero-Contents .hero-intro-image .hi_2 {
+    display: none;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    background-color: #101111;
+    padding: 20px 60px;
+    border-radius: 100px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    position: relative;
+    top: -25%;
+    left: -10%;
+    pointer-events: none;
+  }
+  .Hero .Hero-Contents .hero-intro-image .hi_2 p {
+    color: white;
+    font-size: 1.8rem;
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    letter-spacing: 0px;
   }
 }
 
-@media (max-width: 500px) {
-  .Hero .about_content-hero {
-    width: 80%;
+@media (max-width: 900px) and (max-width: 1100px) {
+  .Hero .Hero-Contents .hero-intro-image {
+    right: 0px;
   }
-  .Hero .about_content-hero div p {
-    font-size: 2rem;
-  }
-  .Hero .about_content-hero div h2 {
-    font-size: 4.5rem;
-  }
-  .Hero .about_content-hero div h2:hover + div {
-    width: 110px;
-    width: 600px;
-    top: 0;
-    left: 0;
-  }
-  .Hero .about_content-hero div .blinds::after {
-    display: none;
-    content: '';
-    width: 100%;
-    height: 0;
-    background-color: #eeeeee;
-    position: absolute;
-    left: 0;
-    -webkit-transform-origin: 0 100%;
-            transform-origin: 0 100%;
-    z-index: 1;
-  }
-  .Hero .about_content-hero div:nth-child(2) {
+}
+
+@media (max-width: 550px) {
+  .Hero .Hero-Contents {
+    width: 90%;
+    position: relative;
+    margin: 40vh 0 10% 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .Hero .about_content-hero div:nth-child(2) h2 > span:first-child {
-    line-height: 1;
+  .Hero .Hero-Contents .hero-intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .Hero .about_content-hero div:nth-child(2) div {
-    top: 120px;
-    left: 250px;
+  .Hero .Hero-Contents .hero-intro h2 {
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 6%;
+  }
+  .Hero .Hero-Contents .hero-intro h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+  }
+  .Hero .Hero-Contents .hero-intro .fontchange > h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    font-style: italic;
+  }
+  .Hero .Hero-Contents .hero-intro h3 {
+    font-size: 1.6rem;
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+  }
+  .Hero .Hero-Contents .hero-intro .ht_5 {
+    margin-top: 10%;
+    text-align: center;
+  }
+  .Hero .Hero-Contents .ht_2, .Hero .Hero-Contents .ht_5, .Hero .Hero-Contents .ht_6 {
+    position: relative;
+    left: 0;
+    text-align: center;
+  }
+  .Hero .Hero-Contents .ht_2, .Hero .Hero-Contents .ht_3 {
+    pointer-events: none;
+    z-index: 3;
+  }
+  .Hero .Hero-Contents .ht_3 {
+    position: relative;
+    top: 10px;
+    left: 0%;
+  }
+  .Hero .Hero-Contents .ht_4 {
+    position: relative;
+    left: 0%;
+  }
+  .Hero .Hero-Contents .hero-intro-image {
+    width: 90%;
+    height: 100%;
+    margin-top: 10%;
+    position: relative;
+    top: 7%;
+  }
+  .Hero .Hero-Contents .hero-intro-image figure {
+    width: 100%;
+    height: 650px;
+  }
+  .Hero .Hero-Contents .hero-intro-image figure img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 100%;
+       object-position: 50% 100%;
+  }
+  .Hero .Hero-Contents .hero-intro-image .hi_2 {
+    display: none;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    background-color: #101111;
+    padding: 20px 60px;
+    border-radius: 100px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    position: relative;
+    top: -25%;
+    left: -10%;
+    pointer-events: none;
+  }
+  .Hero .Hero-Contents .hero-intro-image .hi_2 p {
+    color: white;
+    font-size: 1.8rem;
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    letter-spacing: 0px;
+  }
+}
+
+@media (max-width: 550px) and (max-width: 1100px) {
+  .Hero .Hero-Contents .hero-intro-image {
+    right: 0px;
+  }
+}
+
+@media (max-width: 900px) {
+  .Hero {
+    width: 100vw;
+    height: auto;
   }
 }
 
@@ -1115,14 +1436,13 @@ nav a:visited {
 
 .about-content .about-me p {
   color: #101111;
-  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
-  letter-spacing: -10px;
+  letter-spacing: 3px;
   padding: 200px 0;
-  letter-spacing: -6px;
-  font-size: 2.4rem;
+  letter-spacing: 2px;
+  font-size: 2.6rem;
   line-height: 2.2;
-  text-transform: uppercase;
 }
 
 .about-content .about-me .my-name {
@@ -1180,9 +1500,9 @@ nav a:visited {
 
 .about-content .myExp p, .about-content .mySkills p {
   color: #101111;
-  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
-  letter-spacing: -10px;
+  letter-spacing: 3px;
   padding: 200px 0;
   letter-spacing: -6px;
   font-size: 2.4rem;
@@ -1271,9 +1591,9 @@ nav a:visited {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
-  letter-spacing: -10px;
+  letter-spacing: 3px;
   font-size: 1rem;
   letter-spacing: -2px;
 }
@@ -1281,6 +1601,7 @@ nav a:visited {
 .contacts {
   width: 100vw;
   height: 100vh;
+  margin-top: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1454,12 +1775,90 @@ nav a:visited {
   will-change: auto;
 }
 
+@media (max-width: 600px) {
+  .work-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .work-content h3 {
+    color: #101111;
+    font-family: "MuseoModerno", Montserrat, sans-serif;
+    font-size: 2.5rem;
+    z-index: 9;
+    line-height: 1.5;
+  }
+  .work-content .work {
+    width: 70%;
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+  }
+  .work-content .work h3 {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    font-size: 4rem;
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    letter-spacing: 6px;
+  }
+  .work-content .work .project_btn {
+    margin: 50px 0;
+    background-color: #eeeeee;
+  }
+  .work-content .work:focus {
+    outline: none;
+  }
+  .work-content .work a {
+    text-decoration: none;
+    will-change: auto;
+  }
+}
+
 .movewithmouse {
   visibility: hidden;
 }
 
 .show {
   visibility: visible;
+}
+
+.my-name {
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+  font-size: 3.4rem;
+  text-transform: capitalize;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.line {
+  display: inline-block;
+  height: 1px;
+  width: 0%;
+  background-color: #101111;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  -webkit-transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+}
+
+.my-name:hover .line {
+  width: 100%;
+  pointer-events: none;
 }
 
 button:focus {
@@ -1494,9 +1893,9 @@ button:focus {
 .c-info {
   display: none;
   font-size: 1rem;
-  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
-  letter-spacing: -10px;
+  letter-spacing: 3px;
   letter-spacing: 0px;
   color: #101111;
   position: absolute;
@@ -1667,8 +2066,9 @@ hr {
 .project_btn .button-wrapper p {
   margin: 0 60px;
   color: #eeeeee;
-  font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
-  text-transform: uppercase;
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: 3px;
   font-size: 5.5rem;
   line-height: 1.5;
   position: relative;
@@ -1735,7 +2135,7 @@ hr {
     width: 350px;
   }
   .project_btn .button-wrapper p {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -2220,9 +2620,9 @@ hr {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
-  letter-spacing: -10px;
+  letter-spacing: 3px;
   font-size: 1.2rem;
   letter-spacing: 0;
 }
@@ -2264,9 +2664,9 @@ hr {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   font-size: 1.8rem;
-  font-family: 'Lexend Tera', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
-  letter-spacing: -10px;
+  letter-spacing: 3px;
   letter-spacing: -2px;
 }
 

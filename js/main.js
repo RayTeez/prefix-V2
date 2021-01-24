@@ -432,14 +432,14 @@ for (i = 0; i < coll.length; i++) {
 
 // -------------svgs---------------
 
-// const lcCircle = document.querySelector('.lc-circle');
+const lcCircle = document.querySelector('.lc-circle');
 
-// const editCursor = e => {
-//     const { clientX: x, clientY: y } = e;
-//     lcCircle.setAttribute('x',((x/window.innerWidth)*100)-50);
-//     console.log(((x/window.innerWidth)*100)-50);
-// }    
+const editCursor = e => {
+    const { clientX: x, clientY: y } = e;
+    lcCircle.setAttribute('x',((x/window.innerWidth)*100)-50);
+    console.log(((x/window.innerWidth)*100)-50);
+}    
 
-// window.addEventListener('mousemove', editCursor);
+window.addEventListener('mousemove', editCursor);
 
 gsap.to('svg',{rotation:360, duration:40, ease: "none", repeat:-1})
