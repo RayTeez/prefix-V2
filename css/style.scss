@@ -1429,6 +1429,22 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
             position: relative;
             flex-direction: column;
         }
+        @include media("<=900px"){
+            .my-name{
+            
+                @include Casta;
+                font-size: 2.2rem;
+                text-transform: capitalize;
+            }
+        }
+        @include media("<=500px"){
+            .my-name{
+            
+                @include Casta;
+                font-size: 1.6rem;
+                text-transform: capitalize;
+            }
+        }
         
         .line{
             display: inline-block;
@@ -1484,6 +1500,7 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
             text-transform: capitalize;
         }
 
+
     }
 
 
@@ -1492,8 +1509,27 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
         .about-me, .myExp, .mySkills{
             width: 70%;
             column-gap: 8rem;
+            grid-template-columns: 1fr;
         }
     } 
+
+    @include media("<=1088px"){
+        .about-me, .myExp, .mySkills{
+            width: 70%;
+            column-gap: 8rem;
+            grid-template-columns: 1fr;
+    
+            h3{
+                color: $notBlack;
+                font-size:3rem; 
+                z-index: 9;
+                line-height: 1.5; 
+    
+            }
+
+        }
+    } 
+
     @include media("<=900px"){
         .about-me, .myExp, .mySkills{
             width: 80%;
@@ -1501,7 +1537,6 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
     
             h3{
                 color: $notBlack;
-                font-family: $theFont;
                 font-size:2rem; 
                 z-index: 9;
                 line-height: 1.5; 
@@ -1509,22 +1544,26 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
             }
     
             p{
-                color: $notBlack;
-                font-family: $smallFont; 
+                color: $notBlack; 
                 font-size:1.2rem; 
                 line-height: 1.5;  
             }
         }    
     }
-    @include media("<=500px"){
+    @include media("<=600px"){
         .about-me, .myExp, .mySkills{
-            width: 60%;
+            width: 85%;
             display: grid;
             grid-template-columns: 1fr;
+
+            .timeline, .skill{
+                grid-template-columns: 1fr;
+            }
     
             h3{
                 font-size:2rem; 
                 margin-bottom:1.5rem;
+                top:0;
             }
     
             p{
@@ -1535,8 +1574,15 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
 
 }
 
+
 .about-cont{
     height: 60vh;
+}
+@include media("<=900px"){
+    .about-cont{
+        height: auto;
+    
+    }
 }
 
 .myExp, .mySkills{
@@ -1579,18 +1625,10 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
 
     .contacts-cont{
         
-        display: grid;
-        grid-template-columns: 0.4fr 1fr;
-        
-        p{
-            width: 250px;
-            grid-area: 1 / 1 / 2 / 3;
-            color: $notBlack;
-            font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
-            font-size:1.6rem; 
-            line-height: 1.5;   
-        }
-        .hoverthis{grid-area: 2 / 2 / 3 / 3;}
+        width: max-content;
+        margin: 0 auto;
+        position: relative;
+        top: 50px;
 
         a{
             
@@ -1599,25 +1637,19 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
             font-size:4.5rem; 
             line-height: 1.5; 
             color: $notBlack;
-            text-decoration: none; 
+            text-decoration: none;
+            text-align: center; 
         }
 
         .follow-me{
-            width: 90%;
-            grid-area: 3 / 2 / 4 / 3;
-            display: flex;
-            
-            // justify-content: space-between;
-
+            width: 100%;
         }
-
-        // .div4 { grid-area: 2 / 1 / 3 / 2; } -------arrow thing
 
 
         ul{
-            width: 80%;
+            width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             
             li{
                 font-family: $theFont; 
@@ -1628,19 +1660,12 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
                 }
             }
         }
-
-        // @include media("<=desktop"){
-        //     a{
-        //         font-size:3.5rem; 
-        //     }
-        // }
     }
     @include media("<=1388px"){
         .contacts-cont{
 
             a{
-                font-size:4.0rem; 
-
+                font-size:3.0rem; 
             }
     
         }    
@@ -1649,7 +1674,7 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
         .contacts-cont{
 
             a{
-                font-size:2.8rem; 
+                font-size:calc(100vw*0.05); 
 
             }
             .follow-me{
@@ -1658,29 +1683,37 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
                 justify-content: space-between;
     
             }
-    
+            ul{
+                li{
+                    font-family: $theFont; 
+                    
+                    a{
+                        font-size: calc(100vw*0.03);
+                        margin: 10px 0;
+                    }
+                }
+            }
         }    
     }
     @include media("<=600px"){
         .contacts-cont{
 
             a{
-                font-size:2.2rem; 
+                font-size:calc(100vw*0.07); 
 
             }
-            .follow-me {
-                ul{
-                    width: 100%;
-                    margin-top: 20px;
-                    display: flex;
-                    justify-content: space-between;
+
+            ul{
+                li{
+                    font-family: $theFont; 
+                    
+                    a{
+                        font-size: calc(100vw*0.05);
+                        margin: 10px 0;
+                    }
                 }
-
             }
-            .follow-me > p{
-                display: none;
 
-            }
 
 
 
@@ -2761,11 +2794,16 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     position: absolute;
     z-index: -3;
 
 }
+@include media("<=700px"){
+    .svg-cont{
+    overflow: hidden;
+    }
+}
+
 
 svg{
     width: 80%;
@@ -2774,6 +2812,12 @@ svg{
     top: 10%;
     transform: rotate(130deg);
 
+}
+
+@include media("<=700px"){
+    svg{
+    transform: scale(2);
+    }
 }
 
 text{

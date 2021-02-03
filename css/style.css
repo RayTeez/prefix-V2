@@ -1479,6 +1479,26 @@ nav a:visited {
           flex-direction: column;
 }
 
+@media (max-width: 900px) {
+  .about-content .about-me .my-name {
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    font-size: 2.2rem;
+    text-transform: capitalize;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-content .about-me .my-name {
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+  }
+}
+
 .about-content .about-me .line {
   display: inline-block;
   height: 1px;
@@ -1544,6 +1564,24 @@ nav a:visited {
     width: 70%;
     -webkit-column-gap: 8rem;
             column-gap: 8rem;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1088px) {
+  .about-content .about-me, .about-content .myExp, .about-content .mySkills {
+    width: 70%;
+    -webkit-column-gap: 8rem;
+            column-gap: 8rem;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
+    color: #101111;
+    font-size: 3rem;
+    z-index: 9;
+    line-height: 1.5;
   }
 }
 
@@ -1555,30 +1593,33 @@ nav a:visited {
   }
   .about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
     color: #101111;
-    font-family: "MuseoModerno", Montserrat, sans-serif;
     font-size: 2rem;
     z-index: 9;
     line-height: 1.5;
   }
   .about-content .about-me p, .about-content .myExp p, .about-content .mySkills p {
     color: #101111;
-    font-family: "Mukta Vaani", sans-serif;
     font-size: 1.2rem;
     line-height: 1.5;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .about-content .about-me, .about-content .myExp, .about-content .mySkills {
-    width: 60%;
+    width: 85%;
     display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about-content .about-me .timeline, .about-content .about-me .skill, .about-content .myExp .timeline, .about-content .myExp .skill, .about-content .mySkills .timeline, .about-content .mySkills .skill {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
   .about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    top: 0;
   }
   .about-content .about-me p, .about-content .myExp p, .about-content .mySkills p {
     font-size: 1.1rem;
@@ -1587,6 +1628,12 @@ nav a:visited {
 
 .about-cont {
   height: 60vh;
+}
+
+@media (max-width: 900px) {
+  .about-cont {
+    height: auto;
+  }
 }
 
 .myExp .timeline, .myExp .skill, .mySkills .timeline, .mySkills .skill {
@@ -1636,31 +1683,12 @@ nav a:visited {
 }
 
 .contacts .contacts-cont {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 0.4fr 1fr;
-      grid-template-columns: 0.4fr 1fr;
-}
-
-.contacts .contacts-cont p {
-  width: 250px;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: 1 / 1 / 2 / 3;
-  color: #101111;
-  font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.5;
-}
-
-.contacts .contacts-cont .hoverthis {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 2 / 2 / 3 / 3;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  position: relative;
+  top: 50px;
 }
 
 .contacts .contacts-cont a {
@@ -1672,28 +1700,21 @@ nav a:visited {
   line-height: 1.5;
   color: #101111;
   text-decoration: none;
+  text-align: center;
 }
 
 .contacts .contacts-cont .follow-me {
-  width: 90%;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 3 / 2 / 4 / 3;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 100%;
 }
 
 .contacts .contacts-cont ul {
-  width: 80%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .contacts .contacts-cont ul li {
@@ -1707,13 +1728,13 @@ nav a:visited {
 
 @media (max-width: 1388px) {
   .contacts .contacts-cont a {
-    font-size: 4.0rem;
+    font-size: 3.0rem;
   }
 }
 
 @media (max-width: 900px) {
   .contacts .contacts-cont a {
-    font-size: 2.8rem;
+    font-size: calc(100vw*0.05);
   }
   .contacts .contacts-cont .follow-me {
     width: 100%;
@@ -1724,24 +1745,25 @@ nav a:visited {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .contacts .contacts-cont ul li {
+    font-family: "MuseoModerno", Montserrat, sans-serif;
+  }
+  .contacts .contacts-cont ul li a {
+    font-size: calc(100vw*0.03);
+    margin: 10px 0;
+  }
 }
 
 @media (max-width: 600px) {
   .contacts .contacts-cont a {
-    font-size: 2.2rem;
+    font-size: calc(100vw*0.07);
   }
-  .contacts .contacts-cont .follow-me ul {
-    width: 100%;
-    margin-top: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .contacts .contacts-cont ul li {
+    font-family: "MuseoModerno", Montserrat, sans-serif;
   }
-  .contacts .contacts-cont .follow-me > p {
-    display: none;
+  .contacts .contacts-cont ul li a {
+    font-size: calc(100vw*0.05);
+    margin: 10px 0;
   }
 }
 
@@ -2898,9 +2920,14 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: hidden;
   position: absolute;
   z-index: -3;
+}
+
+@media (max-width: 700px) {
+  .svg-cont {
+    overflow: hidden;
+  }
 }
 
 svg {
@@ -2910,6 +2937,13 @@ svg {
   top: 10%;
   -webkit-transform: rotate(130deg);
           transform: rotate(130deg);
+}
+
+@media (max-width: 700px) {
+  svg {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
 }
 
 text {

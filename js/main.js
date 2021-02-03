@@ -443,3 +443,14 @@ const editCursor = e => {
 window.addEventListener('mousemove', editCursor);
 
 gsap.to('svg',{rotation:360, duration:40, ease: "none", repeat:-1})
+
+//---contacts cont fix
+this.addEventListener("scroll", function () {
+  
+      if(this.scrollY + this.innerHeight>=document.querySelector('body').offsetHeight-20){
+   document.querySelector(".contacts").style.overflow="hidden";
+  } 
+  else if(this.scrollY + this.innerHeight<=document.querySelector('body').offsetHeight-20){   
+   document.querySelector(".contacts").style.overflow="visible";
+  }
+  }, false);
