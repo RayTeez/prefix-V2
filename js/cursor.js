@@ -42,7 +42,7 @@ tl.pause();
         else if(cursorHoveredOn=='next'){
             
             next.style.display='block';
-
+            gsap.to(cursor,{height:'160', width:'160',duration:.4 })
         }
         
           

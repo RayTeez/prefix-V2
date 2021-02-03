@@ -329,11 +329,11 @@ nav a:visited {
   }
   .project-hero .hero-title:nth-child(1) {
     top: 22%;
-    left: 10%;
+    left: 30%;
   }
   .project-hero .hero-title:nth-child(2) {
     bottom: 40%;
-    right: 10%;
+    right: 30%;
     z-index: 1;
   }
   .project-hero .hero-image {
@@ -719,16 +719,102 @@ nav a:visited {
 }
 
 .next-project .strap .s-1 {
-  width: 100%;
-  height: 80%;
+  width: auto;
+  height: 200%;
+  position: relative;
+  left: -25%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
   transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
   transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform;
   transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform, 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+}
+
+@media (max-width: 1388px) {
+  .next-project .strap .s-1 {
+    width: auto;
+    height: 200%;
+    position: relative;
+    left: -25%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform, 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+  }
+}
+
+@media (max-width: 1050px) {
+  .next-project .strap .s-1 {
+    width: auto;
+    height: 200%;
+    position: relative;
+    left: -25%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform, 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+  }
+}
+
+@media (max-width: 950px) {
+  .next-project .strap .s-1 {
+    width: auto;
+    height: 200%;
+    position: relative;
+    left: -25%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform, 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+  }
+  .next-project .strap p {
+    color: #eeeeee;
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: calc(100vw*0.02);
+    line-height: 1.5;
+    text-decoration: none;
+  }
 }
 
 .next-project .strap p {
@@ -736,12 +822,12 @@ nav a:visited {
   font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
   letter-spacing: 3px;
-  font-size: 4.5rem;
+  font-size: calc(100vw*0.03);
   line-height: 1.5;
   text-decoration: none;
 }
 
-.next-project .strap p:nth-child(n+5) {
+.next-project .strap p:nth-child(n+13) {
   font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-stretch: expanded;
   letter-spacing: 3px;
@@ -767,12 +853,7 @@ nav a:visited {
           transform: rotate(3deg);
 }
 
-.move-up {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-}
-
-@media (max-width: 1388px) {
+@media (max-width: 750px) {
   .next-project {
     width: 100%;
     height: 60vh;
@@ -781,95 +862,8 @@ nav a:visited {
     -webkit-transform: rotate(-3deg);
             transform: rotate(-3deg);
   }
-  .next-project .strap {
-    height: 130px;
-    width: 250%;
-    background: #101111;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transform: translate(-30%);
-            transform: translate(-30%);
-    position: relative;
-    top: 35%;
-  }
-  .next-project .strap p {
-    font-size: 3.5rem;
-  }
-  .next-project .arrow:nth-child(2) {
-    height: auto;
-    position: absolute;
-    width: 200px;
-    right: 10%;
-    top: 5%;
-  }
-  .next-project .arrow:nth-child(3) {
-    height: auto;
-    position: absolute;
-    width: 250px;
-    left: 10%;
-    top: 50%;
-  }
-}
-
-@media (max-width: 900px) {
-  .next-project {
-    width: 100%;
-    height: 60vh;
-    margin-top: 15%;
-    position: relative;
-    -webkit-transform: rotate(-3deg);
-            transform: rotate(-3deg);
-  }
-  .next-project .strap {
-    height: 100px;
-    width: 250%;
-    background: #101111;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transform: translate(-30%);
-            transform: translate(-30%);
-    position: relative;
-    top: 35%;
-  }
-  .next-project .strap p {
-    font-size: 2.1rem;
-  }
-  .next-project .arrow:nth-child(2) {
-    height: auto;
-    position: absolute;
-    width: 120px;
-    right: 10%;
-    top: 13%;
-  }
-  .next-project .arrow:nth-child(3) {
-    height: auto;
-    position: absolute;
-    width: 200px;
-    left: 10%;
-    top: 50%;
-  }
-}
-
-@media (max-width: 500px) {
-  .next-project {
-    width: 100%;
-    height: 60vh;
-    margin-top: 15%;
-    position: relative;
-    -webkit-transform: rotate(-3deg);
-            transform: rotate(-3deg);
+  .next-project a {
+    text-decoration: none;
   }
   .next-project .strap {
     height: 80px;
@@ -887,24 +881,136 @@ nav a:visited {
             transform: translate(-30%);
     position: relative;
     top: 35%;
+    overflow: hidden;
+  }
+  .next-project .strap .s-1 {
+    width: 100%;
+    height: 200%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform, 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
   }
   .next-project .strap p {
-    font-size: 1.3rem;
+    color: #eeeeee;
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: calc(100vw*0.035);
+    line-height: 1.5;
+    text-decoration: none;
+  }
+  .next-project .strap p:nth-child(n+13) {
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
   }
   .next-project .arrow:nth-child(2) {
     height: auto;
     position: absolute;
-    width: 80px;
+    width: 200px;
     right: 10%;
-    top: 13%;
+    top: 5%;
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
   }
   .next-project .arrow:nth-child(3) {
     height: auto;
     position: absolute;
-    display: none;
-    width: 140px;
+    width: 300px;
     left: 10%;
     top: 50%;
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .next-project {
+    width: 100%;
+    height: 60vh;
+    margin-top: 15%;
+    position: relative;
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+  .next-project a {
+    text-decoration: none;
+  }
+  .next-project .strap {
+    width: 250%;
+    background: #101111;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translate(-30%);
+            transform: translate(-30%);
+    position: relative;
+    top: 35%;
+    overflow: hidden;
+  }
+  .next-project .strap .s-1 {
+    width: 100%;
+    height: 200%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform, 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
+  }
+  .next-project .strap p {
+    color: #eeeeee;
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: calc(100vw*0.03);
+    line-height: 1.5;
+    text-decoration: none;
+  }
+  .next-project .strap p:nth-child(n+13) {
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+  }
+  .next-project .arrow:nth-child(2) {
+    height: auto;
+    position: absolute;
+    width: 200px;
+    right: 10%;
+    top: 5%;
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  .next-project .arrow:nth-child(3) {
+    height: auto;
+    position: absolute;
+    width: 300px;
+    left: 10%;
+    top: 50%;
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
   }
 }
 
@@ -1616,6 +1722,12 @@ nav a:visited {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .about-content .about-me .timeline .exp, .about-content .about-me .skill .exp, .about-content .myExp .timeline .exp, .about-content .myExp .skill .exp, .about-content .mySkills .timeline .exp, .about-content .mySkills .skill .exp {
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: calc(100vw*0.05);
+  }
   .about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
@@ -1644,7 +1756,9 @@ nav a:visited {
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
   color: #101111;
-  font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: 3px;
   font-size: 2.2rem;
   line-height: 1;
   position: relative;
@@ -1664,6 +1778,39 @@ nav a:visited {
   letter-spacing: 3px;
   font-size: 1rem;
   letter-spacing: -2px;
+}
+
+@media (max-width: 600px) {
+  .myExp .timeline, .myExp .skill, .mySkills .timeline, .mySkills .skill {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    color: #101111;
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: 2.2rem;
+    line-height: 1;
+    position: relative;
+    top: -20px;
+  }
+  .myExp .timeline li, .myExp .skill li, .mySkills .timeline li, .mySkills .skill li {
+    margin: 20px;
+    font-size: calc(100vw*0.05);
+  }
+  .myExp .timeline .time, .myExp .skill .time, .mySkills .timeline .time, .mySkills .skill .time {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    letter-spacing: -2px;
+  }
 }
 
 .contacts {
@@ -2399,6 +2546,26 @@ hr {
   pointer-events: none;
 }
 
+@media (max-width: 800px) {
+  .catagory-section h1 {
+    font-family: "Lexend Tera", Montserrat, sans-serif;
+    letter-spacing: -10px;
+    font-size: calc(100vw * 0.1);
+    color: mediumblue;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .catagory-section h1 {
+    font-family: "Lexend Tera", Montserrat, sans-serif;
+    letter-spacing: -1px;
+    font-size: calc(100vw * 0.1);
+    color: mediumblue;
+    pointer-events: none;
+  }
+}
+
 .cont {
   width: 100vw;
 }
@@ -2906,6 +3073,22 @@ hr {
   }
 }
 
+.op-next {
+  width: 100%;
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: 3px;
+  position: relative;
+  top: 30vh;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .svg-cont {
   height: 100vh;
   width: 96vw;
@@ -2951,5 +3134,17 @@ text {
   font-stretch: expanded;
   letter-spacing: 3px;
   word-spacing: 20px;
+}
+
+.m-c {
+  width: 80%;
+  margin: auto;
+}
+
+@media (max-width: 900px) {
+  .m-c {
+    width: 80%;
+    margin: 2rem auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */

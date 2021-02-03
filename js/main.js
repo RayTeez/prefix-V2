@@ -176,17 +176,30 @@ if(window.document.title=='Cure'||window.document.title=='Sony'||window.document
     
     viewNextProject.forEach(para => {
 
-    para.textContent= nextData.getAttribute("data-name");
-    
-    if(nextData.getAttribute("data-name")==null){
-      para.textContent="view next"
-    }
+      para.textContent= nextData.getAttribute("data-name");
+      
+      if(nextData.getAttribute("data-name")==null){
+        para.textContent="view next"
+      }
 
-    
-  });
-  upTextInStrap.style.transform='translateY(-100%)';
+      
+    });
+    upTextInStrap.style.transform='translateY(-50%)';
+  } 
+} 
+ if(window.document.title=='Other Projects'){
+      this.addEventListener("scroll", function () {
+        
+        if(this.scrollY + this.innerHeight>=document.querySelector('body').offsetHeight-260){
+    document.querySelector(".t-heading").textContent="3D Design";
+    } 
+    else if(this.scrollY + this.innerHeight<=document.querySelector('body').offsetHeight-260){   
+    document.querySelector(".t-heading").textContent="Branding";
+    }
+    }, false);
 }
-}
+
+
 
 
 
@@ -434,23 +447,26 @@ for (i = 0; i < coll.length; i++) {
 
 const lcCircle = document.querySelector('.lc-circle');
 
-const editCursor = e => {
-    const { clientX: x, clientY: y } = e;
-    lcCircle.setAttribute('x',((x/window.innerWidth)*100)-50);
-    console.log(((x/window.innerWidth)*100)-50);
-}    
+if(window.document.title=='About'||window.document.title=='🙃Thomas Mosito'){
 
-window.addEventListener('mousemove', editCursor);
+  const editCursor = e => {
+      const { clientX: x, clientY: y } = e;
+      lcCircle.setAttribute('x',((x/window.innerWidth)*100)-50);
+      console.log(((x/window.innerWidth)*100)-50);
+  }    
 
-gsap.to('svg',{rotation:360, duration:40, ease: "none", repeat:-1})
+  window.addEventListener('mousemove', editCursor);
 
-//---contacts cont fix
-this.addEventListener("scroll", function () {
-  
-      if(this.scrollY + this.innerHeight>=document.querySelector('body').offsetHeight-20){
-   document.querySelector(".contacts").style.overflow="hidden";
-  } 
-  else if(this.scrollY + this.innerHeight<=document.querySelector('body').offsetHeight-20){   
-   document.querySelector(".contacts").style.overflow="visible";
-  }
-  }, false);
+  gsap.to('svg',{rotation:360, duration:40, ease: "none", repeat:-1})
+
+  //---contacts cont fix
+  this.addEventListener("scroll", function () {
+    
+        if(this.scrollY + this.innerHeight>=document.querySelector('body').offsetHeight-20){
+    document.querySelector(".contacts").style.overflow="hidden";
+    } 
+    else if(this.scrollY + this.innerHeight<=document.querySelector('body').offsetHeight-20){   
+    document.querySelector(".contacts").style.overflow="visible";
+    }
+    }, false);
+}

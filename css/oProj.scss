@@ -1,4 +1,4 @@
-
+@import "mediaQuaries";
 
 //variables
 
@@ -24,6 +24,25 @@ $smallFont: 'Mukta Vaani', sans-serif;
         color: mediumblue;
         pointer-events: none;
     }
+    @include media("<=800px"){
+        h1{
+            font-family: $theFont;
+            letter-spacing: -10px; 
+            font-size: calc(100vw * 0.1);
+            color: mediumblue;
+            pointer-events: none;
+        }
+    }
+    @include media("<=500px"){
+        h1{
+            font-family: $theFont;
+            letter-spacing: -1px; 
+            font-size: calc(100vw * 0.1);
+            color: mediumblue;
+            pointer-events: none;
+        }
+    }
+    
 }
 
 .cont{
