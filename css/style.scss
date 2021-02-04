@@ -888,6 +888,7 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
 // }
  @include media("<=750px"){
     .next-project{
+        display: none;
         width: 100%;
         height: 60vh;
         margin-top: 15%;
@@ -899,6 +900,7 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
         }
     
         .strap{
+            
             height: 80px;
             width: 250%;
             background: $notBlack;
@@ -2031,6 +2033,13 @@ button:focus {
 .contain-next{
     overflow: hidden;
 }
+@include media("<=750px"){
+    .contain-next{
+        height: 60vh;
+    }
+}
+
+
 
 // section{
 //     overflow-x: hidden;
@@ -2443,7 +2452,7 @@ hr{
                 @include Lexand();
                 // text-transform: uppercase;
                 // letter-spacing: -20px;
-                font-size:calc(100vw*0.1); 
+                font-size:calc(100vw*0.06); 
                 line-height: 1.5;
                 position: relative; 
                 mix-blend-mode: normal;
@@ -2502,6 +2511,7 @@ hr{
 .t-project_cont{
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s all;
     
+    
 }
 .show-overlay .t-project_cont{
     position: fixed;
@@ -2552,6 +2562,8 @@ hr{
 
     .t-project {
 
+
+
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, max-content) 0.2fr max-content 0.2fr max-content .2fr max-content;
 
@@ -2569,6 +2581,102 @@ hr{
     
     .t-project img{
         width: 100%;
+    }
+
+    .project_name{
+        height: 50px;
+        width: calc(100% - 300px); //.....fix
+    
+        display: flex;
+    
+        // align-items: center;
+        background-color: transparent;
+        border: none;
+        text-decoration: none;
+        position: absolute;
+        left:20px;
+        top:30px;
+        // transition: all 1s cubic-bezier(.64,0,.23,.99);
+    
+        & :focus{
+            outline: none;
+            border:none;
+        }
+    
+        // padding: 10px;
+        .button-wrapper{
+            background: rgba(0, 0, 0, 0);
+            height: 40px;
+            width: 40px;
+            border-radius: 200px;
+            
+    
+            display: flex;
+    
+            // align-items: center;
+    
+            // align-self: start;
+    
+            position: relative;
+    
+            transition: all 0.4s cubic-bezier(.64,0,.23,.99);
+            
+            span{
+                
+                color: $notBlack;
+                position: absolute;
+                transform: translateY(-25%);
+                top: 50%;
+                left:4px;
+                @include Casta();
+                font-size:1.5rem; 
+                line-height: 2;  
+                z-index: 2;
+    
+                transition: all 0.4s cubic-bezier(.64,0,.23,.99);
+    
+    
+                &::after{
+                    content: "";
+                    height: 35px;
+                    width: 35px;
+                    background-color: $notWhite;
+                    border-radius: 100px;
+                    position: relative;
+                    top:-44px;
+                    // left: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: -1;
+                    transition: all 0.4s cubic-bezier(.64,0,.23,.99);
+    
+                }
+                
+            }
+    
+        
+            p{
+                width:200% ;
+                margin: 0 80px;
+                color: $notWhite;
+                font-family: $theFont; 
+                transform: translateY(-20%);
+                font-size:calc(100vw*0.04); 
+                line-height: 1.5;
+                position: absolute; 
+                top: 5px; 
+                left: -10px;
+                opacity: 1;
+                z-index: 2; 
+                mix-blend-mode: difference;
+                transition: all 0.4s cubic-bezier(.64,0,.23,.99);
+                will-change: auto;
+            
+                // position: absolute;
+    
+            }
+        }
     }
 
 }
@@ -2673,10 +2781,10 @@ hr{
                 color: $notWhite;
                 font-family: $theFont; 
                 transform: translateY(-20%);
-                font-size:2.5rem; 
+                font-size:calc(100vw*0.06); 
                 line-height: 1.5;
                 position: absolute; 
-                top: 20%; 
+                top: 20px; 
                 left: -10px;
                 opacity: 1;
                 z-index: 2; 
@@ -2938,7 +3046,7 @@ hr{
      
   .op-next{
       width: 100%;
-      @include Lexand();
+      @include Casta();
       position: relative;
       top: 30vh;
       font-size: 2rem;
@@ -2949,6 +3057,12 @@ hr{
 
       }
       
+  }
+
+  @include media(">=750px"){
+    .op-next{
+        display: none;
+    }
   }
 
 //  -----------svgs --------------

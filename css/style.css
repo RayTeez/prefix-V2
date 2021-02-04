@@ -855,6 +855,7 @@ nav a:visited {
 
 @media (max-width: 750px) {
   .next-project {
+    display: none;
     width: 100%;
     height: 60vh;
     margin-top: 15%;
@@ -2070,6 +2071,12 @@ button:focus {
   overflow: hidden;
 }
 
+@media (max-width: 750px) {
+  .contain-next {
+    height: 60vh;
+  }
+}
+
 .cursor {
   width: 20px;
   height: 20px;
@@ -2443,7 +2450,7 @@ hr {
     font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 100;
     letter-spacing: 3px;
-    font-size: calc(100vw*0.1);
+    font-size: calc(100vw*0.06);
     line-height: 1.5;
     position: relative;
     mix-blend-mode: normal;
@@ -2724,6 +2731,91 @@ hr {
   .t-project img {
     width: 100%;
   }
+  .project_name {
+    height: 50px;
+    width: calc(100% - 300px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+  }
+  .project_name :focus {
+    outline: none;
+    border: none;
+  }
+  .project_name .button-wrapper {
+    background: rgba(0, 0, 0, 0);
+    height: 40px;
+    width: 40px;
+    border-radius: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+    transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+  }
+  .project_name .button-wrapper span {
+    color: #101111;
+    position: absolute;
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    top: 50%;
+    left: 4px;
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    line-height: 2;
+    z-index: 2;
+    -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+    transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+  }
+  .project_name .button-wrapper span::after {
+    content: "";
+    height: 35px;
+    width: 35px;
+    background-color: #eeeeee;
+    border-radius: 100px;
+    position: relative;
+    top: -44px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: -1;
+    -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+    transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+  }
+  .project_name .button-wrapper p {
+    width: 200%;
+    margin: 0 80px;
+    color: #eeeeee;
+    font-family: "Lexend Tera", Montserrat, sans-serif;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    font-size: calc(100vw*0.04);
+    line-height: 1.5;
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    opacity: 1;
+    z-index: 2;
+    mix-blend-mode: difference;
+    -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+    transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
+    will-change: auto;
+  }
 }
 
 @media (max-width: 700px) {
@@ -2818,10 +2910,10 @@ hr {
     font-family: "Lexend Tera", Montserrat, sans-serif;
     -webkit-transform: translateY(-20%);
             transform: translateY(-20%);
-    font-size: 2.5rem;
+    font-size: calc(100vw*0.06);
     line-height: 1.5;
     position: absolute;
-    top: 20%;
+    top: 20px;
     left: -10px;
     opacity: 1;
     z-index: 2;
@@ -3075,8 +3167,8 @@ hr {
 
 .op-next {
   width: 100%;
-  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: 100;
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
   letter-spacing: 3px;
   position: relative;
   top: 30vh;
@@ -3087,6 +3179,12 @@ hr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (min-width: 750px) {
+  .op-next {
+    display: none;
+  }
 }
 
 .svg-cont {
