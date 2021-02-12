@@ -2011,7 +2011,7 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
     transition: cubic-bezier(0.215, 0.610, 0.355, 1) all 1s;
 }
 
-.my-name:hover .line{
+.my-name:hover .line, .collapsible:hover span .line{
     width: 100%; 
     pointer-events: none; 
 }
@@ -2062,6 +2062,7 @@ button:focus {
 }
 
 .c-info{
+    pointer-events: none;
     display: none;
     font-size: 1rem;
     @include Lexand;
@@ -2071,6 +2072,7 @@ button:focus {
 }
 
 .c-next{
+    pointer-events: none;
     display: none;
     width: 150px;
     height: auto;

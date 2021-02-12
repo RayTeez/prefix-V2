@@ -2049,7 +2049,7 @@ nav a:visited {
   transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
 }
 
-.my-name:hover .line {
+.my-name:hover .line, .collapsible:hover span .line {
   width: 100%;
   pointer-events: none;
 }
@@ -2090,6 +2090,7 @@ button:focus {
 }
 
 .c-info {
+  pointer-events: none;
   display: none;
   font-size: 1rem;
   font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -2101,6 +2102,7 @@ button:focus {
 }
 
 .c-next {
+  pointer-events: none;
   display: none;
   width: 150px;
   height: auto;
