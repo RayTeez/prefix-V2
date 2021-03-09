@@ -118,10 +118,15 @@ nav .logo {
 }
 
 nav .menu-bar {
-  width: 130px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 18px;
   font-size: 1.2rem;
   -webkit-text-decoration-style: none;
           text-decoration-style: none;
+  border: 1px solid #101111;
+  border-radius: 50px;
 }
 
 nav .menu-bar a {
@@ -1955,7 +1960,6 @@ nav a:visited {
 
 .work-content .work .project_btn {
   margin: 50px 0;
-  background-color: #eeeeee;
 }
 
 .work-content .work:focus {
@@ -2198,26 +2202,29 @@ hr {
 }
 
 .project_btn {
-  height: 240px;
+  height: 100px;
   width: calc(100% - 100px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: none;
   border: none;
+  position: relative;
+  top: -60px;
+  left: 20px;
   text-decoration: none;
+  background: none;
   -webkit-transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
   transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
 }
 
-.project_btn :focus {
+.project_btn:focus {
   outline: none;
   border: none;
 }
 
 .project_btn .button-wrapper {
-  height: 50px;
-  width: 50px;
+  height: 25px;
+  width: 25px;
   background-color: #101111;
   border-radius: 200px;
   display: -webkit-box;
@@ -2228,54 +2235,17 @@ hr {
   transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
 }
 
-.project_btn .button-wrapper span {
-  color: #eeeeee;
-  position: absolute;
-  -webkit-transform: translateY(-25%);
-          transform: translateY(-25%);
-  top: 50%;
-  font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.5rem;
-  line-height: 2;
-  z-index: 2;
-  -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
-  transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
-}
-
-.project_btn .button-wrapper span::after {
-  content: "";
-  height: 50px;
-  width: 50px;
-  background-color: #101111;
-  border-radius: 100px;
-  position: relative;
-  top: -48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: -1;
-  -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
-  transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
-}
-
 .project_btn .button-wrapper p {
   margin: 0 60px;
-  color: #eeeeee;
+  color: #101111;
   font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
   letter-spacing: 3px;
-  font-size: 5.5rem;
+  font-size: 2.5rem;
   line-height: 1.5;
   position: relative;
-  top: 10px;
+  top: 30px;
   z-index: 2;
-  mix-blend-mode: difference;
   -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
   transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
   will-change: auto;
@@ -2285,29 +2255,37 @@ hr {
   height: 100%;
   width: 100%;
   padding: 0 40px;
+  background-color: transparent;
+  border: 1px solid #101111;
   -webkit-box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
   box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
-}
-
-.project_btn:hover .button-wrapper span {
-  color: #101111;
-}
-
-.project_btn:hover .button-wrapper span::after {
-  content: "";
-  background-color: #eeeeee;
 }
 
 .project_btn:hover .button-wrapper p {
   font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-stretch: expanded;
   letter-spacing: 3px;
-  font-size: 8.5rem;
+  font-size: 3.5rem;
   margin: 0 80px;
   position: absolute;
   -webkit-transform: translateY(-20%);
           transform: translateY(-20%);
   top: 25%;
+}
+
+.project_btn:hover {
+  height: 100px;
+  width: calc(100% - 100px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  position: relative;
+  top: -20px;
+  text-decoration: none;
+  background: none;
+  -webkit-transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
+  transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
 }
 
 @media (max-width: 1388px) {
@@ -2378,7 +2356,7 @@ hr {
     position: absolute;
     -webkit-transform: translateY(-20%);
             transform: translateY(-20%);
-    top: 28%;
+    top: 0;
   }
 }
 
@@ -2389,6 +2367,9 @@ hr {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
+    top: 0px;
+    left: 20px;
     background-color: none;
     border: none;
     text-decoration: none;
@@ -2456,7 +2437,7 @@ hr {
     line-height: 1.5;
     position: relative;
     mix-blend-mode: normal;
-    top: 10px;
+    top: 0;
     z-index: 2;
     -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
     transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
@@ -3053,7 +3034,7 @@ hr {
 .lb-project-box {
   width: 90%;
   margin: 0 auto;
-  padding: 2% 10% 0;
+  padding: 8% 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3065,6 +3046,7 @@ hr {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #eeeeee;
+  border: 1px solid #101111;
   border-radius: 30px;
 }
 
@@ -3073,9 +3055,9 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
   letter-spacing: 3px;
@@ -3112,7 +3094,8 @@ hr {
   background-color: transparent;
   color: #101111;
   cursor: pointer;
-  border: none;
+  border: 1px solid #101111;
+  border-radius: 50px;
   text-align: left;
   outline: none;
   position: relative;
@@ -3245,6 +3228,222 @@ text {
   .m-c {
     width: 80%;
     margin: 2rem auto;
+  }
+}
+
+.gradient-section {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -9;
+}
+
+.grad-bg {
+  width: 700px;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-image: url(../img/background-gradient-01.png);
+  background-position: center;
+  background-size: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.case-twos {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.case-twos .case {
+  width: 48%;
+}
+
+.case-twos .case:hover .project_btn {
+  height: 100px;
+  width: calc(100% - 100px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  position: relative;
+  top: -20px;
+  text-decoration: none;
+  background: none;
+  -webkit-transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
+  transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
+}
+
+.case-twos .case-image {
+  width: 100%;
+  height: auto;
+}
+
+.case-twos .case-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+}
+
+.case-twos .case:nth-child(1) {
+  margin-right: 30px;
+}
+
+.case-twos .case:nth-child(2) {
+  margin-top: 220px;
+  margin-left: 30px;
+}
+
+@media (max-width: 810px) {
+  .case-twos {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .case-twos .case {
+    width: 100%;
+    height: 100%;
+  }
+  .case-twos .case:hover .project_btn {
+    height: 100px;
+    width: calc(100% - 100px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: none;
+    position: relative;
+    top: -20px;
+    text-decoration: none;
+    background: none;
+    -webkit-transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
+    transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
+  }
+  .case-twos .case-image {
+    width: 100%;
+    height: auto;
+  }
+  .case-twos .case-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 100%;
+       object-position: 50% 100%;
+  }
+  .case-twos .case:nth-child(1) {
+    margin-right: 0px;
+  }
+  .case-twos .case:nth-child(2) {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+}
+
+.case-fulls {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.case-fulls .case {
+  width: 100%;
+}
+
+.case-fulls .case:hover .project_btn {
+  height: 100px;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  position: relative;
+  top: -20px;
+  text-decoration: none;
+  background: none;
+  -webkit-transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
+  transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
+}
+
+.case-fulls .case-image {
+  width: 100%;
+  height: 550px;
+}
+
+.case-fulls .case-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+}
+
+.case-fulls .case:nth-child(1) {
+  margin-top: 100px;
+}
+
+@media (max-width: 810px) {
+  .case-fulls {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .case-fulls .case {
+    width: 100%;
+  }
+  .case-fulls .case:hover .project_btn {
+    height: 100px;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: none;
+    position: relative;
+    top: -20px;
+    text-decoration: none;
+    background: none;
+    -webkit-transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
+    transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
+  }
+  .case-fulls .case-image {
+    width: 100%;
+    height: auto;
+  }
+  .case-fulls .case-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 100%;
+       object-position: 50% 100%;
+  }
+  .case-fulls .case:nth-child(1) {
+    margin-top: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */

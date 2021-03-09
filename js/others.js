@@ -5,12 +5,12 @@ const projects=[
         {
             projectName:'Ceres',
             projectCatergory:'Branding',
-            images:['img/otherprojects/img1-1.jpg','img/otherprojects/img1-2.jpg','img/otherprojects/img1-3.jpg','img/otherprojects/img1-4.jpg','img/otherprojects/img1-5.jpg']
+            images:['img/otherprojects/branding-ceres01.webp','img/otherprojects/branding-ceres02.webp','img/otherprojects/branding-ceres03.webp','img/otherprojects/branding-ceres04.webp','img/otherprojects/branding-ceres05.webp']
         },
         {
             projectName:'Kiwi',
             projectCatergory:'Branding',
-            images:['img/otherprojects/img2-1.jpg','img/otherprojects/img2-2.jpg','img/otherprojects/img2-3.jpg','img/otherprojects/img2-4.jpg','img/otherprojects/img2-5.jpg']
+            images:['img/otherprojects/branding-kiwi01.webp','img/otherprojects/branding-kiwi01.webp','img/otherprojects/branding-kiwi03.webp','img/otherprojects/branding-kiwi04.webp','img/otherprojects/branding-kiwi05.webp']
         },
         {
             projectName:'Bolobedu',
