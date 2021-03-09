@@ -2202,8 +2202,8 @@ hr {
 }
 
 .project_btn {
-  height: 100px;
-  width: calc(100% - 100px);
+  height: 60px;
+  width: calc(100% - 250px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2236,12 +2236,11 @@ hr {
 }
 
 .project_btn .button-wrapper p {
-  margin: 0 60px;
   color: #101111;
   font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
   letter-spacing: 3px;
-  font-size: 2.5rem;
+  font-size: calc(100vw*0.02);
   line-height: 1.5;
   position: relative;
   top: 30px;
@@ -2253,8 +2252,10 @@ hr {
 
 .project_btn:hover .button-wrapper {
   height: 100%;
-  width: 100%;
-  padding: 0 40px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 10px;
   background-color: transparent;
   border: 1px solid #101111;
   -webkit-box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
@@ -2265,21 +2266,16 @@ hr {
   font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-stretch: expanded;
   letter-spacing: 3px;
-  font-size: 3.5rem;
-  margin: 0 80px;
-  position: absolute;
-  -webkit-transform: translateY(-20%);
-          transform: translateY(-20%);
-  top: 25%;
+  padding: 0 25px;
+  -webkit-transform: translate(-50%, -45%);
+          transform: translate(-50%, -45%);
+  font-size: calc(100vw*0.02);
+  position: relative;
+  top: 52%;
+  left: 50%;
 }
 
 .project_btn:hover {
-  height: 100px;
-  width: calc(100% - 100px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: none;
   position: relative;
   top: -20px;
   text-decoration: none;
@@ -2288,102 +2284,29 @@ hr {
   transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
 }
 
-@media (max-width: 1388px) {
+@media (max-width: 810px) {
   .project_btn {
-    height: 140px;
-    width: calc(100% - 100px);
-  }
-  .project_btn .button-wrapper p {
-    font-size: 4.5rem;
-  }
-  .project_btn:hover .button-wrapper {
-    height: 100%;
-    width: 100%;
-    padding: 0 40px;
-    -webkit-box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
-    box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
-  }
-  .project_btn:hover .button-wrapper span {
-    color: #101111;
-  }
-  .project_btn:hover .button-wrapper span::after {
-    content: "";
-    background-color: #eeeeee;
-  }
-  .project_btn:hover .button-wrapper p {
-    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-stretch: expanded;
-    letter-spacing: 3px;
-    font-size: 5.5rem;
-    margin: 0 75px;
-    color: #eeeeee;
-    position: absolute;
-    -webkit-transform: translateY(-20%);
-            transform: translateY(-20%);
-    top: 28%;
-  }
-}
-
-@media (max-width: 800px) {
-  .project_btn {
-    height: 100px;
-    width: 450px;
-  }
-  .project_btn .button-wrapper p {
-    font-size: 3.5rem;
-  }
-  .project_btn:hover .button-wrapper {
-    height: 100%;
-    width: 100%;
-    padding: 0 40px;
-    -webkit-box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
-    box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
-  }
-  .project_btn:hover .button-wrapper span {
-    color: #101111;
-  }
-  .project_btn:hover .button-wrapper span::after {
-    content: "";
-    background-color: #eeeeee;
-  }
-  .project_btn:hover .button-wrapper p {
-    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-stretch: expanded;
-    letter-spacing: 3px;
-    font-size: calc(100vw*0.1);
-    margin: 0 70px;
-    color: #eeeeee;
-    position: absolute;
-    -webkit-transform: translateY(-20%);
-            transform: translateY(-20%);
-    top: 0;
-  }
-}
-
-@media (max-width: 500px) {
-  .project_btn {
-    height: 66px;
-    width: 100%;
+    height: 60px;
+    width: calc(100% - 250px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: relative;
-    top: 0px;
-    left: 20px;
-    background-color: none;
     border: none;
+    position: relative;
+    top: -25px;
+    left: 20px;
     text-decoration: none;
-    margin: 0;
+    background: none;
     -webkit-transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
     transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
   }
-  .project_btn :focus {
+  .project_btn:focus {
     outline: none;
     border: none;
   }
   .project_btn .button-wrapper {
-    height: 40px;
-    width: 40px;
+    height: 25px;
+    width: 25px;
     background-color: #101111;
     border-radius: 200px;
     display: -webkit-box;
@@ -2393,51 +2316,15 @@ hr {
     -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
     transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
   }
-  .project_btn .button-wrapper span {
-    color: #eeeeee;
-    position: absolute;
-    -webkit-transform: translateY(-25%);
-            transform: translateY(-25%);
-    top: 50%;
-    font-family: 'Montserrat Light', Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.3rem;
-    line-height: 2;
-    z-index: 2;
-    -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
-    transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
-  }
-  .project_btn .button-wrapper span::after {
-    content: "";
-    height: 40px;
-    width: 40px;
-    background-color: #101111;
-    border-radius: 100px;
-    position: relative;
-    top: -40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    z-index: -1;
-    -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
-    transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
-  }
   .project_btn .button-wrapper p {
-    margin: 0 60px;
     color: #101111;
     font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 100;
     letter-spacing: 3px;
-    font-size: calc(100vw*0.06);
+    font-size: calc(100vw*0.03);
     line-height: 1.5;
     position: relative;
-    mix-blend-mode: normal;
-    top: 0;
+    top: 30px;
     z-index: 2;
     -webkit-transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
     transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
@@ -2445,29 +2332,26 @@ hr {
   }
   .project_btn:hover .button-wrapper {
     height: 100%;
-    width: 100%;
-    padding: 0 40px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 0 10px;
+    background-color: transparent;
+    border: 1px solid #101111;
     -webkit-box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
     box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
-  }
-  .project_btn:hover .button-wrapper span {
-    color: #101111;
-  }
-  .project_btn:hover .button-wrapper span::after {
-    content: "";
-    background-color: #eeeeee;
   }
   .project_btn:hover .button-wrapper p {
     font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-stretch: expanded;
     letter-spacing: 3px;
-    font-size: calc(100vw*0.1);
-    margin: 0 50px;
-    color: #eeeeee;
-    position: absolute;
-    -webkit-transform: translateY(-20%);
-            transform: translateY(-20%);
-    top: 28%;
+    padding: 0 25px;
+    -webkit-transform: translate(-50%, -25%);
+            transform: translate(-50%, -25%);
+    font-size: calc(100vw*0.03);
+    position: relative;
+    top: 52%;
+    left: 50%;
   }
 }
 
@@ -3267,12 +3151,6 @@ text {
 }
 
 .case-twos .case:hover .project_btn {
-  height: 100px;
-  width: calc(100% - 100px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: none;
   position: relative;
   top: -20px;
   text-decoration: none;
@@ -3320,12 +3198,6 @@ text {
     height: 100%;
   }
   .case-twos .case:hover .project_btn {
-    height: 100px;
-    width: calc(100% - 100px);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    border: none;
     position: relative;
     top: -20px;
     text-decoration: none;
@@ -3370,12 +3242,6 @@ text {
 }
 
 .case-fulls .case:hover .project_btn {
-  height: 100px;
-  width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: none;
   position: relative;
   top: -20px;
   text-decoration: none;
@@ -3417,12 +3283,6 @@ text {
     width: 100%;
   }
   .case-fulls .case:hover .project_btn {
-    height: 100px;
-    width: 40%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    border: none;
     position: relative;
     top: -20px;
     text-decoration: none;
