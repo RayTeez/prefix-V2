@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96.07 96.07">
+  <defs>
+    <style>
+      .a, .b {
+        fill: none;
+      }
+
+      .b {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .c {
+        clip-path: url(#a);
+      }
+    </style>
+    <clipPath id="a">
+      <circle class="a" cx="-33.4" cy="204.44" r="82.1"/>
+    </clipPath>
+  </defs>
+  <circle cx="48.03" cy="48.03" r="47.02"/>
+  <g>
+    <polyline class="b" points="52.72 35.07 65.72 48.07 65.72 48 52.72 61"/>
+    <line class="b" x1="30.12" y1="48.03" x2="60.02" y2="48.03"/>
+  </g>
+  <g class="c">
+    <image width="3024" height="4032" transform="translate(-153.27 44.41) scale(0.09)" xlink:href="Reatile%20pictures/File_049.jpeg"/>
+  </g>
+</svg>

@@ -8,71 +8,62 @@ const projects=[
             images:['img/otherprojects/branding-ceres01.webp','img/otherprojects/branding-ceres02.webp','img/otherprojects/branding-ceres03.webp','img/otherprojects/branding-ceres04.webp','img/otherprojects/branding-ceres05.webp']
         },
         {
-            projectName:'Kiwi',
-            projectCatergory:'Branding',
-            images:['img/otherprojects/branding-kiwi01.webp','img/otherprojects/branding-kiwi01.webp','img/otherprojects/branding-kiwi03.webp','img/otherprojects/branding-kiwi04.webp','img/otherprojects/branding-kiwi05.webp']
-        },
-        {
             projectName:'Bolobedu',
             projectCatergory:'Branding',
-            images:['img/otherprojects/img3.jpg','img2','img3']
+            images:['img/otherprojects/branding-bli01.webp','img/otherprojects/branding-bli01.webp','img/otherprojects/branding-bli03.webp','img/otherprojects/branding-bli04.webp','img/otherprojects/branding-bli05.webp','img/otherprojects/branding-bli06.webp','img/otherprojects/branding-bli07.webp']
         },
         {
             projectName:'Slices',
             projectCatergory:'Branding',
-            images:['img/otherprojects/img4.jpg','img2','img3']
+            images:['img/otherprojects/branding-slices01.webp','img/otherprojects/branding-slices02.webp','img/otherprojects/branding-slices03.webp','img/otherprojects/branding-slices04.webp','img/otherprojects/branding-slices05.webp']
         },
         {
             projectName:'Vision Africa',
             projectCatergory:'Branding',
-            images:['img/otherprojects/img5.jpg','img2','img3']
+            images:['img/otherprojects/branding-vision01.webp','img/otherprojects/branding-vision02.webp','img/otherprojects/branding-vision04.webp','img/otherprojects/branding-vision05.webp','img/otherprojects/branding-vision06.webp','img/otherprojects/branding-vision07.webp']
         },
-        {
-            projectName:'pRefix-re',
-            projectCatergory:'Branding',
-            images:['img/otherprojects/img6.jpg','img2','img3']
-        }
+
     ],[ //Logo Design
         {
             projectName:'Phomolong Market',
             projectCatergory:'Logo Design',
-            images:['img1','img2','img3']
+            images:['img/otherproject/Logos-phomolong01.webp','img1/otherproject/Logos-phomolong02.webp','img1/otherproject/Logos-phomolong03.webp','img1/otherproject/Logos-phomolong04.webp','img1/otherproject/Logos-phomolong05.webp']
         },
         {
-            projectName:'Golden...',
-            projectCatergory:'Branding',
-            images:['img1','img2','img3']
+            projectName:'Kiwi',
+            projectCatergory:'Logo Design',
+            images:['img/otherprojects/Logos-kiwi01.webp','img/otherprojects/Logos-kiwi02.webp','img/otherprojects/Logos-kiwi03.webp','img/otherprojects/Logos-kiwi04.webp','img/otherprojects/Logos-kiwi05.webp']
         },
         {
-            projectName:'Ali Cotchet',
+            projectName:'Rose Gold',
             projectCatergory:'Branding',
-            images:['img1','img2','img3']
+            images:['img/otherprojects/Logos-rosegold01.webp','img/otherprojects/Logos-rosegold02.webp','img/otherprojects/Logos-rosegold03.webp','img/otherprojects/Logos-rosegold04.webp']
         },
         {
             projectName:'Consco',
             projectCatergory:'Branding',
-            images:['img1','img2','img3']
+            images:['img/otherprojects/Logos-consco01.webp','img/otherprojects/Logos-consco02.webp','img/otherprojects/Logos-consco03.webp','img/otherprojects/Logos-consco04.webp']
         }
     ],[ //3D Designs
         {
             projectName:'Jeep',
             projectCatergory:'3D Design',
-            images:['img1','img2','img3']
+            images:['img/otherprojects/3d-Jeep01.webp','img/otherprojects/3d-Jeep02.webp','img/otherprojects/3d-Jeep03.webp','img/otherprojects/3d-Jeep04.webp']
         },
         {
             projectName:'27 Vision Trailer',
             projectCatergory:'Branding',
-            images:['img1','img2','img3']
+            images:['img/otherprojects/3d-vt01.webp','img/otherprojects/3d-vt02.webp','img/otherprojects/3d-vt03.webp','img/otherprojects/3d-vt04.webp','img/otherprojects/3d-vt05.webp']
         },
         {
             projectName:'Cyber Mosotho',
             projectCatergory:'Branding',
-            images:['img1','img2','img3']
+            images:['img/otherprojects/3d-cyberMosotho01.webp','img/otherprojects/3d-cyberMosotho02.webp','img/otherprojects/3d-cyberMosotho03.webp','img/otherprojects/3d-cyberMosotho04.webp','img/otherprojects/3d-cyberMosotho05.webp']
         },
         {
             projectName:'Phomolong Market',
             projectCatergory:'Branding',
-            images:['img1','img2','img3']
+            images:['img/otherprojects/3d-phomolong01.webp','img/otherprojects/3d-phomolong02.webp','img/otherprojects/3d-phomolong03.webp','img/otherprojects/3d-phomolong04.webp','img/otherprojects/3d-phomolong05.webp']
         }
     ],
     
@@ -122,9 +113,6 @@ if(window.location.pathname=='/OtherProject.html'){
 const pressedImg =document.querySelector('.t-project');  
 
 
-
-
-
 let test=()=>{
     console.log('im hereeee')
 
@@ -135,15 +123,20 @@ let test=()=>{
         pressedImg.innerHTML+= 
         
         `<li class="box${i+1} proj" id="${i}"  onclick="showProjectCont(this.id)">
-        <div>
-        <button class="project_name">
-            <div class="button-wrapper">
-                    <span>${i+1}</span>
+            <div class="case-fulls">
+            
+                <img src=${firstData.images[0]} alt="image goes here">
+
+                <button class="project_btn">
+
+                    <div class="button-wrapper">
+                            
                         <p class="project-name">${firstData.projectName}</p>
+                    </div>
+
+                </button>
+
             </div>
-        </button>
-        <img src=${firstData.images[0]} alt="image goes here">
-        </div>
         </li>
         
         ` ;
@@ -158,9 +151,6 @@ const lightbox = document.querySelector('.lightbox');
 const projectInBox = document.querySelector('.project-image');
 let lbIsOn=false;
 let scrollPosition = 0;
-
-
-
 
     function showOverlay() {
         scrollPosition = window.pageYOffset;

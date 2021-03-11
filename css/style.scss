@@ -140,96 +140,100 @@ background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 
 
 //About
 
-.main-cont{
-    width: 100vw;
-    height: 110vh;
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: column;
-    justify-content: space-between;
+// .main-cont{
+//     width: 100vw;
+//     height: 110vh;
+//     display: flex;
+//     flex-shrink: 0;
+//     flex-direction: column;
+//     justify-content: space-between;
     
-    .carousal{
-        width: 100%;
-        height: 100%;
-        border-bottom: 10px solid $notBlack;
+//     .carousal{
+//         width: 100%;
+//         height: 100%;
+//         border-bottom: 10px solid $notBlack;
 
         
         
-        .slider{
-            // @include marquee;
-            width: 150%;
-            height:80% ;
+//         .slider{
+//             // @include marquee;
+//             width: 150%;
+//             height:80% ;
             
-            // overflow:  
-            display: flex;
-            // grid-template-columns: 1fr 1fr 1fr 1fr;
-            // justify-items: start;
-            // column-gap: 13rem;
-            white-space: nowrap;
-            // transition: all 1s;
+//             // overflow:  
+//             display: flex;
+//             // grid-template-columns: 1fr 1fr 1fr 1fr;
+//             // justify-items: start;
+//             // column-gap: 13rem;
+//             white-space: nowrap;
+//             // transition: all 1s;
 
 
-            li{
-                width: 50%;
-                height: 300px; /*<<--adjust*/
-                padding: 0 9rem;
+//             li{
+//                 width: 50%;
+//                 height: 300px; /*<<--adjust*/
+//                 padding: 0 9rem;
 
-                font-family: play;
-                font-size: 16rem; 
+//                 font-family: play;
+//                 font-size: 16rem; 
 
 
-            }
-        }
+//             }
+//         }
 
-        //perspective hover
+//         //perspective hover
 
-        .menu-content {
+//         .menu-content {
                         
-            perspective: 400px;
+//             perspective: 400px;
         
-            .child {
-                width: 100%;
-                height: 100%;
-                position: relative;
-                transform-style: preserve-3d;
-                transform: translateZ(-100px);
-                transition: transform 500ms;
+//             .child {
+//                 width: 100%;
+//                 height: 100%;
+//                 position: relative;
+//                 transform-style: preserve-3d;
+//                 transform: translateZ(-100px);
+//                 transition: transform 500ms;
         
-                .cube__face {
-                    position: absolute;
-                    width: max-content;
-                    padding: 0 200px;
-                    height: 100%;
-                    border-radius: 500px;
-                    font-weight: bold;
-                    color: $notWhite;
-                    background-color: $notBlack;
-                    text-align: center;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    line-height: 10px;
-                    backface-visibility: hidden;
+//                 .cube__face {
+//                     position: absolute;
+//                     width: max-content;
+//                     padding: 0 200px;
+//                     height: 100%;
+//                     border-radius: 500px;
+//                     font-weight: bold;
+//                     color: $notWhite;
+//                     background-color: $notBlack;
+//                     text-align: center;
+//                     display: flex;
+//                     justify-content: center;
+//                     align-items: center;
+//                     line-height: 10px;
+//                     backface-visibility: hidden;
 
-                    p{
-                        font-family: play;
-                        font-size: 12rem; 
-                        position: relative;
-                        top: -20px;
-                    }
+//                     p{
+//                         font-family: play;
+//                         font-size: 12rem; 
+//                         position: relative;
+//                         top: -20px;
+//                     }
 
-                }
+//                 }
         
-                .cube__face--front  { transform: rotateY(  0deg) translateZ(150px); }/*<<--adjust*/
-                .cube__face--top    { transform: rotateX( 90deg) translateZ(150px); }/*<<--adjust*/
+//                 .cube__face--front  { transform: rotateY(  0deg) translateZ(150px); }/*<<--adjust*/
+//                 .cube__face--top    { transform: rotateX( 90deg) translateZ(150px); }/*<<--adjust*/
                 
-            }
-            &:hover .child { transform:  translateZ(-80px) rotateX( -90deg) ; }
-          }
-    }
-}
+//             }
+//             &:hover .child { transform:  translateZ(-80px) rotateX( -90deg) ; }
+//           }
+//     }
+// }
 
 //----------------------------------
+
+// html{
+//     scroll-behavior: smooth;
+// }
 
 .project-hero{
     width: 100vw;
@@ -2098,7 +2102,7 @@ hr{
     
     img{
         position: absolute;
-        width: 200px;
+        width: 40px;
         top:-90px
     }
 }
@@ -3076,28 +3080,52 @@ hr{
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 
-    button{
-        padding: 10px 20px;
+    a{
+        padding: 20px 20px;
         outline: none;
         border: none;
-        background-color: none;
         font-size: 1.2rem;
         font-family: $theFont;
     }
+    a:hover{
+        border: 1px solid $notBlack;
+        background-color: $notWhite;
+        border-radius: 100px;
+    }
+    a:nth-child(2){
+        margin-left: 50px;
+    }
   }
 
-  @include media("<=700px"){
+@include media("<=700px"){
 
     .content {
 
-        max-height: 0px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
+            max-height: 0px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        
+        a{
+            margin: 0 auto;
+            padding: 20px 20px;
+            outline: none;
+            border: none;
+            font-size: 1.2rem;
+            font-family: $theFont;
+        }
+        a:hover{
+            border: 1px solid $notBlack;
+            background-color: $notWhite;
+            border-radius: 100px;
+        }
+        a:nth-child(2){
+            margin: 0px auto;
+        }
     }
-  }
+}
      
   .op-next{
       width: 100%;
@@ -3311,6 +3339,17 @@ text{
         text-decoration: none;
         background: none;
         transition: all 1s cubic-bezier(.64,0,.23,.99);
+
+}
+.case-fulls:hover .project_btn{
+        
+    
+    position: relative;
+    top: -20px;
+    
+    text-decoration: none;
+    background: none;
+    transition: all 1s cubic-bezier(.64,0,.23,.99);
 
 }
 

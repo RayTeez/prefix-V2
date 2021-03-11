@@ -164,6 +164,12 @@ if(window.document.title=='Cure'||window.document.title=='Sony'||window.document
   viewNext.addEventListener('mouseout',j );
 
   function j() {
+
+    viewNextProject.forEach(para => {
+
+      para.textContent= "view next";
+      
+    });
     
     upTextInStrap.style.transform='translateY(0%)';
     console.log("inside");
@@ -187,20 +193,31 @@ if(window.document.title=='Cure'||window.document.title=='Sony'||window.document
     upTextInStrap.style.transform='translateY(-50%)';
   } 
 } 
+
+//-------------------otherproject scoll next-----------------------
+
+let OtherProject=['Branding','Logo Design', '3D Design']
+
+let getProjectName= function(){
+ return parseInt(window.location.href.split("=")[1]);
+}
+
+let nextName=  1;
+
+console.log('this the project name = ' + OtherProject[getProjectName()])
+
  if(window.document.title=='Other Projects'){
       this.addEventListener("scroll", function () {
         
         if(this.scrollY + this.innerHeight>=document.querySelector('body').offsetHeight-260){
-    document.querySelector(".t-heading").textContent="3D Design";
+    document.querySelector(".t-heading").textContent= OtherProject[getProjectName()+nextName];
     } 
     else if(this.scrollY + this.innerHeight<=document.querySelector('body').offsetHeight-260){   
-    document.querySelector(".t-heading").textContent="Branding";
-    }
+    document.querySelector(".t-heading").textContent=  OtherProject[getProjectName()];
+
+  }
     }, false);
 }
-
-
-
 
 
 function showText(){
@@ -351,10 +368,7 @@ const wheel =document.querySelector('.scroll-wheel img');
 gsap.to(wheel,
 
 
-  {rotation: 360,
-  duration: 10,
-  ease: "none",
-  repeat:-1
+  {
 
 });
 
@@ -385,6 +399,7 @@ gsap.to(".side-arrow",
 // press to top 
 
 const logo = document.querySelector('.logo');
+logo.addEventListener('click', backToTop);
 
 // logo.addEventListener('click',backToTop);
 
@@ -452,14 +467,15 @@ if(window.document.title=='About'||window.document.title=='🙃Thomas Mosito'){
   const editCursor = e => {
       const { clientX: x, clientY: y } = e;
       lcCircle.setAttribute('x',((x/window.innerWidth)*100)-50);
-      console.log(((x/window.innerWidth)*100)-50);
+      
   }    
 
   window.addEventListener('mousemove', editCursor);
 
   gsap.to('svg',{rotation:360, duration:40, ease: "none", repeat:-1})
 
-  //---contacts cont fix
+  //---contacts cont fix---------------
+
   this.addEventListener("scroll", function () {
     
         if(this.scrollY + this.innerHeight>=document.querySelector('body').offsetHeight-20){
