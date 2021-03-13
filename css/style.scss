@@ -59,7 +59,7 @@ $smallFont: 'Mukta Vaani', sans-serif;
     }
           
     li{
-        
+        background-image: url(../img/otherprojects/Logos-phomolong01.webp);
         will-change: transform;
         animation: marquee 2s linear infinite;
 
@@ -2239,7 +2239,7 @@ hr{
                 transform: translate(-50%, -45%);
                 font-size: calc(100vw*0.02);
                 position: relative;
-                top: 52%;
+                top: 75%;
                 left: 50%;
             }
     
@@ -3325,7 +3325,7 @@ text{
     position: relative;
     display: flex;
     flex-direction: column;
-    
+
     .case{
         width: 100%;
     }
@@ -3340,18 +3340,10 @@ text{
         background: none;
         transition: all 1s cubic-bezier(.64,0,.23,.99);
 
-}
-.case-fulls:hover .project_btn{
-        
-    
-    position: relative;
-    top: -20px;
-    
-    text-decoration: none;
-    background: none;
-    transition: all 1s cubic-bezier(.64,0,.23,.99);
+    }
 
-}
+
+
 
     .case-image{
         width: 100%;
@@ -3369,6 +3361,22 @@ text{
         
     }
 }
+
+.case-fulls:hover .project_btn{
+        
+    
+    position: relative;
+    top: 20px;
+    
+    text-decoration: none;
+    background: none;
+    transition: all 1s cubic-bezier(.64,0,.23,.99);
+
+}
+
+
+
+
 @include media("<=810px"){
     .case-fulls{
         position: relative;
@@ -3407,4 +3415,16 @@ text{
             
         }
     } 
+}
+
+// &:hover{
+//     .case-fulls{
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+//     background-color: crimson;
+// }
+// }
+.bob{
+    top:-10px;
 }

@@ -2161,7 +2161,7 @@ hr {
           transform: translate(-50%, -45%);
   font-size: calc(100vw*0.02);
   position: relative;
-  top: 52%;
+  top: 75%;
   left: 50%;
 }
 
@@ -3165,15 +3165,6 @@ text {
   transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
 }
 
-.case-fulls .case-fulls:hover .project_btn {
-  position: relative;
-  top: -20px;
-  text-decoration: none;
-  background: none;
-  -webkit-transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
-  transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
-}
-
 .case-fulls .case-image {
   width: 100%;
   height: 550px;
@@ -3190,6 +3181,15 @@ text {
 
 .case-fulls .case:nth-child(1) {
   margin-top: 100px;
+}
+
+.case-fulls:hover .project_btn {
+  position: relative;
+  top: 20px;
+  text-decoration: none;
+  background: none;
+  -webkit-transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
+  transition: all 1s cubic-bezier(0.64, 0, 0.23, 0.99);
 }
 
 @media (max-width: 810px) {
@@ -3229,5 +3229,9 @@ text {
   .case-fulls .case:nth-child(1) {
     margin-top: 0px;
   }
+}
+
+.bob {
+  top: -10px;
 }
 /*# sourceMappingURL=style.css.map */

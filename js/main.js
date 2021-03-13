@@ -2,7 +2,7 @@
 
 
 
-const toTop= ()=>{
+const toTop = () => {
 
   var body = document.body; // For Safari
   var html = document.documentElement; // Chrome, Firefox, IE and Opera places the overflow at the html level, unless else is specified. Therefore, we use the documentElement property for these browsers
@@ -18,33 +18,33 @@ const toTop= ()=>{
 
 // ---->> page enter --
 
-function pageTransition(){
+function pageTransition() {
 
 
-  var tl =gsap.timeline();
+  var tl = gsap.timeline();
 
-  tl.set('ul.transition li',{duration:.5, scaleY:1,transformOrigin:'buttom left', stagger: .2})
-  tl.to('ul.transition li',{duration:.5, scaleY:0,transformOrigin:'top left', stagger: .1, delay:.1})
+  tl.set('ul.transition li', { duration: .5, scaleY: 1, transformOrigin: 'buttom left', stagger: .2 })
+  tl.to('ul.transition li', { duration: .5, scaleY: 0, transformOrigin: 'top left', stagger: .1, delay: .1 })
 
 };
 
 // ---->> home intro --
 
-function contentAnimation(){
- 
+function contentAnimation() {
+
   var tl = gsap.timeline();
   var rule = CSSRulePlugin.getRule(".about-hero .about_content-hero div .blinds::after"); //get the rule
 
   const nav = document.querySelector('nav');
 
   tl
-  
-    .from('.anim1', {  duration:1, y:50,stagger:0.})
-    .to(rule,{cssRule:{scaleY:0},duration:1})
-    .to(rule, {duration: 2, cssRule: {scaleY:0},onComplete: () => showImg()},'=-2')
-    .to(nav,{duration:0.3, y:0},'=-1')
-    .to('.scroll-wheel',{opacity:1,duration:0.5 })
-     
+
+    .from('.anim1', { duration: 1, y: 50, stagger: 0. })
+    .to(rule, { cssRule: { scaleY: 0 }, duration: 1 })
+    .to(rule, { duration: 2, cssRule: { scaleY: 0 }, onComplete: () => showImg() }, '=-2')
+    .to(nav, { duration: 0.3, y: 0 }, '=-1')
+    .to('.scroll-wheel', { opacity: 1, duration: 0.5 })
+
 };
 
 
@@ -56,99 +56,99 @@ function contentAnimation(){
 
 
 gsap.registerPlugin(ScrollTrigger);
-const strap=document.querySelector(".strap");
-let passed = false; 
+const strap = document.querySelector(".strap");
+let passed = false;
 
 
-let x =gsap.to(strap,{
-  scrollTrigger:{
+let x = gsap.to(strap, {
+  scrollTrigger: {
     trigger: strap,
-    toggleActions:'restart restart play',
-    markers:false,
-    end:"bottom 87%",
-    scrub:2.5,
-    onEnter:() => {
+    toggleActions: 'restart restart play',
+    markers: false,
+    end: "bottom 87%",
+    scrub: 2.5,
+    onEnter: () => {
       console.log('true')
 
       document.querySelectorAll(".strap p")
-      .forEach(para => {
-        para.textContent='View Next'
-      });
-      
-    },
-    onLeave:() => {
-      document.querySelectorAll(".strap p")
-      .forEach(para => {
-        para.textContent='View Next'
-      });
-    },
-    
-    onEnterBack:() =>{
-      document.querySelectorAll(".strap p")
-      .forEach(para => {
-        para.textContent='Or Not...'
-      });
-      
+        .forEach(para => {
+          para.textContent = 'View Next'
+        });
 
     },
-    onLeaveBack:() =>{
+    onLeave: () => {
       document.querySelectorAll(".strap p")
-      .forEach(para => {
-        para.textContent='Hol Up'
-      })
+        .forEach(para => {
+          para.textContent = 'View Next'
+        });
+    },
+
+    onEnterBack: () => {
+      document.querySelectorAll(".strap p")
+        .forEach(para => {
+          para.textContent = 'Or Not...'
+        });
+
 
     },
-  
+    onLeaveBack: () => {
+      document.querySelectorAll(".strap p")
+        .forEach(para => {
+          para.textContent = 'Hol Up'
+        })
+
+    },
+
   },
-  x:-400,
-  duration:3,
+  x: -400,
+  duration: 3,
   ease: "slow(0.7, 0.7, false)"
 
 
 });
 
-function scrollHero(){
+function scrollHero() {
 
-const heroImg = document.querySelector('.hero-image');
-const heroTitle = document.querySelectorAll('.hero-title');
+  const heroImg = document.querySelector('.hero-image');
+  const heroTitle = document.querySelectorAll('.hero-title');
 
-let tll =gsap.timeline({
-  scrollTrigger:{
-    trigger: heroImg, 
-    markers:false,
-    start: "top 40%",
-    scrub:0.5,
+  let tll = gsap.timeline({
+    scrollTrigger: {
+      trigger: heroImg,
+      markers: false,
+      start: "top 40%",
+      scrub: 0.5,
 
-  }
-});
+    }
+  });
 
-tll.to(heroImg,{
-  duration:5,
-  height:"60%"
-});
-
-
-  tll.to(heroTitle[0],{
-    duration:5,
-    x:-1000
-  },'-=5');
+  tll.to(heroImg, {
+    duration: 5,
+    height: "60%"
+  });
 
 
-  tll.to(heroTitle[1],{
-    duration:5,
-    x:1000
-  },'-=5');
+  tll.to(heroTitle[0], {
+    duration: 5,
+    x: -1000
+  }, '-=5');
 
 
-let tl = gsap.timeline({delay: 0.5});
-    
-tl.to(heroImg, {
+  tll.to(heroTitle[1], {
+    duration: 5,
+    x: 1000
+  }, '-=5');
+
+
+  let tl = gsap.timeline({ delay: 0.5 });
+
+  tl.to(heroImg, {
     // x: 100,
     scale: 0.9,
     ease: 'power4',
     duration: 3,
-    
-});
+
+  });
 
 }
 
@@ -159,77 +159,77 @@ const viewNextProject = document.querySelectorAll(".strap p");
 const viewNext = document.querySelector(".strap");
 const upTextInStrap = document.querySelector(".s-1");
 
-if(window.document.title=='Cure'||window.document.title=='Sony'||window.document.title=='Bolobedu'||window.document.title=='Open App' ||window.document.title=='Other Projects'){
-  viewNext.addEventListener('mouseover',f );
-  viewNext.addEventListener('mouseout',j );
+if (window.document.title == 'Cure' || window.document.title == 'Sony' || window.document.title == 'Bolobedu' || window.document.title == 'Open App' || window.document.title == 'Other Projects') {
+  viewNext.addEventListener('mouseover', f);
+  viewNext.addEventListener('mouseout', j);
 
   function j() {
 
     viewNextProject.forEach(para => {
 
-      para.textContent= "view next";
-      
+      para.textContent = "view next";
+
     });
-    
-    upTextInStrap.style.transform='translateY(0%)';
+
+    upTextInStrap.style.transform = 'translateY(0%)';
     console.log("inside");
   };
 
   function f() {
     const nextData = document.querySelector("body");
 
-    viewNextTitle= document.querySelector('.strap').parentElement.href.split("/")[3].split(".")[0]
-    
+    // viewNextTitle = document.querySelector('.strap').parentElement.href.split("/")[3].split(".")[0]
+
     viewNextProject.forEach(para => {
 
-      para.textContent= nextData.getAttribute("data-name");
-      
-      if(nextData.getAttribute("data-name")==null){
-        para.textContent="view next"
+      para.textContent = nextData.getAttribute("data-name");
+
+      if (nextData.getAttribute("data-name") == null) {
+        para.textContent = "view next"
       }
 
-      
+
     });
-    upTextInStrap.style.transform='translateY(-50%)';
-  } 
-} 
+    upTextInStrap.style.transform = 'translateY(-50%)';
+  }
+}
 
 //-------------------otherproject scoll next-----------------------
 
-let OtherProject=['Branding','Logo Design', '3D Design']
+let OtherProject = ['Branding', 'Logo Design', '3D Design']
 
-let getProjectName= function(){
- return parseInt(window.location.href.split("=")[1]);
+let getProjectName = function () {
+  return parseInt(window.location.href.split("=")[1]);
 }
 
-let nextName=  1;
+let nextName = 1;
 
 console.log('this the project name = ' + OtherProject[getProjectName()])
 
- if(window.document.title=='Other Projects'){
-      this.addEventListener("scroll", function () {
-        
-        if(this.scrollY + this.innerHeight>=document.querySelector('body').offsetHeight-260){
-    document.querySelector(".t-heading").textContent= OtherProject[getProjectName()+nextName];
-    } 
-    else if(this.scrollY + this.innerHeight<=document.querySelector('body').offsetHeight-260){   
-    document.querySelector(".t-heading").textContent=  OtherProject[getProjectName()];
+if (window.document.title == 'Other Projects') {
+  this.addEventListener("scroll", function () {
 
-  }
-    }, false);
+    if (this.scrollY + this.innerHeight >= document.querySelector('body').offsetHeight - 260) {
+      document.querySelector(".t-heading").textContent = OtherProject[getProjectName() + nextName];
+    }
+    else if (this.scrollY + this.innerHeight <= document.querySelector('body').offsetHeight - 260) {
+      document.querySelector(".t-heading").textContent = OtherProject[getProjectName()];
+
+    }
+  }, false);
 }
 
 
-function showText(){
+function showText() {
   var tl = gsap.timeline();
 
 
 
-  tl.from('.hero-image',1,{height:0, duration:0.7, ease:'power1.out'}),
-  tl.to('.hero-title.top', {xPercent:0,duration:0.7, ease:'power2.out'}),
-  tl.to('.hero-title.bottom', {xPercent:0,duration:0.7, ease:'power2.out'},'-=0.5'),
-  tl.from('.side-arrow', {autoAlpha:0, yPercent:-10,duration:1.5, ease: Elastic.easeOut.config(1, 0.3)},'-=0.5')
-  
+  tl.from('.hero-image', 1, { height: 0, duration: 0.7, ease: 'power1.out' }),
+    tl.to('.hero-title.top', { xPercent: 0, duration: 0.7, ease: 'power2.out' }),
+    tl.to('.hero-title.bottom', { xPercent: 0, duration: 0.7, ease: 'power2.out' }, '-=0.5'),
+    tl.from('.side-arrow', { autoAlpha: 0, yPercent: -10, duration: 1.5, ease: Elastic.easeOut.config(1, 0.3) }, '-=0.5')
+
   scrollHero();
 }
 
@@ -237,28 +237,29 @@ if (window.innerWidth >= 960) {
   showText();
   console.log("it can move on scroll");
 }
-else{
-  
+else {
+
   console.log("it cannot move on scroll bruh");
 }
 
 
-function heroImage(){
+function heroImage() {
   var tl = gsap.timeline();
 
-  tl.to('.hero-image',{ duration:5, height:"50px" })
+  tl.to('.hero-image', { duration: 5, height: "50px" })
 }
 
 
-window.onload = () => { 
+window.onload = () => {
 
-toTop();
- 
-if (window.document.title == '🙃Thomas Mosito'){    // ------<< fix
-  pageTransition(); 
-  setTimeout(function () {
-  contentAnimation()},2000)
- };
+  toTop();
+
+  if (window.document.title == '🙃Thomas Mosito') {    // ------<< fix
+    pageTransition();
+    setTimeout(function () {
+      contentAnimation()
+    }, 2000)
+  };
 }
 
 
@@ -276,7 +277,7 @@ if (window.document.title == '🙃Thomas Mosito'){    // ------<< fix
 //   hoverCont.addEventListener("mousemove", function(e){
 //     if (window.innerWidth > 960) {
 //       floatingImg(e);
-      
+
 //     }
 //     e.stopPropagation();
 //   });
@@ -316,7 +317,7 @@ if (window.document.title == '🙃Thomas Mosito'){    // ------<< fix
 
 //   gsap.to(hoverImg, { x: reposition.offsetLeft, y:reposition.offsetTop-hoverCont.clientHeight});
 //   // hoverImg.style.transform="translate3D(" +reposition.offsetLeft+"px, "+reposition.offsetTop+"px)"
-  
+
 // }
 
 // const cursor=document.getElementsByClassName("cursor");
@@ -328,7 +329,7 @@ if (window.document.title == '🙃Thomas Mosito'){    // ------<< fix
 
 // screens
 
-function quaries(){
+function quaries() {
   if (screen.width < 960) {
     console.log('Less than 960');
   }
@@ -348,12 +349,12 @@ function quaries(){
 //   const newPixel = window.pageYOffset;
 //   const diff = newPixel - currentPixel
 //   const speed = diff * 0.15;
-  
+
 //   section.style.transform = "skewY(" + speed + "deg)"
-  
-  
+
+
 //   currentPixel = newPixel;
-  
+
 //   requestAnimationFrame(looper)
 // }
 
@@ -363,38 +364,38 @@ function quaries(){
 
 //------->> wheel spin
 
-const wheel =document.querySelector('.scroll-wheel img');
+const wheel = document.querySelector('.scroll-wheel img');
 
 gsap.to(wheel,
 
 
   {
 
-});
+  });
 
 //------->> arrow flip
 
-const toTopButton =document.querySelector(".side-arrow");
-const viewedContent =document.querySelector('.project-info');
+const toTopButton = document.querySelector(".side-arrow");
+const viewedContent = document.querySelector('.project-info');
 
 gsap.to(".side-arrow",
-{
-  scrollTrigger:{
-    trigger: ".hero-image",
-    toggleActions:" play none reverse reverse",
-    start: " top center",
-    end: "90% center",
-    onEnter:()=>{
-      if(window.document.title=='Cure'||window.document.title=='Sony'||window.document.title=='Bolobedu'||window.document.title=='Open App'){
-      toTopButton.addEventListener('click', backToTop);
-      }
+  {
+    scrollTrigger: {
+      trigger: ".hero-image",
+      toggleActions: " play none reverse reverse",
+      start: " top center",
+      end: "90% center",
+      onEnter: () => {
+        if (window.document.title == 'Cure' || window.document.title == 'Sony' || window.document.title == 'Bolobedu' || window.document.title == 'Open App') {
+          toTopButton.addEventListener('click', backToTop);
+        }
+      },
     },
-  },
-  rotation: 180,
-  ease: "back.out(1.7)",
-  duration: 1,
+    rotation: 180,
+    ease: "back.out(1.7)",
+    duration: 1,
 
-});
+  });
 
 // press to top 
 
@@ -412,9 +413,9 @@ function backToTop() {
 
 function ToContent() {
 
-    window.scrollTo(0, viewedContent.offsetTop);
-    setTimeout(ToContent, 0);
-  }
+  window.scrollTo(0, viewedContent.offsetTop);
+  setTimeout(ToContent, 0);
+}
 
 
 
@@ -446,13 +447,13 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
+  coll[i].addEventListener("click", function () {
     var content = this.nextElementSibling;
-    if (content.style.maxHeight){
+    if (content.style.maxHeight) {
       content.style.maxHeight = null;
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
-    } 
+    }
   });
 };
 
@@ -462,27 +463,64 @@ for (i = 0; i < coll.length; i++) {
 
 const lcCircle = document.querySelector('.lc-circle');
 
-if(window.document.title=='About'||window.document.title=='🙃Thomas Mosito'){
+if (window.document.title == 'About' || window.document.title == '🙃Thomas Mosito') {
 
   const editCursor = e => {
-      const { clientX: x, clientY: y } = e;
-      lcCircle.setAttribute('x',((x/window.innerWidth)*100)-50);
-      
-  }    
+    const { clientX: x, clientY: y } = e;
+    lcCircle.setAttribute('x', ((x / window.innerWidth) * 100) - 50);
+
+  }
 
   window.addEventListener('mousemove', editCursor);
 
-  gsap.to('svg',{rotation:360, duration:40, ease: "none", repeat:-1})
+  gsap.to('svg', { rotation: 360, duration: 40, ease: "none", repeat: -1 })
 
   //---contacts cont fix---------------
 
   this.addEventListener("scroll", function () {
-    
-        if(this.scrollY + this.innerHeight>=document.querySelector('body').offsetHeight-20){
-    document.querySelector(".contacts").style.overflow="hidden";
-    } 
-    else if(this.scrollY + this.innerHeight<=document.querySelector('body').offsetHeight-20){   
-    document.querySelector(".contacts").style.overflow="visible";
+
+    if (this.scrollY + this.innerHeight >= document.querySelector('body').offsetHeight - 20) {
+      document.querySelector(".contacts").style.overflow = "hidden";
     }
-    }, false);
+    else if (this.scrollY + this.innerHeight <= document.querySelector('body').offsetHeight - 20) {
+      document.querySelector(".contacts").style.overflow = "visible";
+    }
+  }, false);
 }
+
+
+//************
+//--------- next other project -----
+//************
+
+if (document.title == "Other Projects") {
+  document.querySelector('.next-project').addEventListener('click',
+
+  () => {
+    if (window.location.href.split("=")[1] == '0') {
+      window.location.href = window.location.origin + "/OtherProject.html?para1=1";
+    }
+    else if(window.location.href.split("=")[1] == '1') {
+      window.location.href = window.location.origin + "/OtherProject.html?para1=2";
+    }
+    else if(window.location.href.split("=")[1] == '2') {
+      window.location.href = window.location.origin + "/OtherProject.html?para1=0";
+    }
+  })
+
+  document.querySelector('.op-next').addEventListener('click',
+
+  () => {
+    if (window.location.href.split("=")[1] == '0') {
+      window.location.href = window.location.origin + "/OtherProject.html?para1=1";
+    }
+    else if(window.location.href.split("=")[1] == '1') {
+      window.location.href = window.location.origin + "/OtherProject.html?para1=2";
+    }
+    else if(window.location.href.split("=")[1] == '2') {
+      window.location.href = window.location.origin + "/OtherProject.html?para1=0";
+    }
+  })
+};
+
+

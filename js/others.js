@@ -5,7 +5,7 @@ const projects=[
         {
             projectName:'Ceres',
             projectCatergory:'Branding',
-            images:['img/otherprojects/branding-ceres01.webp','img/otherprojects/branding-ceres02.webp','img/otherprojects/branding-ceres03.webp','img/otherprojects/branding-ceres04.webp','img/otherprojects/branding-ceres05.webp']
+            images:['img/otherprojects/branding-ceres01.webp','img/otherprojects/branding-ceres02.webp','img/otherprojects/branding-ceres03.webp','img/otherprojects/branding-ceres04.webp','img/otherprojects/branding-ceres06.webp','img/otherprojects/branding-ceres07.webp']
         },
         {
             projectName:'Bolobedu',
@@ -27,21 +27,21 @@ const projects=[
         {
             projectName:'Phomolong Market',
             projectCatergory:'Logo Design',
-            images:['img/otherproject/Logos-phomolong01.webp','img1/otherproject/Logos-phomolong02.webp','img1/otherproject/Logos-phomolong03.webp','img1/otherproject/Logos-phomolong04.webp','img1/otherproject/Logos-phomolong05.webp']
+            images:['img/otherprojects/Logos-phomolong01.webp','img/otherprojects/Logos-phomolong02.webp','img/otherprojects/Logos-phomolong03.webp','img/otherprojects/Logos-phomolong04.webp']
         },
         {
             projectName:'Kiwi',
             projectCatergory:'Logo Design',
-            images:['img/otherprojects/Logos-kiwi01.webp','img/otherprojects/Logos-kiwi02.webp','img/otherprojects/Logos-kiwi03.webp','img/otherprojects/Logos-kiwi04.webp','img/otherprojects/Logos-kiwi05.webp']
+            images:['img/otherprojects/Logos-kiwi01.webp','img/otherprojects/Logos-kiwi02.webp','img/otherprojects/Logos-kiwi03.webp','img/otherprojects/Logos-kiwi04.webp']
         },
         {
             projectName:'Rose Gold',
-            projectCatergory:'Branding',
+            projectCatergory:'Logo Design',
             images:['img/otherprojects/Logos-rosegold01.webp','img/otherprojects/Logos-rosegold02.webp','img/otherprojects/Logos-rosegold03.webp','img/otherprojects/Logos-rosegold04.webp']
         },
         {
             projectName:'Consco',
-            projectCatergory:'Branding',
+            projectCatergory:'Logo Design',
             images:['img/otherprojects/Logos-consco01.webp','img/otherprojects/Logos-consco02.webp','img/otherprojects/Logos-consco03.webp','img/otherprojects/Logos-consco04.webp']
         }
     ],[ //3D Designs
@@ -52,17 +52,17 @@ const projects=[
         },
         {
             projectName:'27 Vision Trailer',
-            projectCatergory:'Branding',
+            projectCatergory:'3D Design',
             images:['img/otherprojects/3d-vt01.webp','img/otherprojects/3d-vt02.webp','img/otherprojects/3d-vt03.webp','img/otherprojects/3d-vt04.webp','img/otherprojects/3d-vt05.webp']
         },
         {
             projectName:'Cyber Mosotho',
-            projectCatergory:'Branding',
+            projectCatergory:'3D Design',
             images:['img/otherprojects/3d-cyberMosotho01.webp','img/otherprojects/3d-cyberMosotho02.webp','img/otherprojects/3d-cyberMosotho03.webp','img/otherprojects/3d-cyberMosotho04.webp','img/otherprojects/3d-cyberMosotho05.webp']
         },
         {
             projectName:'Phomolong Market',
-            projectCatergory:'Branding',
+            projectCatergory:'3D Design',
             images:['img/otherprojects/3d-phomolong01.webp','img/otherprojects/3d-phomolong02.webp','img/otherprojects/3d-phomolong03.webp','img/otherprojects/3d-phomolong04.webp','img/otherprojects/3d-phomolong05.webp']
         }
     ],
@@ -127,7 +127,7 @@ let test=()=>{
             
                 <img src=${firstData.images[0]} alt="image goes here">
 
-                <button class="project_btn">
+                <button class="project_btn bob">
 
                     <div class="button-wrapper">
                             
