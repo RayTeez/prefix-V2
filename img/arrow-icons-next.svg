@@ -6,19 +6,23 @@
       }
 
       .b {
-        stroke: #fff;
+        stroke: #1460ff;
         stroke-miterlimit: 10;
       }
 
       .c {
         clip-path: url(#a);
       }
+      .d {
+        fill: #eee;
+        stroke: none;
+      }
     </style>
     <clipPath id="a">
       <circle class="a" cx="-33.4" cy="204.44" r="82.1"/>
     </clipPath>
   </defs>
-  <circle cx="48.03" cy="48.03" r="47.02"/>
+  <circle class="d" cx="48.03" cy="48.03" r="47.02"/>
   <g>
     <polyline class="b" points="52.72 35.07 65.72 48.07 65.72 48 52.72 61"/>
     <line class="b" x1="30.12" y1="48.03" x2="60.02" y2="48.03"/>
