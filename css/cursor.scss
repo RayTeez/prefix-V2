@@ -1,8 +1,10 @@
+@import "mediaQuaries";
 .hover-this {
     transition: all 0.3s ease;
 }
 
 .hoverthis span {
+    height: inherit;
     display: inline-block;
     pointer-events: none;
     // transition: transform 0.1s linear;
@@ -15,6 +17,12 @@
 
 
 .cursor {
+    width: 20px;
+    height: 20px;
+    background: $notBlack;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     pointer-events: none;
     position: fixed;
     padding: 0.3rem;
@@ -23,6 +31,27 @@
     mix-blend-mode: difference;
     transition: transform 0.2s ease;
     z-index: 5555;
+}
+
+.selected{
+    transform: scale(8);
+}
+
+.info{
+    height: 150px;
+    width: 150px;
+}
+
+.c-info{
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+}
+
+.c-next{
+    width: 50%;
+    height: auto;
+    position: absolute;
 }
 
 .hover-this:hover ~ .cursor {

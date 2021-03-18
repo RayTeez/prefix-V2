@@ -34,6 +34,10 @@ body {
 ol, ul {
 	list-style: none;
 }
+a{
+	text-decoration: none;
+	color: black;
+}
 blockquote, q {
 	quotes: none;
 }
@@ -50,3 +54,8 @@ button:focus {
     border: none;
     outline: none;
 }
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 95.74 95.74">
+  <defs>
+    <style>
+      .a, .b {
+        fill: none;
+      }
+
+      .b {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 1.26px;
+      }
+
+      .c {
+        clip-path: url(#a);
+      }
+    </style>
+    <clipPath id="a">
+      <circle class="a" cx="105.35" cy="207.29" r="82.1"/>
+    </clipPath>
+  </defs>
+  <circle cx="47.87" cy="47.87" r="46.89"/>
+  <g>
+    <line class="b" x1="63.32" y1="32.54" x2="33.04" y2="62.82"/>
+    <line class="b" x1="33.04" y1="32.54" x2="63.32" y2="62.82"/>
+  </g>
+  <g class="c">
+    <image width="3024" height="4032" transform="translate(-14.52 47.26) scale(0.09)" xlink:href="Reatile%20pictures/File_049.jpeg"/>
+  </g>
+</svg>

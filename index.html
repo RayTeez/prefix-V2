@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/transition.css">
     <link rel="stylesheet" href="css/cursor.css">
 </head>
-<body data-barba="wrapper">
+<body>
 
 
     <!-- {transistion stuff here} -->
@@ -30,18 +30,22 @@
     <nav>
 
         <div class="logo">
+            
             <img src="img/logo.svg" alt="logo-icon">
+            
         </div>
-        <div class="menu-bar hoverthis">
-            <a href="about.html"><span> About </span></a> 
-        </div>
+        <a   href="about.html">
+        <div class="menu-bar hoverthis" data-option="selected"><span>
+             About Me  
+        </span></div>
+        </a>
     </nav>
 
-<div class="skewable">
 
-    <section class="about-hero">
+    <section class="Hero">
+        <div class="Hero-Contents">
 
-        <section class= "about_content-hero">
+        <!-- <section class= "about_content-hero">
             <div class="anim1">
                 <p><span class="blinds">Hello I'm</span></p>
             </div>
@@ -50,38 +54,169 @@
                 <div class="movewithmouse">
                     <img src="img/mefortheweb.png" alt="Me here">
                 </div>
-                <!-- <h2>Reatile Thomas Mosito</h2> -->
+                 <h2>Reatile Thomas Mosito</h2> 
             </div>
             <div class="anim1">
                 <p><span class="blinds">Digital Designer</span></p>
             </div>
-        </section>
+        </section> -->
+
+        <div class="hero-intro">
+            <div class="ht_1">
+                <h2 class="ht_Reveal">Hello There! Im</h2>
+            </div>
+            <div class="ht_2">
+                <h1 class="ht_Reveal">Reatile</h1>
+            </div>
+            <div class="ht_3 fontchange">
+                <h1 class="ht_Reveal">Thomas</h1>
+            </div>
+            <div class="ht_4">
+                <h1 class="ht_Reveal">Mosito</h1>
+            </div>
+            <div class="ht_5">
+                <h3 class="ht_Reveal">I am Digital Designer</h3>
+            </div>
+            <div class="ht_6">
+                <h3 class="ht_Reveal">From Lesotho</h3>
+            </div> 
+        </div>
+
+        <div class="hero-intro-image" data-option="info">
+            
+                <figure class="hi_1 hoverthis"  data-option="info">
+              <span><img src="img/pic-of-me.png" alt="picture of me"   loading="lazy"></span>
+                </figure>
+            
+            <div class="hi_2">
+                
+                <div>
+                    <p class="ht_Reveal">this is my </p>
+                </div>
+                <div>
+                    <p class="ht_Reveal">Portfolio</p>
+                </div>
+            
+            </div>
+        </div>
+    </div>    
 
     </section>
     
     <div class="scroll-wheel">
-        <img src="img/scroll-down_wheel-22.svg" alt="arrow">
+        <img src="img/arrow-icons-scroll.svg" alt="arrow">
     </div>
 
-    <section class="about-content">
-        <div class="about-me">
-            <h3>About Me</h3>
+    <section class="intro-content">
+
+
             <p>
-                Hello!! Im Reatile Thomas Mosito, originally from Lesotho but have been living in South Africa for 5 years now. I am highly passionate about Digital Designs and experiences (Graphic, Web and even Game Graphic) and cool stuff! Currently I have just finished school ready to deep right in to the the work force. 
+                Hello!! <span class="highlight"><a href="about.html">I'm Reatile Thomas Mosito</a><span class="line"></span></span>, <br> Lover Of Design and All. <br> There is <span class="highlight">some Pretty Cool Stuff in here!<span class="line"></span></span> <br> Have fun and enjoy!  
             </p>
-        </div>
+
     </section>
 
     <section class="work-content">
         
-
+    
         <div class="work">
+            <h3>Projects</h3>
+            <div class="case-twos">
+                <div class="case"> 
+                    <a href="cure.html">
+                    <div class="case-image">
+                        <img src="img/cure/cure-main.webp" alt="case-project">
+                    </div>
+                    </a>
+                    <a href="cure.html" class="project_btn">
 
-            <h3>Work</h3>
-            <a href="cure.html">
+                            <div class="button-wrapper">
+                                    
+                                        <p class="project-name">Cure</p>
+                            </div>
+
+                    </a>
+                </div>
+
+                <div class="case"> 
+                    <a href="bolobedu.html">
+                    <div class="case-image">
+                        <img src="img/home-img-bolo.webp" alt="case-project">
+                    </div>
+                    </a>
+                    <a href="bolobedu.html" class="project_btn">
+
+                        <div class="button-wrapper">
+                                
+                                    <p class="project-name">Bolobedu</p>
+                        </div>
+
+                </a>
+                </div>
+
+                
+            </div>
+
+            <div class="case-fulls">
+                <a href="sony.html">
+                    <div class="case"> 
+                        <div class="case-image">
+                            <img src="img/sony/sony-look_and_feeling.webp" alt="case-project">
+                        </div>
+                </a>
+                <a href="sony.html" class="project_btn">
+                    <div class="button-wrapper">     
+                                <p class="project-name">Sony</p>
+                    </div>
+
+                </a>
+            </div>
+        </div>
+            <div class="case-twos">
+                <div class="case"> 
+                    <a href="htir.html">
+                    <div class="case-image">
+                        <img src="img/home-img-htir.webp" alt="case-project">
+                    </div>
+                    </a>
+                    <a href="htir.html" class="project_btn">
+
+                            <div class="button-wrapper">
+                                    
+                                        <p class="project-name">Htir</p>
+                            </div>
+
+                    </a>
+                </div>
+
+                <div class="case"> 
+                    <a href="openapp.html">
+                    <div class="case-image">
+                        <img src="img/openApp/openApp4-28.webp" alt="case-project">
+                    </div>
+                    </a>
+                    <a href="openapp.html" class="project_btn">
+
+                        <div class="button-wrapper">
+                                
+                                    <p class="project-name">OpenApp</p>
+                        </div>
+
+                </a>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+
+
+        
+            <!-- <a href="cure.html">
                 <button class="project_btn">
                     <div class="button-wrapper">
-                            <span>1</span>
+                            
                                 <p class="project-name">Cure</p>
                     </div>
                 </button>
@@ -124,42 +259,69 @@
                                 <p class="project-name">Htir</p>
                     </div>
                 </button>
-            </a>
+            </a> -->
         </div>
 
     </section>
 
-</section>
+    <section class="other-projects hoverthis" data-option="selected">
+        <button class="collapsible"><span>Other Projects<span class="line"></span></span></button>
+        <div class="content">
+            <a class="project-one hoverthis" data-option="selected" id="0" onclick="showProject(this)"><span>Branding</span></a>
+            <a class="project-three hoverthis" data-option="selected" id="1" onclick="showProject(this)"><span>Logo Design</span></a>
+            <a class="project-two hoverthis" data-option="selected" id="2" onclick="showProject(this)"><span>3D Design</span></a>
+            
+        </div>
+    </section>
 
-
-    </main>
 
     <footer class="contacts skewable">
     
 
-    <div class="contacts-cont">
-        <p>Let's Chat</p>
-        <div class="hoverthis">
-        <a href="mailto:hello@thomasmosito.xyz"><span> hello@thomasmosito.xyz </span></a>
-        </div>
-        <div class="follow-me">
-            <p>Or... Follow Me</p>
-            <ul>
-                <li><div class="hoverthis"><a href="https://www.instagram.com/thomasmosito/" target="_blank"><span>Instagram</span> </a> </div></li>
-                <li><div class="hoverthis"><a href="https://dribbble.com/Thomas_Mosito" target="_blank"><span>Dribbble</span> </a> </div></li>
-                <li><div class="hoverthis"><a href="https://www.behance.net/reatilemosito?tracking_source=search_projects_recommended%7Creatile" target="_blank"><span>Behance</span> </a> </div></li>
+        <div class="contacts-cont">
+    
+            <div class="hoverthis">
+                <a href="#"><span> hello@thomasmosito.xyz </span></a>
+            </div>
+            <div class="follow-me">
+                <ul>
+                    <li><div class="hoverthis"><a href="https://www.instagram.com/thomas_mosito/" target="_blank"><span>Instagram</span> </a> </div></li>
+                    <li><div class="hoverthis"><a href="https://dribbble.com/Thomas_Mosito" target="_blank"><span>Dribbble</span> </a> </div></li>
+                    <li><div class="hoverthis"><a href="https://www.behance.net/reatilemosito?tracking_source=search_projects_recommended%7Creatile" target="_blank"><span>Behance</span> </a> </div></li>
+    
+                </ul>
+            </div>
+    
+        </div> 
 
-            </ul>
-        </div>
 
-    </div> 
+        <div class="svg-cont">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 315">
+    
+            <path id="curve" fill="transparent" d="M291.79,157.48c0,74.16-60.12,133.9-134.29,133.9S23.21,231.64,23.21,157.48a134.29,134.29,0,0,1,268.58,0Z"/>
+            <text class="lc-circle" width="600">
+                <textpath xlink:href="#curve">
+                Let's Chat Let's Chat Let's Chat Let's Chat Let's Chat Let's Chat Let's Chat
+                </textpath>
+            </text>
+            </svg>
+            </div>
+
+
     </footer>
+
+    <section class="gradient-section">
+        <div class="grad-bg"></div>
+    </section>
 
 
 </div>
 
 
-<div class="cursor"></div>
+<div class="cursor">
+    <p class="c-info">This is Me</p>
+    <img class="c-next" src="img/arrow-icons-next.svg" alt="arrow">
+</div>
     <!-- <script src="js/app.js"></script> -->
 
 
@@ -167,6 +329,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/others.js"></script>
     <script src="js/cursor.js"></script>
 
     

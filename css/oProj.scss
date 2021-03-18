@@ -1,0 +1,54 @@
+@import "mediaQuaries";
+
+//variables
+
+$notBlack:#101111;
+$notWhite:#eeeeee;
+$theFont: 'Lexend Tera', Montserrat, sans-serif;
+$smallFont: 'Mukta Vaani', sans-serif;
+
+.catagory-section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    pointer-events: none;
+    
+
+    h1{
+        font-family: $theFont;
+        letter-spacing: -20px; 
+        font-size: calc(100vw / 12);
+        color: mediumblue;
+        pointer-events: none;
+    }
+    @include media("<=800px"){
+        h1{
+            font-family: $theFont;
+            letter-spacing: -10px; 
+            font-size: calc(100vw * 0.1);
+            color: mediumblue;
+            pointer-events: none;
+        }
+    }
+    @include media("<=500px"){
+        h1{
+            font-family: $theFont;
+            letter-spacing: -1px; 
+            font-size: calc(100vw * 0.1);
+            color: mediumblue;
+            pointer-events: none;
+        }
+    }
+    
+}
+
+.cont{
+    width: 100vw;
+    // padding-top: 90vh;
+    // display:grid;
+    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+}

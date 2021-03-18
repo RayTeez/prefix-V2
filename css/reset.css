@@ -39,6 +39,11 @@ ol, ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 blockquote, q {
   quotes: none;
 }
@@ -57,5 +62,10 @@ table {
 button:focus {
   border: none;
   outline: none;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 /*# sourceMappingURL=reset.css.map */
