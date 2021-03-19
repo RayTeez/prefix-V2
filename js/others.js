@@ -75,37 +75,21 @@ const projecThree = document.querySelector('.project-three');
 
 let getProject = null;
 
-
-
-
-// projectOne.addEventListener('click', showProject(this));
-
 function showProject(e){
     let newlink = function(){
         var projNumber=  e.getAttribute('id'); //<<<--------what
         var queryString = "?para1=" + projNumber;
-        window.location.href = 'OtherProject.html' + queryString;
-        return  'OtherProject.html'+ queryString;
+        window.location.href = 'otherproject.html' + queryString;
+        return  'otherproject.html'+ queryString;
     }
 
-
- 
     let getproject = newlink().split("=");
-
-    console.log(getproject[1]);
-     
     let putProject=projects[getproject[1]][0].projectName
-    
-    
-    console.log(putProject);
-    
 }
 
-if(window.location.pathname=='/OtherProject.html'){
+if(window.location.pathname.includes("otherproject")){
     let getproject =window.location.search.split("=");
     let putProject=projects[getproject[1]][1].projectName;
-    console.log(getproject[1]);
-    console.log(putProject);
 
     const heading =document.querySelector('.t-heading');
     heading.textContent=projects[getproject[1]][0].projectCatergory;
@@ -114,14 +98,12 @@ const pressedImg =document.querySelector('.t-project');
 
 
 let test=()=>{
-    console.log('im hereeee')
-
+  
     for ( i = 0; i < projects[getproject[1]].length; i++) {
 
         let firstData = projects[getproject[1]][i]
 
         pressedImg.innerHTML+= 
-        
         `<li class="box${i+1} proj" id="${i}"  onclick="showProjectCont(this.id)">
             <div class="case-fulls">
             
@@ -137,12 +119,8 @@ let test=()=>{
                 </button>
 
             </div>
-        </li>
-        
-        ` ;
-        
+        </li>`;   
     }
-
 }
 
 test()
@@ -170,22 +148,12 @@ let scrollPosition = 0;
         projectInBox.innerHTML='';
     }
 
-
-
     function showProjectCont(clicked_id){
-        
-    
 
-        // const listProjects = document.querySelectorAll('.proj');
-        
         const lb_projectName = document.querySelector('.lb-p_name h1');
         const lb_CatergoryName = document.querySelector('.lb-p_catergory-name h2');
-        
-
+    
         let getProjectNum = clicked_id;
-
-        console.log(getProjectNum);
-
 
             for (let j = 0; j < projects[getproject[1]][getProjectNum].images.length; j++) {
 
@@ -207,8 +175,6 @@ let scrollPosition = 0;
         lightbox.style.display="block";
         lbIsOn=true;
         showOverlay();
-
-
     }
 
 
@@ -227,11 +193,8 @@ let scrollPosition = 0;
 
         }
         else{
-            document.location.pathname= "/index.html"
-           
-            
-            
-    };
+            document.location.pathname= "/index.html"   
+        };
         console.log('close');
         console.log(phase);
 
@@ -243,11 +206,6 @@ let scrollPosition = 0;
         lightbox.style.display = "none";
         removeOverlay();
         removeChildren();
-        // document.querySelector('.lb-project-box').scrollTop =0; //not working
-        
-
         }
     });
-
 }
-

@@ -25,10 +25,6 @@ tl.pause();
 
           cursorHoveredOn=e.target.getAttribute("data-option");
 
-
-          
-        
-
         if(cursorHoveredOn=='selected'){
             cursor.classList.add('selected');
         } 
@@ -44,14 +40,6 @@ tl.pause();
             next.style.display='block';
             gsap.to(cursor,{height:'160', width:'160',duration:.4 })
         }
-        
-          
-
-
-                          console.log('hovered object is:', e.type)
-                        //   console.log('hovered object is:', e.target.getAttribute("data-option"));
-
-          
 
         if (e.type === 'mouseleave') {
             span.style.transform = '';
@@ -66,25 +54,12 @@ tl.pause();
         }
     };
 
-
     const editCursor = e => {
           const { clientX: x, clientY: y } = e;
           cursor.style.left = x + 'px';
           cursor.style.top = y + 'px';
-
-          
+     
     };
-
-    const grey=()=>{
-        const span = document.querySelector('.hoverthis a span');
-        span.style.color='grey';
-    }
-
-
-    const black=()=>{
-        const span = this.querySelector('.hoverthis a span');
-        span.style.color='intial';
-    }
 
     link.forEach(b => b.addEventListener('mousemove', animateit));
     link.forEach(b => b.addEventListener('mouseleave', animateit));

@@ -1,6 +1,3 @@
-//--->> to top --
-
-
 
 const toTop = () => {
 
@@ -11,11 +8,6 @@ const toTop = () => {
   html.scrollTop = 0;
 }
 
-// ---->> scroll down --
-
-// .........bruhhhh.........................
-
-
 // ---->> page enter --
 
 function pageTransition() {
@@ -23,8 +15,8 @@ function pageTransition() {
 
   var tl = gsap.timeline();
 
-  tl.set('ul.transition li', { duration: .5, scaleY: 1, transformOrigin: 'buttom left', stagger: .2 })
-  tl.to('ul.transition li', { duration: .5, scaleY: 0, transformOrigin: 'top left', stagger: .1, delay: .1 })
+  tl.set('ul.transition li', {scaleY: 1})
+  tl.to('ul.transition li', { duration: .5, scaleY: 0, transformOrigin: 'top left', stagger: .1, delay: .7 })
 
 };
 
@@ -33,24 +25,14 @@ function pageTransition() {
 function contentAnimation() {
 
   var tl = gsap.timeline();
-  var rule = CSSRulePlugin.getRule(".about-hero .about_content-hero div .blinds::after"); //get the rule
-
   const nav = document.querySelector('nav');
 
   tl
 
     .from('.anim1', { duration: 1, y: 50, stagger: 0. })
-    .to(rule, { cssRule: { scaleY: 0 }, duration: 1 })
-    .to(rule, { duration: 2, cssRule: { scaleY: 0 }, onComplete: () => showImg() }, '=-2')
     .to(nav, { duration: 0.3, y: 0 }, '=-1')
-    .to('.scroll-wheel', { opacity: 1, duration: 0.5 })
 
 };
-
-
-// function showImg(){
-//   hoverImg.classList.add('show');
-// } 
 
 // --->> project stuff -- 
 
@@ -68,8 +50,6 @@ let x = gsap.to(strap, {
     end: "bottom 87%",
     scrub: 2.5,
     onEnter: () => {
-      console.log('true')
-
       document.querySelectorAll(".strap p")
         .forEach(para => {
           para.textContent = 'View Next'
@@ -103,8 +83,6 @@ let x = gsap.to(strap, {
   x: -400,
   duration: 3,
   ease: "slow(0.7, 0.7, false)"
-
-
 });
 
 function scrollHero() {
@@ -127,18 +105,15 @@ function scrollHero() {
     height: "60%"
   });
 
-
   tll.to(heroTitle[0], {
     duration: 5,
     x: -1000
   }, '-=5');
 
-
   tll.to(heroTitle[1], {
     duration: 5,
     x: 1000
   }, '-=5');
-
 
   let tl = gsap.timeline({ delay: 0.5 });
 
@@ -147,11 +122,8 @@ function scrollHero() {
     scale: 0.9,
     ease: 'power4',
     duration: 3,
-
   });
-
 }
-
 
 //---->> next project hover ---
 
@@ -166,28 +138,21 @@ if (window.document.title == 'Cure' || window.document.title == 'Sony' || window
   function j() {
 
     viewNextProject.forEach(para => {
-
       para.textContent = "view next";
-
     });
 
     upTextInStrap.style.transform = 'translateY(0%)';
-    console.log("inside");
   };
 
   function f() {
     const nextData = document.querySelector("body");
 
-    // viewNextTitle = document.querySelector('.strap').parentElement.href.split("/")[3].split(".")[0]
-
     viewNextProject.forEach(para => {
-
       para.textContent = nextData.getAttribute("data-name");
 
       if (nextData.getAttribute("data-name") == null) {
         para.textContent = "view next"
       }
-
 
     });
     upTextInStrap.style.transform = 'translateY(-50%)';
@@ -196,7 +161,7 @@ if (window.document.title == 'Cure' || window.document.title == 'Sony' || window
 
 //-------------------otherproject scoll next-----------------------
 
-let OtherProject = ['Branding', 'Logo Design', '3D Design']
+let otherproject = ['Branding', 'Logo Design', '3D Design']
 
 let getProjectName = function () {
   return parseInt(window.location.href.split("=")[1]);
@@ -204,125 +169,27 @@ let getProjectName = function () {
 
 let nextName = 1;
 
-console.log('this the project name = ' + OtherProject[getProjectName()])
-
 if (window.document.title == 'Other Projects') {
   this.addEventListener("scroll", function () {
 
     if (this.scrollY + this.innerHeight >= document.querySelector('body').offsetHeight - 260) {
-      document.querySelector(".t-heading").textContent = OtherProject[getProjectName() + nextName];
+      document.querySelector(".t-heading").textContent = otherproject[getProjectName() + nextName];
     }
     else if (this.scrollY + this.innerHeight <= document.querySelector('body').offsetHeight - 260) {
-      document.querySelector(".t-heading").textContent = OtherProject[getProjectName()];
-
+      document.querySelector(".t-heading").textContent = otherproject[getProjectName()];
     }
   }, false);
 }
 
-
-function showText() {
-  var tl = gsap.timeline();
-
-
-
-  tl.from('.hero-image', 1, { height: 0, duration: 0.7, ease: 'power1.out' }),
-    tl.to('.hero-title.top', { xPercent: 0, duration: 0.7, ease: 'power2.out' }),
-    tl.to('.hero-title.bottom', { xPercent: 0, duration: 0.7, ease: 'power2.out' }, '-=0.5'),
-    tl.from('.side-arrow', { autoAlpha: 0, yPercent: -10, duration: 1.5, ease: Elastic.easeOut.config(1, 0.3) }, '-=0.5')
-
-  scrollHero();
-}
-
-if (window.innerWidth >= 960) {
-  showText();
-  console.log("it can move on scroll");
-}
-else {
-
-  console.log("it cannot move on scroll bruh");
-}
-
-
-function heroImage() {
-  var tl = gsap.timeline();
-
-  tl.to('.hero-image', { duration: 5, height: "50px" })
-}
-
-
 window.onload = () => {
 
   toTop();
+  pageTransition();
 
-  if (window.document.title == '🙃Thomas Mosito') {    // ------<< fix
-    pageTransition();
-    setTimeout(function () {
-      contentAnimation()
-    }, 2000)
-  };
-}
-
-
-
-
-// ====================================
-
-//---- Hover Img -----
-
-// const hoverImg =document.querySelector(".movewithmouse");
-// const hoverCont =document.querySelector(".anim1 h2");
-
-// if(window.document.title=='🙃Thomas Mosito'){  // ------<< fix
-
-//   hoverCont.addEventListener("mousemove", function(e){
-//     if (window.innerWidth > 960) {
-//       floatingImg(e);
-
-//     }
-//     e.stopPropagation();
-//   });
-
-
-// hoverCont.addEventListener("mouseleave",function(e){
-// reposition(e);
-// console.log(hoverImg.style.transform);
-// })
-
-// function showCoords(event) {
-//   var x = event.clientX;
-//   var y = event.clientY;
-
-//   // hoverImg.style.top=(y-500)+'px';
-//   hoverImg.style.transform="translate(" +(x-1200)+"px, "+(y-550)+"px)";
-//   console.log("innnn");
-// }
-
-// hoverCont.addEventListener('click', function(e){
-//   window.location.href="about.html";
-// })
-// }
-
-// function floatingImg(e){
-
-//   var xCoor = e.clientX;
-//   var yCoor = e.clientY;
-
-//   gsap.to(hoverImg, {x: xCoor-hoverCont.clientWidth, y:yCoor-hoverCont.clientHeight});
-//   console.log("innnn");
-
-// }
-
-// function reposition() {
-//   var reposition = document.getElementById("reposition");
-
-//   gsap.to(hoverImg, { x: reposition.offsetLeft, y:reposition.offsetTop-hoverCont.clientHeight});
-//   // hoverImg.style.transform="translate3D(" +reposition.offsetLeft+"px, "+reposition.offsetTop+"px)"
-
-// }
-
-// const cursor=document.getElementsByClassName("cursor");
-
-// gsap.to(cursor, {x: window.clientX, y: window.clientY});
+  setTimeout(function () {
+    contentAnimation()
+  }, 800)
+};
 
 
 // =========================================
@@ -338,40 +205,10 @@ function quaries() {
   }
 }
 
-// ===============
-// ----->>skewing
+window.addEventListener("resize", ()=>{
 
-// const section = document.querySelector(".skewable");
-// let currentPixel = window.pageYOffset
-
-// //looper keeps running and keeps track of where the new pixel is
-// const looper = function () {
-//   const newPixel = window.pageYOffset;
-//   const diff = newPixel - currentPixel
-//   const speed = diff * 0.15;
-
-//   section.style.transform = "skewY(" + speed + "deg)"
-
-
-//   currentPixel = newPixel;
-
-//   requestAnimationFrame(looper)
-// }
-
-//   looper();
-
-// =================
-
-//------->> wheel spin
-
-const wheel = document.querySelector('.scroll-wheel img');
-
-gsap.to(wheel,
-
-
-  {
-
-  });
+  pageTransition();
+});
 
 //------->> arrow flip
 
@@ -397,18 +234,23 @@ gsap.to(".side-arrow",
 
   });
 
-// press to top 
+  /**
+   * press to top
+   */
 
 const logo = document.querySelector('.logo');
+
+if (window.document.title == '🙃Thomas Mosito') {   
+
 logo.addEventListener('click', backToTop);
 
-// logo.addEventListener('click',backToTop);
-
-function backToTop() {
-  if (window.pageYOffset > 0) {
-    window.scrollBy(0, -80);
-    setTimeout(backToTop, 0);
-  }
+  function backToTop() {
+    pageTransition()
+    if (window.pageYOffset > 0) {
+      window.scrollBy(0, -80);
+      setTimeout(backToTop, 0);
+    }
+  } 
 }
 
 function ToContent() {
@@ -416,30 +258,6 @@ function ToContent() {
   window.scrollTo(0, viewedContent.offsetTop);
   setTimeout(ToContent, 0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Mark ii----coding
 
 //collapsilbe
 
@@ -457,9 +275,10 @@ for (i = 0; i < coll.length; i++) {
   });
 };
 
-
-
-// -------------svgs---------------
+/**
+ * svgs
+ */
+// ----------------------------
 
 const lcCircle = document.querySelector('.lc-circle');
 
@@ -472,10 +291,12 @@ if (window.document.title == 'About' || window.document.title == '🙃Thomas Mos
   }
 
   window.addEventListener('mousemove', editCursor);
-
   gsap.to('svg', { rotation: 360, duration: 40, ease: "none", repeat: -1 })
 
-  //---contacts cont fix---------------
+  /**
+   *contacts cont fix 
+   */
+  //------------------
 
   this.addEventListener("scroll", function () {
 
@@ -488,7 +309,6 @@ if (window.document.title == 'About' || window.document.title == '🙃Thomas Mos
   }, false);
 }
 
-
 //************
 //--------- next other project -----
 //************
@@ -498,13 +318,13 @@ if (document.title == "Other Projects") {
 
   () => {
     if (window.location.href.split("=")[1] == '0') {
-      window.location.href = window.location.origin + "/OtherProject.html?para1=1";
+      window.location.href = window.location.origin + window.location.pathname + "?para1=1";
     }
     else if(window.location.href.split("=")[1] == '1') {
-      window.location.href = window.location.origin + "/OtherProject.html?para1=2";
+      window.location.href = window.location.origin + window.location.pathname + "?para1=2";
     }
     else if(window.location.href.split("=")[1] == '2') {
-      window.location.href = window.location.origin + "/OtherProject.html?para1=0";
+      window.location.href = window.location.origin + window.location.pathname + "?para1=0";
     }
   })
 
@@ -512,15 +332,13 @@ if (document.title == "Other Projects") {
 
   () => {
     if (window.location.href.split("=")[1] == '0') {
-      window.location.href = window.location.origin + "/OtherProject.html?para1=1";
+      window.location.href = window.location.origin + window.location.pathname + "?para1=1";
     }
     else if(window.location.href.split("=")[1] == '1') {
-      window.location.href = window.location.origin + "/OtherProject.html?para1=2";
+      window.location.href = window.location.origin + window.location.pathname + "?para1=2";
     }
     else if(window.location.href.split("=")[1] == '2') {
-      window.location.href = window.location.origin + "/OtherProject.html?para1=0";
+      window.location.href = window.location.origin + window.location.pathname + "?para1=0";
     }
   })
 };
-
-
