@@ -23,7 +23,7 @@ function pageTransition() {
 
   var tl = gsap.timeline();
 
-  tl.set('ul.transition li', { duration: .5, scaleY: 1, transformOrigin: 'buttom left', stagger: .2 })
+
   tl.to('ul.transition li', { duration: .5, scaleY: 0, transformOrigin: 'top left', stagger: .1, delay: .1 })
 
 };
@@ -33,17 +33,12 @@ function pageTransition() {
 function contentAnimation() {
 
   var tl = gsap.timeline();
-  var rule = CSSRulePlugin.getRule(".about-hero .about_content-hero div .blinds::after"); //get the rule
-
   const nav = document.querySelector('nav');
 
   tl
 
     .from('.anim1', { duration: 1, y: 50, stagger: 0. })
-    .to(rule, { cssRule: { scaleY: 0 }, duration: 1 })
-    .to(rule, { duration: 2, cssRule: { scaleY: 0 }, onComplete: () => showImg() }, '=-2')
     .to(nav, { duration: 0.3, y: 0 }, '=-1')
-    .to('.scroll-wheel', { opacity: 1, duration: 0.5 })
 
 };
 
@@ -196,7 +191,7 @@ if (window.document.title == 'Cure' || window.document.title == 'Sony' || window
 
 //-------------------otherproject scoll next-----------------------
 
-let OtherProject = ['Branding', 'Logo Design', '3D Design']
+let otherproject = ['Branding', 'Logo Design', '3D Design']
 
 let getProjectName = function () {
   return parseInt(window.location.href.split("=")[1]);
@@ -204,16 +199,16 @@ let getProjectName = function () {
 
 let nextName = 1;
 
-console.log('this the project name = ' + OtherProject[getProjectName()])
+console.log('this the project name = ' + otherproject[getProjectName()])
 
 if (window.document.title == 'Other Projects') {
   this.addEventListener("scroll", function () {
 
     if (this.scrollY + this.innerHeight >= document.querySelector('body').offsetHeight - 260) {
-      document.querySelector(".t-heading").textContent = OtherProject[getProjectName() + nextName];
+      document.querySelector(".t-heading").textContent = otherproject[getProjectName() + nextName];
     }
     else if (this.scrollY + this.innerHeight <= document.querySelector('body').offsetHeight - 260) {
-      document.querySelector(".t-heading").textContent = OtherProject[getProjectName()];
+      document.querySelector(".t-heading").textContent = otherproject[getProjectName()];
 
     }
   }, false);
@@ -258,7 +253,7 @@ window.onload = () => {
     pageTransition();
     setTimeout(function () {
       contentAnimation()
-    }, 2000)
+    }, 800)
   };
 }
 
@@ -400,15 +395,20 @@ gsap.to(".side-arrow",
 // press to top 
 
 const logo = document.querySelector('.logo');
+
+if (window.document.title == '🙃Thomas Mosito') {    // ------<< fix
+
+
 logo.addEventListener('click', backToTop);
 
-// logo.addEventListener('click',backToTop);
 
 function backToTop() {
   if (window.pageYOffset > 0) {
     window.scrollBy(0, -80);
     setTimeout(backToTop, 0);
   }
+}
+
 }
 
 function ToContent() {
@@ -498,13 +498,13 @@ if (document.title == "Other Projects") {
 
   () => {
     if (window.location.href.split("=")[1] == '0') {
-      window.location.href = window.location.origin + "/OtherProject.html?para1=1";
+      window.location.href = window.location.origin + window.location.pathname + "?para1=1";
     }
     else if(window.location.href.split("=")[1] == '1') {
-      window.location.href = window.location.origin + "/OtherProject.html?para1=2";
+      window.location.href = window.location.origin + window.location.pathname + "?para1=2";
     }
     else if(window.location.href.split("=")[1] == '2') {
-      window.location.href = window.location.origin + "/OtherProject.html?para1=0";
+      window.location.href = window.location.origin + window.location.pathname + "?para1=0";
     }
   })
 
@@ -512,13 +512,13 @@ if (document.title == "Other Projects") {
 
   () => {
     if (window.location.href.split("=")[1] == '0') {
-      window.location.href = window.location.origin + "/OtherProject.html?para1=1";
+      window.location.href = window.location.origin + window.location.pathname + "?para1=1";
     }
     else if(window.location.href.split("=")[1] == '1') {
-      window.location.href = window.location.origin + "/OtherProject.html?para1=2";
+      window.location.href = window.location.origin + window.location.pathname + "?para1=2";
     }
     else if(window.location.href.split("=")[1] == '2') {
-      window.location.href = window.location.origin + "/OtherProject.html?para1=0";
+      window.location.href = window.location.origin + window.location.pathname + "?para1=0";
     }
   })
 };

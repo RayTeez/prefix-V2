@@ -84,8 +84,8 @@ function showProject(e){
     let newlink = function(){
         var projNumber=  e.getAttribute('id'); //<<<--------what
         var queryString = "?para1=" + projNumber;
-        window.location.href = 'OtherProject.html' + queryString;
-        return  'OtherProject.html'+ queryString;
+        window.location.href = 'otherproject.html' + queryString;
+        return  'otherproject.html'+ queryString;
     }
 
 
@@ -101,7 +101,7 @@ function showProject(e){
     
 }
 
-if(window.location.pathname=='/OtherProject.html'){
+if(window.location.pathname.includes("otherproject")){
     let getproject =window.location.search.split("=");
     let putProject=projects[getproject[1]][1].projectName;
     console.log(getproject[1]);

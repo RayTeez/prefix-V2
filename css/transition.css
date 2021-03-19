@@ -14,8 +14,7 @@ ul.transition {
 }
 
 ul.transition li {
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
+
   background: white;
   width: 20%;
 }
