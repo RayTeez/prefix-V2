@@ -262,7 +262,7 @@ if (window.document.title == 'Other Projects') {
     {
       scrollTrigger: {
         trigger: ".box1",
-        markers: true,
+        markers: false,
         toggleActions: "play reverse play reverse",
         start: "top center",
         endTrigger: ".box4",
