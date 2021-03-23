@@ -11,6 +11,7 @@ tl.pause();
 
     const animateit = function (e) {
           const info=document.querySelector('.c-info');  
+          const view=document.querySelector('.c-view');  
           const next=document.querySelector('.c-next');  
 
           const span = this.querySelector('.hoverthis span');
@@ -35,22 +36,32 @@ tl.pause();
             info.style.display='block';
 
         }
+        else if(cursorHoveredOn=='view'){
+            gsap.to(cursor,{height:'160', width:'160',duration:.4 })
+            tl.play();
+            // cursor.classList.add('info')
+            view.style.display='block';
+            cursor.style.mixBlendMode ='normal'
+        }
         else if(cursorHoveredOn=='next'){
             
             next.style.display='block';
             gsap.to(cursor,{height:'160', width:'160',duration:.4 })
         }
 
-        if (e.type === 'mouseleave') {
+        if (e.type === 'mouseleave' ) {
             span.style.transform = '';
             cursor.classList.remove('selected');
-            cursor.classList.remove('info');
             cursor.classList.remove('next');
             gsap.to(cursor,{height:'20', width:'20',duration:.4 })
-            info.style.display='none';
+            if (window.document.title == '🙃Thomas Mosito') {
+                info.style.display='none';
+                view.style.display='none';                
+            }
+
             next.style.display='none';
             tl.reverse();
-
+            cursor.style.mixBlendMode ='difference'
         }
     };
 
