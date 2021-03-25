@@ -5,22 +5,27 @@ const projects=[
         {
             projectName:'Ceres',
             projectCatergory:'Branding',
-            images:['img/otherprojects/branding-ceres01.webp','img/otherprojects/branding-ceres02.webp','img/otherprojects/branding-ceres03.webp','img/otherprojects/branding-ceres04.webp','img/otherprojects/branding-ceres06.webp','img/otherprojects/branding-ceres07.webp']
+            images:['img/otherprojects/branding-ceres01.webp','img/otherprojects/branding-ceres02.webp','img/otherprojects/branding-ceres03.webp','img/otherprojects/branding-ceres04.webp','img/otherprojects/branding-ceres06.webp','img/otherprojects/branding-ceres07.webp'],
+            imagesPng:['img/otherprojects/branding-ceres01.png','img/otherprojects/branding-ceres02.png','img/otherprojects/branding-ceres03.png','img/otherprojects/branding-ceres04.png','img/otherprojects/branding-ceres06.png','img/otherprojects/branding-ceres07.png']
+
         },
         {
             projectName:'Bolobedu',
             projectCatergory:'Branding',
-            images:['img/otherprojects/branding-bli01.webp','img/otherprojects/branding-bli01.webp','img/otherprojects/branding-bli03.webp','img/otherprojects/branding-bli04.webp','img/otherprojects/branding-bli05.webp','img/otherprojects/branding-bli06.webp','img/otherprojects/branding-bli07.webp']
+            images:['img/otherprojects/branding-bli01.webp','img/otherprojects/branding-bli01.webp','img/otherprojects/branding-bli03.webp','img/otherprojects/branding-bli04.webp','img/otherprojects/branding-bli05.webp','img/otherprojects/branding-bli06.webp','img/otherprojects/branding-bli07.webp'],
+            imagesPng:['img/otherprojects/branding-bli01.png','img/otherprojects/branding-bli01.png','img/otherprojects/branding-bli03.png','img/otherprojects/branding-bli04.png','img/otherprojects/branding-bli05.png','img/otherprojects/branding-bli06.png','img/otherprojects/branding-bli07.png']
         },
         {
             projectName:'Slices',
             projectCatergory:'Branding',
-            images:['img/otherprojects/branding-slices01.webp','img/otherprojects/branding-slices02.webp','img/otherprojects/branding-slices03.webp','img/otherprojects/branding-slices04.webp','img/otherprojects/branding-slices05.webp']
+            images:['img/otherprojects/branding-slices01.webp','img/otherprojects/branding-slices02.webp','img/otherprojects/branding-slices03.webp','img/otherprojects/branding-slices04.webp','img/otherprojects/branding-slices05.webp'],
+            imagesPng:['img/otherprojects/branding-slices01.png','img/otherprojects/branding-slices02.png','img/otherprojects/branding-slices03.png','img/otherprojects/branding-slices04.png','img/otherprojects/branding-slices05.png']
         },
         {
             projectName:'Vision Africa',
             projectCatergory:'Branding',
-            images:['img/otherprojects/branding-vision01.webp','img/otherprojects/branding-vision02.webp','img/otherprojects/branding-vision04.webp','img/otherprojects/branding-vision05.webp','img/otherprojects/branding-vision06.webp','img/otherprojects/branding-vision07.webp']
+            images:['img/otherprojects/branding-vision01.webp','img/otherprojects/branding-vision02.webp','img/otherprojects/branding-vision04.webp','img/otherprojects/branding-vision05.webp','img/otherprojects/branding-vision06.webp','img/otherprojects/branding-vision07.webp'],
+            imagesPng:['img/otherprojects/branding-vision01.png','img/otherprojects/branding-vision02.png','img/otherprojects/branding-vision04.png','img/otherprojects/branding-vision05.png','img/otherprojects/branding-vision06.png','img/otherprojects/branding-vision07.png']
         },
 
     ],[ //Logo Design
@@ -103,11 +108,17 @@ let test=()=>{
 
         let firstData = projects[getproject[1]][i]
 
+        console.log(firstData.imagesPng[2]);
+
         pressedImg.innerHTML+= 
         `<li class="box${i+1} proj" id="${i}"  onclick="showProjectCont(this.id)">
             <div class="case-fulls">
-            
-                <img src=${firstData.images[0]} alt="image goes here">
+
+                <picture>
+                    <source srcset="${firstData.images[0]}" type="image/webp">
+                    <source srcset="${firstData.imagesPng[0]}" type="image/png">
+                    <img src="${firstData.images[0]}"alt="image goes here">
+                </picture>
 
                 <button class="project_btn bob">
 
@@ -160,11 +171,17 @@ let scrollPosition = 0;
                 console.log(projects[getproject[1]][getProjectNum].images[j]);
 
                 let imageData = projects[getproject[1]][getProjectNum].images
+                let imagePngData = projects[getproject[1]][getProjectNum].imagesPng
 
                 projectInBox.innerHTML+=
 
                 `<figure class="image">
-                    <img src=${imageData[j]} alt="project-image">
+                    <picture>
+                        <source srcset=${imageData[j]} type="image/webp">
+                        <source srcset=${imagePngData[j]} type="image/png">
+                        <img src=${imageData[j]} alt="project-image">
+                    </picture>
+                    <img src=${imageData[j]} >
                 </figure>`
 
             };
