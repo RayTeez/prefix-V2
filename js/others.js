@@ -32,43 +32,51 @@ const projects=[
         {
             projectName:'Phomolong Market',
             projectCatergory:'Logo Design',
-            images:['img/otherprojects/Logos-phomolong01.webp','img/otherprojects/Logos-phomolong02.webp','img/otherprojects/Logos-phomolong03.webp','img/otherprojects/Logos-phomolong04.webp']
+            images:['img/otherprojects/Logos-phomolong01.webp','img/otherprojects/Logos-phomolong02.webp','img/otherprojects/Logos-phomolong03.webp','img/otherprojects/Logos-phomolong04.webp'],
+            imagesPng:['img/otherprojects/Logos-phomolong01.png','img/otherprojects/Logos-phomolong02.png','img/otherprojects/Logos-phomolong03.png','img/otherprojects/Logos-phomolong04.png']
         },
         {
             projectName:'Kiwi',
             projectCatergory:'Logo Design',
-            images:['img/otherprojects/Logos-kiwi01.webp','img/otherprojects/Logos-kiwi02.webp','img/otherprojects/Logos-kiwi03.webp','img/otherprojects/Logos-kiwi04.webp']
+            images:['img/otherprojects/Logos-kiwi01.webp','img/otherprojects/Logos-kiwi02.webp','img/otherprojects/Logos-kiwi03.webp','img/otherprojects/Logos-kiwi04.webp'],
+            imagesPng:['img/otherprojects/Logos-kiwi01.png','img/otherprojects/Logos-kiwi02.png','img/otherprojects/Logos-kiwi03.png','img/otherprojects/Logos-kiwi04.png']
         },
         {
             projectName:'Rose Gold',
             projectCatergory:'Logo Design',
-            images:['img/otherprojects/Logos-rosegold01.webp','img/otherprojects/Logos-rosegold02.webp','img/otherprojects/Logos-rosegold03.webp','img/otherprojects/Logos-rosegold04.webp']
+            images:['img/otherprojects/Logos-rosegold01.webp','img/otherprojects/Logos-rosegold02.webp','img/otherprojects/Logos-rosegold03.webp','img/otherprojects/Logos-rosegold04.webp'],
+            imagesPng:['img/otherprojects/Logos-rosegold01.png','img/otherprojects/Logos-rosegold02.png','img/otherprojects/Logos-rosegold03.png','img/otherprojects/Logos-rosegold04.webp']
         },
         {
             projectName:'Consco',
             projectCatergory:'Logo Design',
-            images:['img/otherprojects/Logos-consco01.webp','img/otherprojects/Logos-consco02.webp','img/otherprojects/Logos-consco03.webp','img/otherprojects/Logos-consco04.webp']
+            images:['img/otherprojects/Logos-consco01.webp','img/otherprojects/Logos-consco02.webp','img/otherprojects/Logos-consco03.webp','img/otherprojects/Logos-consco04.webp'],
+            imagesPng:['img/otherprojects/Logos-consco01.png','img/otherprojects/Logos-consco02.png','img/otherprojects/Logos-consco03.png','img/otherprojects/Logos-consco04.png']
         }
     ],[ //3D Designs
         {
             projectName:'Jeep',
             projectCatergory:'3D Design',
-            images:['img/otherprojects/3d-Jeep01.webp','img/otherprojects/3d-Jeep02.webp','img/otherprojects/3d-Jeep03.webp','img/otherprojects/3d-Jeep04.webp']
+            images:['img/otherprojects/3d-Jeep01.webp','img/otherprojects/3d-Jeep02.webp','img/otherprojects/3d-Jeep03.webp','img/otherprojects/3d-Jeep04.webp'],
+            imagesPng:['img/otherprojects/3d-Jeep01.png','img/otherprojects/3d-Jeep02.png','img/otherprojects/3d-Jeep03.png','img/otherprojects/3d-Jeep04.png']
         },
         {
             projectName:'27 Vision Trailer',
             projectCatergory:'3D Design',
-            images:['img/otherprojects/3d-vt01.webp','img/otherprojects/3d-vt02.webp','img/otherprojects/3d-vt03.webp','img/otherprojects/3d-vt04.webp','img/otherprojects/3d-vt05.webp']
+            images:['img/otherprojects/3d-vt01.webp','img/otherprojects/3d-vt02.webp','img/otherprojects/3d-vt03.webp','img/otherprojects/3d-vt04.webp','img/otherprojects/3d-vt05.webp'],
+            imagesPng:['img/otherprojects/3d-vt01.png','img/otherprojects/3d-vt02.png','img/otherprojects/3d-vt03.png','img/otherprojects/3d-vt04.png','img/otherprojects/3d-vt05.png']
         },
         {
             projectName:'Cyber Mosotho',
             projectCatergory:'3D Design',
-            images:['img/otherprojects/3d-cyberMosotho01.webp','img/otherprojects/3d-cyberMosotho02.webp','img/otherprojects/3d-cyberMosotho03.webp','img/otherprojects/3d-cyberMosotho04.webp','img/otherprojects/3d-cyberMosotho05.webp']
+            images:['img/otherprojects/3d-vt01.webp','img/otherprojects/3d-vt02.webp','img/otherprojects/3d-vt03.webp','img/otherprojects/3d-vt04.webp','img/otherprojects/3d-vt05.webp'],
+            imagesPng:['img/otherprojectsc/3d-cyberMosotho01.png','img/otherprojects/3d-cyberMosotho02.png','img/otherprojects/3d-cyberMosotho03.png','img/otherprojects/3d-cyberMosotho04.png','img/otherprojects/3d-cyberMosotho05.png']
         },
         {
             projectName:'Phomolong Market',
             projectCatergory:'3D Design',
-            images:['img/otherprojects/3d-phomolong01.webp','img/otherprojects/3d-phomolong02.webp','img/otherprojects/3d-phomolong03.webp','img/otherprojects/3d-phomolong04.webp','img/otherprojects/3d-phomolong05.webp']
+            images:['img/otherprojects/3d-phomolong01.webp','img/otherprojects/3d-phomolong02.webp','img/otherprojects/3d-phomolong03.webp','img/otherprojects/3d-phomolong04.webp','img/otherprojects/3d-phomolong05.webp'],
+            imagesPng:['img/otherprojects/3d-phomolong01.png','img/otherprojects/3d-phomolong02.png','img/otherprojects/3d-phomolong03.png','img/otherprojects/3d-phomolong04.png','img/otherprojects/3d-phomolong05.png']
         }
     ],
     
@@ -112,22 +120,19 @@ let test=()=>{
 
         pressedImg.innerHTML+= 
         `<li class="box${i+1} proj" id="${i}"  onclick="showProjectCont(this.id)">
-            <div class="case-fulls">
+            <div class="case-fulls others hoverthis" data-option="view">
+                <span>
+                    <picture>
+                        <source srcset="${firstData.images[0]}" type="image/webp">
+                        <source srcset="${firstData.imagesPng[0]}" type="image/png">
+                        <img src="${firstData.images[0]}"alt="image goes here">
+                    </picture>
+                </span>
 
-                <picture>
-                    <source srcset="${firstData.images[0]}" type="image/webp">
-                    <source srcset="${firstData.imagesPng[0]}" type="image/png">
-                    <img src="${firstData.images[0]}"alt="image goes here">
-                </picture>
-
-                <button class="project_btn bob">
-
-                    <div class="button-wrapper">
-                            
-                        <p class="project-name">${firstData.projectName}</p>
-                    </div>
-
-                </button>
+                <span class="highlight">
+                    <a href="sony.html">${firstData.projectName}</a>
+                    <span class="line"></span>
+                </span>
 
             </div>
         </li>`;   
@@ -181,7 +186,6 @@ let scrollPosition = 0;
                         <source srcset=${imagePngData[j]} type="image/png">
                         <img src=${imageData[j]} alt="project-image">
                     </picture>
-                    <img src=${imageData[j]} >
                 </figure>`
 
             };

@@ -91,9 +91,19 @@
         </div>
     </section>
 
-<section v-for="image in projects[4].projectImages" class="project-image m-c">
+<!-- <section v-for="image in projects[4].projectImages" class="project-image m-c">
     <figure class="image">
         <img v-bind:src='image' alt="project-image">
+    </figure>
+</section> -->
+
+<section class="project-image m-c">
+    <figure class="image">
+        <picture>
+            <source srcset="img/htir/HTIR.webp" type="image/webp">
+            <source srcset="img/htir/HTIR.png" type="image/png">
+            <img src="img/htir/HTIR.webp" alt="project-image">      
+        </picture>
     </figure>
 </section>
 

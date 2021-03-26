@@ -92,10 +92,54 @@
             <img src="" alt="">
         </div>
     </section>
-
-<section v-for="image in projects[0].projectImages" class="project-image m-c">
+<!-- 
+<section v-for="image in projects[0].projectImages[0]" class="project-image m-c">
     <figure class="image">
-        <img v-bind:src='image' alt="project-image">
+        <picture>
+            <source v-bind:srcset='image' type="image/webp">
+            <source v-bind:srcset='image.png' type="image/png">
+            <img v-bind:src='image.webp' alt="project-image">      
+        </picture>
+    </figure>
+</section> -->
+
+<section class="project-image m-c">
+    <figure class="image">
+        <picture>
+            <source srcset="img/bolo/bli-logo-28.webp" type="image/webp">
+            <source srcset="img/bolo/bli-logo-28.png" type="image/png">
+            <img src="img/bolo/bli-logo-28.webp" alt="project-image">      
+        </picture>
+    </figure>
+</section>
+
+<section class="project-image m-c">
+    <figure class="image">
+        <picture>
+            <source srcset="img/bolo/print.webp" type="image/webp">
+            <source srcset="img/bolo/print.png" type="image/png">
+            <img src="img/bolo/print.webp" alt="project-image">      
+        </picture>
+    </figure>
+</section>
+
+<section class="project-image m-c">
+    <figure class="image">
+        <picture>
+            <source srcset="img/bolo/web.webp" type="image/webp">
+            <source srcset="img/bolo/web.png" type="image/png">
+            <img src="img/bolo/web.webp" alt="project-image">      
+        </picture>
+    </figure>
+</section>
+
+<section class="project-image m-c">
+    <figure class="image">
+        <picture>
+            <source srcset="img/bolo/menu.webp" type="image/webp">
+            <source srcset="img/bolo/menu.png" type="image/png">
+            <img src="img/bolo/menu.webp" alt="project-image">      
+        </picture>
     </figure>
 </section>
 

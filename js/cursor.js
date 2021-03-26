@@ -54,7 +54,7 @@ tl.pause();
             cursor.classList.remove('selected');
             cursor.classList.remove('next');
             gsap.to(cursor,{height:'20', width:'20',duration:.4 })
-            if (window.document.title == '🙃Thomas Mosito') {
+            if (window.document.title == '🙃Thomas Mosito'|| window.document.title == 'Other Projects') {
                 info.style.display='none';
                 view.style.display='none';                
             }

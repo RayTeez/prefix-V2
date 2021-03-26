@@ -20,6 +20,10 @@ function pageTransition() {
 
 };
 
+function pageOut(){
+  gsap.to('ul.transition li', { duration: .5, scaleY: 1, transformOrigin: 'bottom left', stagger: .1, delay: .2 })
+}
+
 // ---->> home intro --
 
 function contentAnimation() {
@@ -382,3 +386,24 @@ if (document.title == "Other Projects") {
     }
   })
 };
+
+const links = document.querySelectorAll('a')
+
+links.forEach(link => {
+  link.addEventListener('click', (function(e) {
+    ;
+    e.preventDefault();
+    console.log(this.href)
+    pageOut()
+    setTimeout(function(url) {
+        window.location = url
+    }, 2000, this.href);
+  })
+)})
+
+document.addEventListener("DOMContentLoaded", function() {
+  window.addEventListener("load", function() {
+    pageTransition()
+
+  } );
+});

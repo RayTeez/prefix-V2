@@ -86,9 +86,39 @@
         </div>
     </section>
 
-<section v-for="image in projects[1].projectImages" class="project-image m-c">
+<!-- <section v-for="image in projects[1].projectImages" class="project-image m-c">
     <figure class="image">
         <img v-bind:src='image' alt="project-image">
+    </figure>
+</section> -->
+
+<section class="project-image m-c">
+    <figure class="image">
+        <picture>
+            <source srcset="img/sony/sony-look_and_feeling.webp" type="image/webp">
+            <source srcset="img/sony/sony-look_and_feeling.png" type="image/png">
+            <img src="img/sony/sony-look_and_feeling.webp" alt="project-image">      
+        </picture>
+    </figure>
+</section>
+
+<section class="project-image m-c">
+    <figure class="image">
+        <picture>
+            <source srcset="img/sony/sony-wireframe.webp" type="image/webp">
+            <source srcset="img/sony/sony-wireframe.png" type="image/png">
+            <img src="img/sony/sony-wireframe.webp" alt="project-image">      
+        </picture>
+    </figure>
+</section>
+
+<section class="project-image m-c">
+    <figure class="image">
+        <picture>
+            <source srcset="img/sony/sony-web.webp" type="image/webp">
+            <source srcset="img/sony/sony-web.png" type="image/png">
+            <img src="img/sony/sony-web.webp" alt="project-image">      
+        </picture>
     </figure>
 </section>
 

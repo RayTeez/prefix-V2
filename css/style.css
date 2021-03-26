@@ -2780,6 +2780,36 @@ hr {
     transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
     will-change: auto;
   }
+  .box1:hover .project_name .highlight, .box2:hover .project_name .highlight, .box3:hover .project_name .highlight, .box4:hover .project_name .highlight, .box5:hover .project_name .highlight, .box6:hover .project_name .highlight {
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: calc(100vw * 0.03);
+    text-transform: capitalize;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .box1:hover .project_name .line, .box2:hover .project_name .line, .box3:hover .project_name .line, .box4:hover .project_name .line, .box5:hover .project_name .line, .box6:hover .project_name .line {
+    display: inline-block;
+    height: 1px;
+    width: 0%;
+    background-color: #101111;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    -webkit-transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+    transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+  }
+  .box1:hover .project_name .highlight:hover .line, .box2:hover .project_name .highlight:hover .line, .box3:hover .project_name .highlight:hover .line, .box4:hover .project_name .highlight:hover .line, .box5:hover .project_name .highlight:hover .line, .box6:hover .project_name .highlight:hover .line {
+    width: 100%;
+    pointer-events: none;
+  }
   .box1:hover .project_name .button-wrapper span, .box2:hover .project_name .button-wrapper span, .box3:hover .project_name .button-wrapper span, .box4:hover .project_name .button-wrapper span, .box5:hover .project_name .button-wrapper span, .box6:hover .project_name .button-wrapper span {
     color: #101111;
     left: 4px;
@@ -3079,6 +3109,40 @@ text {
 
 .case-twos .case {
   width: 48%;
+  margin-bottom: 100px;
+}
+
+.case-twos .case .highlight {
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: 3px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: calc(100vw * 0.03);
+  text-transform: capitalize;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.case-twos .case .line {
+  display: inline-block;
+  height: 1px;
+  width: 0%;
+  background-color: #101111;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  -webkit-transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+}
+
+.case-twos .case .highlight:hover .line {
+  width: 100%;
+  pointer-events: none;
 }
 
 .case-twos .case:hover .project_btn {
@@ -3137,6 +3201,22 @@ text {
   .case-twos .case {
     width: 100%;
     height: 100%;
+    margin-bottom: 50px;
+  }
+  .case-twos .case .highlight {
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: calc(100vw * 0.05);
+    text-transform: capitalize;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .case-twos .case:hover .project_btn {
     position: relative;
@@ -3180,6 +3260,40 @@ text {
 
 .case-fulls .case {
   width: 100%;
+  margin-bottom: 100px;
+}
+
+.case-fulls .case .highlight {
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: 3px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: calc(100vw * 0.03);
+  text-transform: capitalize;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.case-fulls .case .line {
+  display: inline-block;
+  height: 1px;
+  width: 0%;
+  background-color: #101111;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  -webkit-transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+}
+
+.case-fulls .case .highlight:hover .line {
+  width: 100%;
+  pointer-events: none;
 }
 
 .case-fulls .case:hover .project_btn {
@@ -3241,6 +3355,22 @@ text {
   }
   .case-fulls .case {
     width: 100%;
+    margin-bottom: 50px;
+  }
+  .case-fulls .case .highlight {
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: calc(100vw * 0.05);
+    text-transform: capitalize;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .case-fulls .case:hover .project_btn {
     position: relative;
@@ -3252,7 +3382,9 @@ text {
   }
   .case-fulls .case-image {
     width: 100%;
-    height: auto;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
   .case-fulls .case-image img {
     width: 100%;
@@ -3267,7 +3399,40 @@ text {
   }
 }
 
-.bob {
+.others {
   top: -10px;
+}
+
+.others .highlight {
+  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: 3px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: calc(100vw * 0.03);
+  text-transform: capitalize;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.others .line {
+  display: inline-block;
+  height: 1px;
+  width: 0%;
+  background-color: #101111;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  -webkit-transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 1s;
+}
+
+.others .highlight:hover .line {
+  width: 100%;
+  pointer-events: none;
 }
 /*# sourceMappingURL=style.css.map */

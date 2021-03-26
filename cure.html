@@ -84,9 +84,24 @@
         </div>
     </section>
 
-<section v-for="image in projects[2].projectImages" class="m-c project-image m-c">
+<!-- <section v-for="image in projects[2].projectImages" class="m-c project-image m-c">
     <figure class="image">
+        <picture>
+            <source srcset="img/home-img-htir.webp" type="image/webp">
+            <source v-bind:srcset='image.png' type="image/png">
+            <img src="img/home-img-htir.png">
+        </picture>
         <img v-bind:src='image' alt="project-image">
+    </figure>
+</section> -->
+
+<section class="project-image m-c">
+    <figure class="image">
+        <picture>
+            <source srcset="img/cure/cure-web.webp" type="image/webp">
+            <source srcset="img/cure/cure-web.png" type="image/png">
+            <img src="img/cure/cure-web.webp" alt="project-image">      
+        </picture>
     </figure>
 </section>
 
