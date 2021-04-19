@@ -3435,4 +3435,13 @@ text {
   width: 100%;
   pointer-events: none;
 }
+
+.word {
+  overflow: hidden;
+}
+
+.letter {
+  position: relative;
+  display: inline-block;
+}
 /*# sourceMappingURL=style.css.map */

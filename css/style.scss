@@ -3199,3 +3199,13 @@ text{
         pointer-events: none; 
     }
 }
+
+
+.word{
+    overflow:hidden;  
+  }
+
+.letter{
+position:relative;
+display: inline-block;
+  }

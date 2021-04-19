@@ -21,7 +21,7 @@ function pageTransition() {
 };
 
 function pageOut(){
-  gsap.to('ul.transition li', { duration: .5, scaleY: 1, transformOrigin: 'bottom left', stagger: .1, delay: .2 })
+  gsap.to('ul.transition li', { duration: .5, scaleY: 1, transformOrigin: 'bottom left', stagger: .1, delay: .2})
 }
 
 // ---->> home intro --
@@ -198,6 +198,10 @@ window.onload = () => {
 
   setTimeout(function () {
     contentAnimation()
+
+    setTimeout(function () {
+      wordtl.play();
+    }, 1000)
   }, 800)
 };
 
@@ -407,3 +411,38 @@ document.addEventListener("DOMContentLoaded", function() {
 
   } );
 });
+
+/**
+ * word Staggerer
+ */
+
+// Find all text with .tricks class and break each letter into a span
+const Word = document.getElementsByClassName("word");
+for (var i = 0; i < Word.length; i++) {
+
+const wordWrap = Word.item(i);
+wordWrap.innerHTML = wordWrap.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, '$1<span class="Word">$2</span>');
+
+}
+
+
+const Letter = document.getElementsByClassName("Word");
+for (var i = 0; i < Letter.length; i++) {
+
+   const letterWrap = Letter.item(i);
+   letterWrap.innerHTML = letterWrap.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+}
+let wordtl = 
+
+ gsap.from('.letter',{
+  y: '120%', 
+  ease: "expo.out",
+  duration: 1,
+  opacity:0,
+  // rotation: 170, 
+  stagger: 0.05,
+  delay:0.02
+}); 
+
+wordtl.pause()
