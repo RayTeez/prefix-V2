@@ -54,7 +54,7 @@ tl.pause();
             cursor.classList.remove('selected');
             cursor.classList.remove('next');
             gsap.to(cursor,{height:'20', width:'20',duration:.4 })
-            if (window.document.title == '🙃Thomas Mosito'|| window.document.title == 'Other Projects') {
+            if (window.document.title == '🙃Thomas Mosito'|| window.document.title == 'Other Projects' || window.document.title == 'About') {
                 info.style.display='none';
                 view.style.display='none';                
             }
@@ -72,8 +72,8 @@ tl.pause();
      
     };
 
-    link.forEach(b => b.addEventListener('mousemove', animateit));
-    link.forEach(b => b.addEventListener('mouseleave', animateit));
+    link.forEach(b => b.addEventListener('mousemove', animateit),false);
+    link.forEach(b => b.addEventListener('mouseleave', animateit),false);
     window.addEventListener('mousemove', editCursor);
 
 })();

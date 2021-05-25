@@ -3,6 +3,29 @@
     transition: all 0.3s ease;
 }
 
+:root {
+
+    --notblack-color: #101111;
+    --notwhite-color: #eeeeee;
+    --cursorblack-color: #000;
+    --cursorwhite-color: #fff;
+    --main-border: 1px solid rgba(255, 255, 255, 0.4);
+    --main-bg: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="dark"] {
+
+    --notblack-color: #eeeeee;
+    --notwhite-color: #101111;
+    --cursorblack-color: #fff;
+    --cursorwhite-color: #000;
+    --main-border: 1px solid rgba(255, 255, 255, 0.2);
+    --main-bg: rgba(25, 25, 25, 0.4);
+}
+
+$notBlack:var(--notblack-color);
+$notWhite:var(--notwhite-color);
+
 .hoverthis span {
     height: inherit;
     display: inline-block;
@@ -26,7 +49,7 @@
     pointer-events: none;
     position: fixed;
     padding: 0.3rem;
-    background-color: #fff;
+    background-color: var(--cursorwhite-color);
     border-radius: 50%;
     mix-blend-mode: difference;
     transition: transform 0.2s ease;
@@ -46,6 +69,7 @@
     font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: absolute;
+    color: var(--notblack-color);
 }
 
 .c-next{

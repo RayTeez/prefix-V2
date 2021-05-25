@@ -69,8 +69,8 @@ const projects=[
         {
             projectName:'Cyber Mosotho',
             projectCatergory:'3D Design',
-            images:['img/otherprojects/3d-vt01.webp','img/otherprojects/3d-vt02.webp','img/otherprojects/3d-vt03.webp','img/otherprojects/3d-vt04.webp','img/otherprojects/3d-vt05.webp'],
-            imagesPng:['img/otherprojectsc/3d-cyberMosotho01.png','img/otherprojects/3d-cyberMosotho02.png','img/otherprojects/3d-cyberMosotho03.png','img/otherprojects/3d-cyberMosotho04.png','img/otherprojects/3d-cyberMosotho05.png']
+            images:['img/otherprojects/3d-cyberMosotho02.webp', 'img/otherprojects/3d-cyberMosotho01.webp','img/otherprojects/3d-cyberMosotho03.webp','img/otherprojects/3d-cyberMosotho04.webp','img/otherprojects/3d-cyberMosotho05.webp'],
+            imagesPng:['img/otherprojects/3d-cyberMosotho02.png', 'img/otherprojects/3d-cyberMosotho01.png','img/otherprojects/3d-cyberMosotho03.png','img/otherprojects/3d-cyberMosotho04.png','img/otherprojects/3d-cyberMosotho05.png']
         },
         {
             projectName:'Phomolong Market',

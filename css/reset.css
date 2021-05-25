@@ -47,14 +47,6 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-body {
-  line-height: 1;
-  font-family: 'Lexend Deca', sans-serif;
-  background: #eeeeee;
-  overflow-x: hidden;
-  position: relative;
-}
-
 ol, ul {
   list-style: none;
 }

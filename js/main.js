@@ -177,6 +177,51 @@ let getProjectName = function () {
   return parseInt(window.location.href.split("=")[1]);
 }
 
+//  const Wordthree = document.getElementsByClassName("wordThree");
+//  for (var i = 0; i < Wordthree.length; i++) {
+ 
+//  const wordWrap = Wordthree.item(i);
+//  wordWrap.innerHTML = wordWrap.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, '$1<span class="Wordthree">$2</span>');
+ 
+//  }
+ 
+ 
+//  const Letterthree = document.getElementsByClassName("Wordthree");
+//  for (var i = 0; i < Letterthree.length; i++) {
+ 
+//     const letterWrap = Letterthree.item(i);
+//     letterWrap.innerHTML = letterWrap.textContent.replace(/\S/g, "<span class='letterthree'>$&</span>");
+ 
+//  }
+ 
+//  let nextOther =
+//  gsap.from('.letterthree',{
+ 
+//    y: '120%', 
+//    ease: "expo.out",
+//    duration: 1,
+//    opacity:0,
+//    // rotation: 170, 
+//    stagger: 0.05,
+//    delay:0.02
+//  }); 
+ 
+//  nextOther.pause()
+        let nextW=
+        gsap.from('.wordThree',{
+ 
+          y: '100', 
+          ease: "expo.out",
+          duration: 1,
+          opacity:0,
+          // rotation: 170, 
+          stagger: 0.05,
+          delay:0.02
+        })
+
+        nextW.pause();
+
+
 let nextName = 1;
 
 if (window.document.title == 'Other Projects') {
@@ -184,9 +229,14 @@ if (window.document.title == 'Other Projects') {
 
     if (this.scrollY + this.innerHeight >= document.querySelector('body').offsetHeight - 260) {
       document.querySelector(".t-heading").textContent = otherproject[getProjectName() + nextName];
+
+      nextW.restart()
+      
+      
     }
     else if (this.scrollY + this.innerHeight <= document.querySelector('body').offsetHeight - 260) {
       document.querySelector(".t-heading").textContent = otherproject[getProjectName()];
+      
     }
   }, false);
 }
@@ -265,6 +315,7 @@ gsap.to(".side-arrow",
  * Text fade otherProjects
  */
 
+
 if (window.document.title == 'Other Projects') {
   gsap.to(".t-heading",
     {
@@ -275,10 +326,12 @@ if (window.document.title == 'Other Projects') {
         start: "top center",
         endTrigger: ".box4",
         end: "bottom center",
+        
       },
       alpha:0.2,
       ease: "power1.in",
       duration: .2,
+
     }
   );
 }
@@ -313,14 +366,15 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function () {
+  coll[i].addEventListener("click", function (event) {
     var content = this.nextElementSibling;
     if (content.style.maxHeight) {
       content.style.maxHeight = null;
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
     }
-  });
+    event.stopPropagation()
+  }, false);
 };
 
 /**
@@ -334,9 +388,12 @@ if (window.document.title == 'About' || window.document.title == '🙃Thomas Mos
 
   const editCursor = e => {
     const { clientX: x, clientY: y } = e;
-    lcCircle.setAttribute('x', ((x / window.innerWidth) * 100) - 50);
-
+    // lcCircle.setAttribute('x', ((x / window.innerWidth) * 100) - 50);
+    lcCircle.style.transform=`rotate(${((x / window.innerWidth) * 100) - 50}deg)`
+    lcCircle.style.transformOrigin = "50% 50%";
   }
+
+  
 
   window.addEventListener('mousemove', editCursor);
   gsap.to('svg', { rotation: 360, duration: 40, ease: "none", repeat: -1 })
@@ -433,9 +490,12 @@ for (var i = 0; i < Letter.length; i++) {
    letterWrap.innerHTML = letterWrap.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 }
+
+
 let wordtl = 
 
  gsap.from('.letter',{
+
   y: '120%', 
   ease: "expo.out",
   duration: 1,
@@ -445,4 +505,248 @@ let wordtl =
   delay:0.02
 }); 
 
+
+
 wordtl.pause()
+
+
+const Wordtwo = document.getElementsByClassName("wordTwo");
+for (var i = 0; i < Wordtwo.length; i++) {
+
+const wordWrap = Wordtwo.item(i);
+wordWrap.innerHTML = wordWrap.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, '$1<span class="Wordtwo">$2</span>');
+
+}
+
+
+const Lettertwo = document.getElementsByClassName("Wordtwo");
+for (var i = 0; i < Lettertwo.length; i++) {
+
+   const letterWrap = Lettertwo.item(i);
+   letterWrap.innerHTML = letterWrap.textContent.replace(/\S/g, "<span class='lettertwo'>$&</span>");
+
+}
+
+gsap.from('.lettertwo',{
+
+  scrollTrigger:{
+    trigger: ".collapsible",
+    toggleActions: "restart stop restart pause ",
+    
+},
+  y: '120%', 
+  ease: "expo.out",
+  duration: 1,
+  opacity:0,
+  // rotation: 170, 
+  stagger: 0.05,
+  delay:0.02
+}); 
+
+
+
+
+/**
+ * Dark Mode -----------
+ */
+
+ const checkbox = document.querySelector('[type="checkbox"]');
+const gradBg = document.querySelector('.gradient-section')
+
+
+
+ const bWord = document.getElementsByClassName("bword");
+ const aWord = document.getElementsByClassName("aword");
+ const cont = document.querySelector(".stagger");
+
+
+
+ // var bob = document.getElementsByClassName("bword")[0].innerHTML;
+ // var ann = document.getElementsByClassName("aword")[0].innerHTML;
+ 
+ const turnToSpan =()=>{
+     for (var i = 0; i < bWord.length; i++) {
+ 
+     const wordWrap = bWord.item(i);
+     wordWrap.innerHTML = wordWrap.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, `$1<span class="bWord">$2</span>` );
+ 
+     }
+ 
+ 
+     const bLetter = document.getElementsByClassName("bWord");
+     for (var i = 0; i < bLetter.length; i++) {
+ 
+     const letterWrap = bLetter.item(i);
+     letterWrap.innerHTML = letterWrap.textContent.replace(/\S/g, "<span class='bletter'>$&</span>");
+ 
+     }
+ 
+ 
+     ///--------
+ 
+ 
+     //const cont = document.querySelector(".dark-light_container")
+     for (var i = 0; i < aWord.length; i++) {
+ 
+     const wordWrap = aWord.item(i);
+     wordWrap.innerHTML = wordWrap.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, '$1<span class="aWord">$2</span>');
+ 
+     }
+ 
+ 
+     const aLetter = document.getElementsByClassName("aWord");
+     for (var i = 0; i < aLetter.length; i++) {
+ 
+     const letterWrap = aLetter.item(i);
+     letterWrap.innerHTML = letterWrap.textContent.replace(/\S/g, "<span class='aletter'>$&</span>");
+ 
+     }
+ 
+ }
+ 
+ turnToSpan();
+ 
+ 
+ 
+ 
+ 
+ /**
+ *Animation
+ **/
+ 
+ function runthis(){
+ 
+ let bwordtl = gsap.timeline();
+ 
+  bwordtl
+    .to('.bletter',{
+     y: '-140%', 
+     ease: "power1.inOut.inOut",
+     /* ease: "expo.out", */
+     duration: 0.4,
+ 
+     stagger: 0.05,
+     delay:0.02
+   })
+ 
+ 
+ let awordtl = gsap.timeline();
+ 
+  awordtl
+  .to('.aletter',{
+   y: '-140%', 
+   ease: "power1.inOut.inOut",
+   /* ease: "expo.out", */
+   duration: 0.4,
+ 
+  
+   stagger: 0.05,
+   delay:0.03
+ }); 
+ 
+ 
+ bwordtl.pause();
+ awordtl.pause();
+ 
+if ( window.document.title == '🙃Thomas Mosito') {
+  
+ 
+   cont.addEventListener("mouseover", function( event ) {
+ 
+     bwordtl.play();
+     awordtl.play();
+ 
+ 
+     },false);
+  
+   
+   
+ cont.addEventListener("mouseout", function( event ) {
+   bwordtl.reverse();
+   awordtl.reverse();
+   },false); 
+
+  }
+ 
+}
+ runthis();
+ 
+   
+  //----========------//
+  
+  
+  
+  const toggleSwitch = document.querySelector('.container_toggle');
+ 
+ const body = document.querySelector('body');
+ /* const para = document.querySelectorAll('p'); */
+ 
+ const currentTheme = localStorage.getItem("theme");
+ 
+ // If the current local storage item can be found
+ if (currentTheme) {
+   // Set the body data-theme attribute to match the local storage item
+   body.setAttribute("data-theme", currentTheme);
+ 
+   // If the current theme is dark, check the theme toggle
+   if (currentTheme === "dark") {
+     checkbox.checked = true;
+   }
+   
+   
+ }
+ 
+ // Function that will switch the theme based on the if the theme toggle is checked or not
+ function switchTheme(e) {
+ 
+     var bob;
+     var ann;
+ 
+ 
+     if( checkbox.checked == false){
+     bob  = 'Light';
+     ann  = 'Dark'
+ 
+ 
+     }
+ 
+     else if( checkbox.checked == true){
+     bob =  'Dark';
+     ann = 'Light'
+ 
+         
+     } 
+     
+     if (e.target.checked) {
+       body.setAttribute("data-theme", "dark");
+       
+ 
+         
+         console.log( bob)
+         document.getElementsByClassName("bword")[0].innerHTML = bob;
+         document.getElementsByClassName("aword")[0].innerHTML = ann;
+         gradBg.style.opacity= '0'
+         turnToSpan();
+         runthis();
+         
+       // Set the user's theme preference to dark
+       localStorage.setItem("theme", "dark");
+     } else {
+       body.setAttribute("data-theme", "light");
+       
+ 
+         console.log( bob)
+         document.getElementsByClassName("bword")[0].innerHTML = bob;
+         document.getElementsByClassName("aword")[0].innerHTML = ann;
+         gradBg.style.opacity= '1'
+         turnToSpan();
+         runthis();
+ 
+       // Set the user's theme preference to light
+       localStorage.setItem("theme", "light");
+     }
+   }
+   // Add an event listener to the theme toggle, which will switch the theme
+   checkbox.addEventListener("change", switchTheme, false); 
+
+

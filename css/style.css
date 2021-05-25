@@ -52,14 +52,6 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-body {
-  line-height: 1;
-  font-family: 'Lexend Deca', sans-serif;
-  background: #eeeeee;
-  overflow-x: hidden;
-  position: relative;
-}
-
 ol, ul {
   list-style: none;
 }
@@ -99,11 +91,37 @@ button:focus {
   src: url("../fonts/Casta-Thin.otf");
 }
 
+* {
+  -webkit-transition: background-color 0.6s ease, color 0.6s ease;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+:root {
+  --notblack-color: #101111;
+  --notwhite-color: #eeeeee;
+  --main-border: 1px solid rgba(255, 255, 255, 0.4);
+  --main-bg: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="dark"] {
+  --notblack-color: #eeeeee;
+  --notwhite-color: #101111;
+  --main-border: 1px solid rgba(255, 255, 255, 0.2);
+  --main-bg: rgba(25, 25, 25, 0.4);
+}
+
+body {
+  line-height: 1;
+  font-family: 'Lexend Deca', sans-serif;
+  background: var(--notwhite-color);
+  overflow-x: hidden;
+  position: relative;
+}
+
 nav {
   width: 100vw;
-  height: 10vh;
   margin: auto;
-  padding: 5% 5%;
+  padding: 2% 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,13 +161,13 @@ nav .menu-bar {
   font-size: 1.2rem;
   -webkit-text-decoration-style: none;
           text-decoration-style: none;
-  border: 1px solid #101111;
+  border: 1px solid var(--notblack-color);
   border-radius: 50px;
 }
 
 nav .menu-bar a {
   text-decoration: none;
-  color: black;
+  color: var(--notblack-color);
 }
 
 nav a:visited {
@@ -176,7 +194,7 @@ nav a:visited {
   }
   nav .menu-bar a {
     text-decoration: none;
-    color: black;
+    color: var(--notblack-color);
   }
 }
 
@@ -192,7 +210,7 @@ nav a:visited {
 
 .project-hero .hero-title h2 {
   font-size: 20rem;
-  color: #101111;
+  color: var(--notblack-color);
 }
 
 .project-hero .hero-title:nth-child(1) {
@@ -335,6 +353,7 @@ nav a:visited {
 }
 
 .intro-content p {
+  color: var(--notblack-color);
   width: 80%;
   font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
@@ -360,11 +379,15 @@ nav a:visited {
           flex-direction: column;
 }
 
+.intro-content a {
+  color: var(--notblack-color);
+}
+
 .intro-content .line {
   display: inline-block;
   height: 1px;
   width: 0%;
-  background-color: #101111;
+  background-color: var(--notblack-color);
   position: absolute;
   top: 50px;
   left: 0;
@@ -420,7 +443,7 @@ nav a:visited {
     display: inline-block;
     height: 1px;
     width: 0%;
-    background-color: #101111;
+    background-color: var(--notblack-color);
     position: absolute;
     top: 50px;
     left: 0;
@@ -449,6 +472,7 @@ nav a:visited {
 }
 
 .project-info .project-title h2 {
+  color: var(--notblack-color);
   font-size: 2.5rem;
   font-family: "MuseoModerno", Montserrat, sans-serif;
 }
@@ -459,12 +483,14 @@ nav a:visited {
 }
 
 .project-info .project-title .tools h3 {
+  color: var(--notblack-color);
   font-size: 1.5rem;
   font-family: "MuseoModerno", Montserrat, sans-serif;
   margin: 20px 0 10px;
 }
 
 .project-info .project-title .tools ul li {
+  color: var(--notblack-color);
   font-family: Helvetica, sans-serif;
   font-size: 1rem;
   margin: 10px 0;
@@ -475,6 +501,7 @@ nav a:visited {
 }
 
 .project-info .project-disc p {
+  color: var(--notblack-color);
   font-family: "Mukta Vaani", sans-serif;
   font-size: 1.5rem;
   line-height: 1.5;
@@ -488,6 +515,7 @@ nav a:visited {
 }
 
 .project-info .project-year p {
+  color: var(--notblack-color);
   width: 90px;
   font-size: 1rem;
   margin: 0 auto;
@@ -508,6 +536,7 @@ nav a:visited {
             column-gap: 4rem;
   }
   .project-info .project-title h2 {
+    color: var(--notblack-color);
     font-size: 2rem;
     font-family: "MuseoModerno", Montserrat, sans-serif;
   }
@@ -516,19 +545,23 @@ nav a:visited {
     height: auto;
   }
   .project-info .project-title .tools h3 {
+    color: var(--notblack-color);
     font-size: 1.5rem;
   }
   .project-info .project-title .tools ul li {
+    color: var(--notblack-color);
     font-family: "Mukta Vaani", sans-serif;
     font-size: 1rem;
   }
   .project-info .project-disc p {
+    color: var(--notblack-color);
     font-size: 1.2rem;
   }
   .project-info .project-year {
     font-size: 2rem;
   }
   .project-info .project-year p {
+    color: var(--notblack-color);
     font-size: 1rem;
     margin: 10px;
     padding: 20px 1px;
@@ -557,6 +590,7 @@ nav a:visited {
     grid-column: 1 / 2;
   }
   .project-info .project-title h2 {
+    color: var(--notblack-color);
     font-size: 2rem;
     font-family: "MuseoModerno", Montserrat, sans-serif;
   }
@@ -565,9 +599,11 @@ nav a:visited {
     height: auto;
   }
   .project-info .project-title .tools h3 {
+    color: var(--notblack-color);
     font-size: 1.5rem;
   }
   .project-info .project-title .tools ul li {
+    color: var(--notblack-color);
     font-family: "Mukta Vaani", sans-serif;
     font-size: 1rem;
   }
@@ -591,6 +627,7 @@ nav a:visited {
         justify-self: end;
   }
   .project-info .project-year p {
+    color: var(--notblack-color);
     font-size: 1rem;
     margin: 10px;
     padding: 20px 1px;
@@ -610,12 +647,13 @@ nav a:visited {
 
 .next-project a {
   text-decoration: none;
+  color: var(--notblack-color);
 }
 
 .next-project .strap {
   height: 130px;
   width: 250%;
-  background: #101111;
+  background: var(--notblack-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -720,7 +758,7 @@ nav a:visited {
     transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform, 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
   }
   .next-project .strap p {
-    color: #eeeeee;
+    color: var(--notwhite-color);
     font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 100;
     letter-spacing: 3px;
@@ -731,7 +769,7 @@ nav a:visited {
 }
 
 .next-project .strap p {
-  color: #eeeeee;
+  color: var(--notwhite-color);
   font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
   letter-spacing: 3px;
@@ -777,12 +815,13 @@ nav a:visited {
             transform: rotate(-3deg);
   }
   .next-project a {
+    color: var(--notblack-color);
     text-decoration: none;
   }
   .next-project .strap {
     height: 80px;
     width: 250%;
-    background: #101111;
+    background: var(--notblack-color);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -815,7 +854,7 @@ nav a:visited {
     transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform, 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
   }
   .next-project .strap p {
-    color: #eeeeee;
+    color: var(--notwhite-color);
     font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 100;
     letter-spacing: 3px;
@@ -858,11 +897,12 @@ nav a:visited {
             transform: rotate(-3deg);
   }
   .next-project a {
+    color: var(--notblack-color);
     text-decoration: none;
   }
   .next-project .strap {
     width: 250%;
-    background: #101111;
+    background: var(--notblack-color);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -895,7 +935,7 @@ nav a:visited {
     transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) transform, 0.5s cubic-bezier(0.19, 1, 0.22, 1) -webkit-transform;
   }
   .next-project .strap p {
-    color: #eeeeee;
+    color: var(--notwhite-color);
     font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 100;
     letter-spacing: 3px;
@@ -964,6 +1004,7 @@ nav a:visited {
 }
 
 .Hero .Hero-Contents .hero-intro h2 {
+  color: var(--notblack-color);
   font-size: 2.5rem;
   letter-spacing: 3px;
   font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -973,6 +1014,7 @@ nav a:visited {
 }
 
 .Hero .Hero-Contents .hero-intro h1 {
+  color: var(--notblack-color);
   font-size: 6rem;
   text-transform: uppercase;
   font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -990,6 +1032,7 @@ nav a:visited {
 }
 
 .Hero .Hero-Contents .hero-intro h3 {
+  color: var(--notblack-color);
   font-size: 1.6rem;
   font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-stretch: expanded;
@@ -1006,6 +1049,7 @@ nav a:visited {
 }
 
 .Hero .Hero-Contents .ht_2, .Hero .Hero-Contents .ht_3 {
+  color: var(--notblack-color);
   pointer-events: none;
   z-index: 3;
 }
@@ -1046,7 +1090,7 @@ nav a:visited {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  background-color: #101111;
+  background-color: var(--notblack-color);
   padding: 20px 60px;
   border-radius: 100px;
   -ms-flex-wrap: nowrap;
@@ -1058,7 +1102,7 @@ nav a:visited {
 }
 
 .Hero .Hero-Contents .hero-intro-image .hi_2 p {
-  color: white;
+  color: var(--notwhite-color);
   font-size: 2rem;
   font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-stretch: expanded;
@@ -1150,7 +1194,7 @@ nav a:visited {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    background-color: #101111;
+    background-color: var(--notblack-color);
     padding: 20px 60px;
     border-radius: 100px;
     -ms-flex-wrap: nowrap;
@@ -1161,7 +1205,7 @@ nav a:visited {
     pointer-events: none;
   }
   .Hero .Hero-Contents .hero-intro-image .hi_2 p {
-    color: white;
+    color: var(--notwhite-color);
     font-size: 1.8rem;
     font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-stretch: expanded;
@@ -1279,7 +1323,7 @@ nav a:visited {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    background-color: #101111;
+    background-color: var(--notblack-color);
     padding: 20px 60px;
     border-radius: 100px;
     -ms-flex-wrap: nowrap;
@@ -1290,7 +1334,7 @@ nav a:visited {
     pointer-events: none;
   }
   .Hero .Hero-Contents .hero-intro-image .hi_2 p {
-    color: white;
+    color: var(--notwhite-color);
     font-size: 1.8rem;
     font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-stretch: expanded;
@@ -1409,7 +1453,7 @@ nav a:visited {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    background-color: #101111;
+    background-color: var(--notblack-color);
     padding: 20px 60px;
     border-radius: 100px;
     -ms-flex-wrap: nowrap;
@@ -1420,7 +1464,7 @@ nav a:visited {
     pointer-events: none;
   }
   .Hero .Hero-Contents .hero-intro-image .hi_2 p {
-    color: white;
+    color: var(--notwhite-color);
     font-size: 1.8rem;
     font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-stretch: expanded;
@@ -1444,6 +1488,7 @@ nav a:visited {
 
 .about-content {
   width: 100vw;
+  margin-bottom: 20vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1456,16 +1501,29 @@ nav a:visited {
           align-items: center;
 }
 
+.about-content .about-container {
+  max-width: 1000px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .about-content .about-me {
   -webkit-column-gap: 2rem;
           column-gap: 2rem;
   width: 90%;
+  pointer-events: none;
+  z-index: 5;
 }
 
 .about-content .about-me h3 {
   position: relative;
   top: -45px;
-  color: #101111;
+  color: var(--notblack-color);
   font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-stretch: expanded;
   letter-spacing: 3px;
@@ -1476,14 +1534,14 @@ nav a:visited {
 }
 
 .about-content .about-me p {
-  color: #101111;
+  color: var(--notblack-color);
   font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
   letter-spacing: 3px;
   padding: 200px 0;
   letter-spacing: 2px;
-  font-size: 2.6rem;
-  line-height: 2.2;
+  font-size: 2rem;
+  line-height: 1.5;
 }
 
 .about-content .about-me .my-name {
@@ -1523,7 +1581,7 @@ nav a:visited {
   display: inline-block;
   height: 1px;
   width: 0%;
-  background-color: #101111;
+  background-color: var(--notblack-color);
   position: absolute;
   top: 50px;
   left: 0;
@@ -1534,6 +1592,17 @@ nav a:visited {
 .about-content .about-me .my-name:hover .line {
   width: 100%;
   pointer-events: none;
+}
+
+.about-content .about-me-img {
+  width: 40%;
+  position: absolute;
+  top: 55%;
+  right: 0;
+}
+
+.about-content .in-about {
+  width: 100%;
 }
 
 .about-content .myExp, .about-content .mySkills {
@@ -1549,7 +1618,7 @@ nav a:visited {
 .about-content .myExp h3, .about-content .mySkills h3 {
   position: relative;
   top: -45px;
-  color: #101111;
+  color: var(--notblack-color);
   font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-stretch: expanded;
   letter-spacing: 3px;
@@ -1560,7 +1629,7 @@ nav a:visited {
 }
 
 .about-content .myExp p, .about-content .mySkills p {
-  color: #101111;
+  color: var(--notblack-color);
   font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
   letter-spacing: 3px;
@@ -1598,7 +1667,7 @@ nav a:visited {
         grid-template-columns: 1fr;
   }
   .about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
-    color: #101111;
+    color: var(--notblack-color);
     font-size: 3rem;
     z-index: 9;
     line-height: 1.5;
@@ -1612,13 +1681,13 @@ nav a:visited {
             column-gap: 1rem;
   }
   .about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
-    color: #101111;
+    color: var(--notblack-color);
     font-size: 2rem;
     z-index: 9;
     line-height: 1.5;
   }
   .about-content .about-me p, .about-content .myExp p, .about-content .mySkills p {
-    color: #101111;
+    color: var(--notblack-color);
     font-size: 1.2rem;
     line-height: 1.5;
   }
@@ -1652,6 +1721,555 @@ nav a:visited {
   }
 }
 
+@media (max-width: 1200px) {
+  .about-content {
+    width: 100vw;
+    margin-bottom: 20vh;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-content .about-container {
+    max-width: 1000px;
+    margin: 0 100px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-content .about-me {
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+    width: 90%;
+    pointer-events: none;
+    z-index: 5;
+  }
+  .about-content .about-me h3 {
+    position: relative;
+    top: -45px;
+    color: var(--notblack-color);
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    font-size: 6.5rem;
+    letter-spacing: 6px;
+    z-index: 9;
+    line-height: 1.5;
+  }
+  .about-content .about-me p {
+    color: var(--notblack-color);
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    padding: 200px 0;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+  .about-content .about-me-img {
+    width: 40%;
+    position: absolute;
+    top: 30%;
+    right: 0;
+  }
+  .about-content .in-about {
+    width: 100%;
+  }
+  .about-content .myExp, .about-content .mySkills {
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+    width: 90%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+  .about-content .myExp h3, .about-content .mySkills h3 {
+    position: relative;
+    top: -45px;
+    color: var(--notblack-color);
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    font-size: 6.5rem;
+    letter-spacing: 6px;
+    z-index: 9;
+    line-height: 1.5;
+  }
+  .about-content .myExp p, .about-content .mySkills p {
+    color: var(--notblack-color);
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    padding: 200px 0;
+    letter-spacing: -6px;
+    font-size: 2.4rem;
+    line-height: 2.2;
+    text-transform: uppercase;
+  }
+  .about-content .myExp .my-name, .about-content .mySkills .my-name {
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    font-size: 3.4rem;
+    text-transform: capitalize;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 1388px) {
+  .about-content .about-me, .about-content .myExp, .about-content .mySkills {
+    width: 70%;
+    -webkit-column-gap: 8rem;
+            column-gap: 8rem;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 1088px) {
+  .about-content .about-me, .about-content .myExp, .about-content .mySkills {
+    width: 70%;
+    -webkit-column-gap: 8rem;
+            column-gap: 8rem;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
+    color: var(--notblack-color);
+    font-size: 3rem;
+    z-index: 9;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 900px) {
+  .about-content .about-me, .about-content .myExp, .about-content .mySkills {
+    width: 80%;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+  .about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
+    color: var(--notblack-color);
+    font-size: 2rem;
+    z-index: 9;
+    line-height: 1.5;
+  }
+  .about-content .about-me .my-name-about, .about-content .myExp .my-name-about, .about-content .mySkills .my-name-about {
+    font-size: 1.5rem;
+  }
+  .about-content .about-me p, .about-content .myExp p, .about-content .mySkills p {
+    color: var(--notblack-color);
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 600px) {
+  .about-content .about-me, .about-content .myExp, .about-content .mySkills {
+    width: 85%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about-content .about-me .timeline, .about-content .about-me .skill, .about-content .myExp .timeline, .about-content .myExp .skill, .about-content .mySkills .timeline, .about-content .mySkills .skill {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about-content .about-me .timeline .exp, .about-content .about-me .skill .exp, .about-content .myExp .timeline .exp, .about-content .myExp .skill .exp, .about-content .mySkills .timeline .exp, .about-content .mySkills .skill .exp {
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: calc(100vw*0.05);
+  }
+  .about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    top: 0;
+  }
+  .about-content .about-me .my-name-about, .about-content .myExp .my-name-about, .about-content .mySkills .my-name-about {
+    font-size: 1.3rem;
+  }
+  .about-content .about-me p, .about-content .myExp p, .about-content .mySkills p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-content {
+    width: 100vw;
+    margin-bottom: 20vh;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-content .about-container {
+    max-width: 1000px;
+    margin: 0 30px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-content .about-me {
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+    width: 90%;
+    pointer-events: none;
+    z-index: 5;
+  }
+  .about-content .about-me h3 {
+    position: relative;
+    top: -45px;
+    color: var(--notblack-color);
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    font-size: 6.5rem;
+    letter-spacing: 6px;
+    z-index: 9;
+    line-height: 1.5;
+  }
+  .about-content .about-me p {
+    color: var(--notblack-color);
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    padding: 200px 0 50%;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+  .about-content .about-me-img {
+    width: 100%;
+    position: relative;
+    top: -30%;
+    right: 0;
+  }
+  .about-content .in-about {
+    width: 100%;
+  }
+  .about-content .myExp, .about-content .mySkills {
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+    width: 90%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+  .about-content .myExp h3, .about-content .mySkills h3 {
+    position: relative;
+    top: -45px;
+    color: var(--notblack-color);
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    font-size: 6.5rem;
+    letter-spacing: 6px;
+    z-index: 9;
+    line-height: 1.5;
+  }
+  .about-content .myExp p, .about-content .mySkills p {
+    color: var(--notblack-color);
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    padding: 200px 0;
+    letter-spacing: -6px;
+    font-size: 2.4rem;
+    line-height: 2.2;
+    text-transform: uppercase;
+  }
+  .about-content .myExp .my-name, .about-content .mySkills .my-name {
+    font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-stretch: expanded;
+    letter-spacing: 3px;
+    font-size: 3.4rem;
+    text-transform: capitalize;
+  }
+}
+
+@media (max-width: 700px) and (max-width: 1388px) {
+  .about-content .about-me, .about-content .myExp, .about-content .mySkills {
+    width: 70%;
+    -webkit-column-gap: 8rem;
+            column-gap: 8rem;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) and (max-width: 1088px) {
+  .about-content .about-me, .about-content .myExp, .about-content .mySkills {
+    width: 70%;
+    -webkit-column-gap: 8rem;
+            column-gap: 8rem;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
+    color: var(--notblack-color);
+    font-size: 3rem;
+    z-index: 9;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 700px) and (max-width: 900px) {
+  .about-content .about-me, .about-content .myExp, .about-content .mySkills {
+    width: 80%;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+  .about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
+    color: var(--notblack-color);
+    font-size: 2rem;
+    z-index: 9;
+    line-height: 1.5;
+  }
+  .about-content .about-me .my-name-about, .about-content .myExp .my-name-about, .about-content .mySkills .my-name-about {
+    font-size: 1.5rem;
+  }
+  .about-content .about-me p, .about-content .myExp p, .about-content .mySkills p {
+    color: var(--notblack-color);
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 700px) and (max-width: 600px) {
+  .about-content .about-me, .about-content .myExp, .about-content .mySkills {
+    width: 85%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about-content .about-me .timeline, .about-content .about-me .skill, .about-content .myExp .timeline, .about-content .myExp .skill, .about-content .mySkills .timeline, .about-content .mySkills .skill {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about-content .about-me .timeline .exp, .about-content .about-me .skill .exp, .about-content .myExp .timeline .exp, .about-content .myExp .skill .exp, .about-content .mySkills .timeline .exp, .about-content .mySkills .skill .exp {
+    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: calc(100vw*0.05);
+  }
+  .about-content .about-me h3, .about-content .myExp h3, .about-content .mySkills h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    top: 0;
+  }
+  .about-content .about-me .my-name-about, .about-content .myExp .my-name-about, .about-content .mySkills .my-name-about {
+    font-size: 1.3rem;
+  }
+  .about-content .about-me p, .about-content .myExp p, .about-content .mySkills p {
+    font-size: 1.1rem;
+  }
+}
+
+.about-me-text {
+  width: 100vw;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-me-text .about-container {
+  width: 1000px;
+  max-width: 100%;
+  margin: 0 100px;
+  position: relative;
+}
+
+.about-me-text .about-me-one {
+  width: 400px;
+  margin-bottom: 50px;
+}
+
+.about-me-text .more-me {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.about-me-text .about-me-two {
+  width: 500px;
+}
+
+.about-me-text .cv {
+  width: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.about-me-text p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .about-me-text {
+    width: 100vw;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-me-text .about-container {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 100px;
+    position: relative;
+  }
+  .about-me-text .about-me-one {
+    width: 400px;
+    margin-bottom: 50px;
+  }
+  .about-me-text .more-me {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-me-text .about-me-two {
+    width: 100%;
+    margin-bottom: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .about-me-text .about-me-two p {
+    width: 500px;
+    font-size: 1.2rem;
+    position: relative;
+    right: 0;
+  }
+  .about-me-text .cv {
+    width: 50%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    text-align: center;
+  }
+  .about-me-text p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-me-text {
+    width: 100vw;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-me-text .about-container {
+    width: 80%;
+    max-width: 100%;
+    margin: 0 20px;
+    position: relative;
+  }
+  .about-me-text .about-me-one {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .about-me-text .more-me {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-me-text .about-me-two {
+    width: 100%;
+    margin-bottom: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .about-me-text .about-me-two p {
+    width: 500px;
+    font-size: 1.2rem;
+    position: relative;
+    right: 0;
+  }
+  .about-me-text .cv {
+    width: 50%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    text-align: center;
+  }
+  .about-me-text p {
+    font-size: 1.1rem;
+  }
+}
+
 .about-cont {
   height: 60vh;
 }
@@ -1659,71 +2277,6 @@ nav a:visited {
 @media (max-width: 900px) {
   .about-cont {
     height: auto;
-  }
-}
-
-.myExp .timeline, .myExp .skill, .mySkills .timeline, .mySkills .skill {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  color: #101111;
-  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: 100;
-  letter-spacing: 3px;
-  font-size: 2.2rem;
-  line-height: 1;
-  position: relative;
-  top: -20px;
-}
-
-.myExp .timeline li, .myExp .skill li, .mySkills .timeline li, .mySkills .skill li {
-  margin: 20px;
-}
-
-.myExp .timeline .time, .myExp .skill .time, .mySkills .timeline .time, .mySkills .skill .time {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: 100;
-  letter-spacing: 3px;
-  font-size: 1rem;
-  letter-spacing: -2px;
-}
-
-@media (max-width: 600px) {
-  .myExp .timeline, .myExp .skill, .mySkills .timeline, .mySkills .skill {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    color: #101111;
-    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 100;
-    letter-spacing: 3px;
-    font-size: 2.2rem;
-    line-height: 1;
-    position: relative;
-    top: -20px;
-  }
-  .myExp .timeline li, .myExp .skill li, .mySkills .timeline li, .mySkills .skill li {
-    margin: 20px;
-    font-size: calc(100vw*0.05);
-  }
-  .myExp .timeline .time, .myExp .skill .time, .mySkills .timeline .time, .mySkills .skill .time {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 100;
-    letter-spacing: 3px;
-    font-size: 1rem;
-    letter-spacing: -2px;
   }
 }
 
@@ -1754,13 +2307,13 @@ nav a:visited {
 }
 
 .contacts .contacts-cont a {
-  color: #101111;
+  color: var(--notblack-color);
   font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-stretch: expanded;
   letter-spacing: 3px;
   font-size: 4.5rem;
   line-height: 1.5;
-  color: #101111;
+  color: var(--notblack-color);
   text-decoration: none;
   text-align: center;
 }
@@ -1780,10 +2333,12 @@ nav a:visited {
 }
 
 .contacts .contacts-cont ul li {
+  color: var(--notblack-color);
   font-family: "MuseoModerno", Montserrat, sans-serif;
 }
 
 .contacts .contacts-cont ul li a {
+  color: var(--notblack-color);
   font-size: 1.8rem;
   margin: 10px 0;
 }
@@ -1843,7 +2398,7 @@ nav a:visited {
 }
 
 .work-content h3 {
-  color: #101111;
+  color: var(--notblack-color);
   font-family: "MuseoModerno", Montserrat, sans-serif;
   font-size: 2.5rem;
   z-index: 9;
@@ -1858,6 +2413,7 @@ nav a:visited {
 }
 
 .work-content .work h3 {
+  color: var(--notblack-color);
   -ms-grid-column-align: center;
       justify-self: center;
   font-size: 5rem;
@@ -1876,6 +2432,7 @@ nav a:visited {
 }
 
 .work-content .work a {
+  color: var(--notblack-color);
   text-decoration: none;
   will-change: auto;
 }
@@ -1894,7 +2451,7 @@ nav a:visited {
             justify-content: center;
   }
   .work-content h3 {
-    color: #101111;
+    color: var(--notblack-color);
     font-family: "MuseoModerno", Montserrat, sans-serif;
     font-size: 2.5rem;
     z-index: 9;
@@ -1937,11 +2494,38 @@ nav a:visited {
   visibility: visible;
 }
 
+.link-arrow {
+  width: 12px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.link-arrow-bigger {
+  width: 20px;
+  height: auto;
+  margin-right: 20px;
+}
+
 .my-name {
   font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-stretch: expanded;
   letter-spacing: 3px;
+  color: var(--notblack-color);
   font-size: 3.4rem;
+  text-transform: capitalize;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.my-name-about {
+  font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+  color: var(--notblack-color);
+  font-size: 2.4rem;
   text-transform: capitalize;
   position: relative;
   -webkit-box-orient: vertical;
@@ -1952,9 +2536,10 @@ nav a:visited {
 
 .line {
   display: inline-block;
+  color: var(--notblack-color);
   height: 1px;
   width: 0%;
-  background-color: #101111;
+  background-color: var(--notblack-color);
   position: absolute;
   top: 50px;
   left: 0;
@@ -1993,7 +2578,7 @@ button:focus {
 .cursor {
   width: 20px;
   height: 20px;
-  background: #101111;
+  background: var(--notwhite-color);
   -webkit-transform-origin: 50%, 50%;
           transform-origin: 50%, 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -2014,7 +2599,7 @@ button:focus {
   font-weight: 100;
   letter-spacing: 3px;
   letter-spacing: 0px;
-  color: #101111;
+  color: var(--notblack-color);
   position: absolute;
 }
 
@@ -2135,7 +2720,7 @@ hr {
 .project_btn .button-wrapper {
   height: 25px;
   width: 25px;
-  background-color: #101111;
+  background-color: var(--notblack-color);
   border-radius: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2146,7 +2731,7 @@ hr {
 }
 
 .project_btn .button-wrapper p {
-  color: #101111;
+  color: var(--notblack-color);
   font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
   letter-spacing: 3px;
@@ -2167,7 +2752,7 @@ hr {
   width: max-content;
   padding: 0 10px;
   background-color: transparent;
-  border: 1px solid #101111;
+  border: 1px solid var(--notblack-color);
   -webkit-box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
   box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
 }
@@ -2176,6 +2761,7 @@ hr {
   font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-stretch: expanded;
   letter-spacing: 3px;
+  color: var(--notblack-color);
   padding: 0 25px;
   -webkit-transform: translate(-50%, -45%);
           transform: translate(-50%, -45%);
@@ -2217,7 +2803,7 @@ hr {
   .project_btn .button-wrapper {
     height: 25px;
     width: 25px;
-    background-color: #101111;
+    background-color: var(--notblack-color);
     border-radius: 200px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2227,7 +2813,7 @@ hr {
     transition: all 0.4s cubic-bezier(0.64, 0, 0.23, 0.99);
   }
   .project_btn .button-wrapper p {
-    color: #101111;
+    color: var(--notblack-color);
     font-family: 'Lexend Deca', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 100;
     letter-spacing: 3px;
@@ -2247,7 +2833,7 @@ hr {
     width: max-content;
     padding: 0 10px;
     background-color: transparent;
-    border: 1px solid #101111;
+    border: 1px solid var(--notblack-color);
     -webkit-box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
     box-shadow: 31px 54px 122px -16px rgba(0, 0, 0, 0.41);
   }
@@ -2822,6 +3408,7 @@ hr {
     top: -46px;
   }
   .box1:hover .project_name .button-wrapper p, .box2:hover .project_name .button-wrapper p, .box3:hover .project_name .button-wrapper p, .box4:hover .project_name .button-wrapper p, .box5:hover .project_name .button-wrapper p, .box6:hover .project_name .button-wrapper p {
+    color: #101111;
     width: 200%;
     margin: 0 80px;
     position: absolute;
@@ -2847,7 +3434,7 @@ hr {
 .lb-back-drop {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: #101111;
   opacity: 0.7;
   position: fixed;
   top: 0;
@@ -2875,6 +3462,7 @@ hr {
 }
 
 .lb-p_catergory-name {
+  color: #101111;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2890,6 +3478,7 @@ hr {
 }
 
 .lb-p_name {
+  color: #101111;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2920,6 +3509,12 @@ hr {
   cursor: pointer;
   border: 1px solid #101111;
   border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: left;
   outline: none;
   position: relative;
@@ -2947,6 +3542,7 @@ hr {
 }
 
 .content a {
+  color: #101111;
   padding: 20px 20px;
   outline: none;
   border: none;
@@ -2978,6 +3574,7 @@ hr {
     transition: max-height 0.2s ease-out;
   }
   .content a {
+    color: #101111;
     margin: 0 auto;
     padding: 20px 20px;
     outline: none;
@@ -3018,6 +3615,7 @@ hr {
 }
 
 .svg-cont {
+  color: #101111;
   height: 100vh;
   width: 96vw;
   -ms-flex-item-align: end;
@@ -3058,6 +3656,7 @@ svg {
 }
 
 text {
+  color: #101111;
   font-family: 'Casta', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-stretch: expanded;
   letter-spacing: 3px;
@@ -3443,5 +4042,82 @@ text {
 .letter {
   position: relative;
   display: inline-block;
+}
+
+.darkmode-button {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+#switch {
+  visibility: hidden;
+}
+
+.dark-light {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border: 1px solid var(--notblack-color);
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* overflow: hidden; */
+}
+
+.cont-cont {
+  margin: 10px 30px;
+  height: 80%;
+  overflow: hidden;
+}
+
+.cont-cont .dark-light_container {
+  margin: -25%;
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
+  /* background: red; */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.cont-cont p {
+  margin: 0;
+  padding: 5%;
+  font-size: 1em;
+  color: var(--notblack-color);
+  -webkit-transition: color 0.6s ease;
+  transition: color 0.6s ease;
+}
+
+.aletter, .bletter {
+  position: relative;
+  display: inline-block;
+}
+
+h3 {
+  font-size: 3rem;
+  color: var(--title-color);
+}
+
+.para {
+  font-size: 2rem;
+  color: var(--title-color);
 }
 /*# sourceMappingURL=style.css.map */

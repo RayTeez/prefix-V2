@@ -57,17 +57,17 @@
                 <h1 class="ht_Reveal word">Mosito</h1>
             </div>
             <div class="ht_5">
-                <h3 class="ht_Reveal">I'm a Digital Designer</h3>
+                <h3 class="ht_Reveal">Digital Designer</h3>
             </div>
-            <div class="ht_6">
+            <!-- <div class="ht_6"> 
                 <h3 class="ht_Reveal">From Lesotho</h3>
-            </div> 
+            </div> -->
         </div>
 
         <div class="hero-intro-image" data-option="info">
             
                 <figure class="hi_1 hoverthis"  data-option="info">
-              <span><img src="img/pic-of-me2.png" alt="picture of me"   loading="lazy"></span>
+              <span><img src="img/pic-of-me2.png" alt="picture of me" loading="lazy"></span>
                 </figure>
             
             <div class="hi_2">
@@ -195,7 +195,10 @@
     </section>
 
     <section class="other-projects hoverthis" data-option="selected">
-        <button class="collapsible"><span>Other Projects<span class="line"></span></span></button>
+        <button class="collapsible">
+            <img src="img/linkarrow.svg" alt="arrow" class="link-arrow-bigger">
+            <span class="wordTwo">Other Projects</span>
+        </button>
         <div class="content">
             <a class="project-one hoverthis" data-option="selected" id="0" onclick="showProject(this)"><span>Branding</span></a>
             <a class="project-three hoverthis" data-option="selected" id="1" onclick="showProject(this)"><span>Logo Design</span></a>
@@ -213,7 +216,7 @@
             </div>
             <div class="follow-me">
                 <ul>
-                    <li><div class="hoverthis"><a href="https://www.instagram.com/thomas_mosito/" target="_blank"><span>Instagram</span> </a> </div></li>
+                    <li><div class="hoverthis"><a href="https://www.instagram.com/reatilethomas/" target="_blank"><span>Instagram</span> </a> </div></li>
                     <li><div class="hoverthis"><a href="https://dribbble.com/Thomas_Mosito" target="_blank"><span>Dribbble</span> </a> </div></li>
                     <li><div class="hoverthis"><a href="https://www.behance.net/reatilemosito?tracking_source=search_projects_recommended%7Creatile" target="_blank"><span>Behance</span> </a> </div></li>
     
@@ -247,12 +250,27 @@
     <img class="c-next" src="img/arrow-icons-next.svg" alt="arrow">
 </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/others.js"></script>
-    <script src="js/cursor.js"></script>
+<div class="darkmode-button">
+
+    <!-- //In beta - coming Soon! -->
+    <input  type="checkbox" id="switch" name="mode" value="colorcheck" >
+ 
+    <label for="switch" class=' stagger dark-light'>
+      <div class='cont-cont'>
+        <div class='dark-light_container'>
+          <p class="bword">Light</p>
+          <p class="aword">Dark</p>
+        </div>
+      </div>
+    </label>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/others.js"></script>
+<script src="js/cursor.js"></script>
  
     </body>
 </html>  
